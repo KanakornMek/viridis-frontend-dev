@@ -1,0 +1,40 @@
+.navBar{
+    display: flex;
+    justify-content: space-between;
+}
+.leftSideNav a {
+    color: white;
+}
+.rightSideNav{
+    display:flex;
+}
+.innerRightSideNav{
+    display: flex;
+}
+.innerRightSideNav li {
+    color: white;
+    list-style: none;
+}
+.home{
+    text-decoration: none;
+    color: white;
+}
+.portfolio{
+    text-decoration: none;
+    color: white;
+}
+.services{
+    text-decoration: none;
+    color: white;
+}
+.changableNavComponent button{
+    border: none;
+    border-radius: 0.625rem;
+    color: white;
+    background-color: #06C755;
+    height: 3.5rem;
+    width: 8.375rem;
+}
+.changableNavComponent button:hover{
+    color: #003315;
+}
