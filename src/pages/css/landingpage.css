@@ -61,10 +61,70 @@ body{
 .leftCard{
     height: 26.25rem;
     width: 26.25rem;
-    background-color: #06C755;
+    border-radius: 1rem;
+    box-shadow: 1px 2px 4px grey;
+}
+.leftCard-img{
+    height: 40%;
+    margin: 1rem;
+    background-size: cover;
+    background-image: url('/src/assets/picture/carbon-footprint-CO2.jpg');
+}
+.Card-content{
+    height: 40%;
+    margin: 1rem;
+}
+.Card-content h3{
+    font-size: 2rem;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 0px;
+}
+.Card-content p{
+    font-size: 1.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 1rem;
+    color: #696969;
 }
 .rightCard{
     height: 26.25rem;
     width: 26.25rem;
-    background-color: #06C755;
+    border-radius: 1rem;
+    box-shadow: 1px 2px 4px grey;
+}
+.rightCard-img{
+    height: 40%;
+    margin: 1rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('/src/assets/picture/cc-logo-green.png');
+}
+.whatWeDo-section{
+    height: 34.2rem;
+    background-image: url('/src/assets/picture/smilingFarmer.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color:rgb(69, 69, 69);
+    background-blend-mode: multiply;
+}
+.whatWeDo-box{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.whatWeDo-box h3{
+    font-size: 4rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    margin-bottom: 0.75em;
+}
+.whatWeDo-box p { 
+    font-size: 2.25rem;
+    font-family: 'Josefin Sans', sans-serif;
+    width: 80%;
+    text-align: center;
+    margin-top: 0px;
 }
