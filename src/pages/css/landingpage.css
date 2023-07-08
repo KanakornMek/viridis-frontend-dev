@@ -54,7 +54,8 @@ body{
     font-size: 3rem;
 }
 .cardComponent{
-    width: 100%;
+    max-width: 94.5rem;
+    min-width: 120rem;
     display: flex;
     justify-content: space-around;
 }
