@@ -8,6 +8,7 @@ function Loginpage(){
     const [currForm, setCurrForm] = useState('login');
     return(
         <div>
+            <NavBar/>
             {currForm === "login" ? <Login setForm={setCurrForm} /> : <Register setForm={setCurrForm} /> }
         </div>
         

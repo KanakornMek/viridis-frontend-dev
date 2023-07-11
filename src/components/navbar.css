@@ -3,7 +3,7 @@
     justify-content: space-between;
     padding-top: 1.5rem;
     width: 100%;
-    /* position: absolute; */
+    position: absolute; 
     z-index: 1;
 }
 .leftSideNav a {
@@ -16,6 +16,7 @@
 .rightSideNav{
     display:flex;
     padding-right: 2.5rem;
+    align-items: center;
 }
 .innerRightSideNav{
     display: flex;
