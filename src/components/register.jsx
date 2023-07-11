@@ -1,17 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import './register.css';
 
-function App() {
-  const [count, setCount] = useState(0)
+
+function Register({setForm}) {
 
   return (
     <>
       <div className="container">
         <form id="form" class="form">
-            <h1 className="form-control">ลงทะเบียน</h1>
-            <p1>หรือ </p1><p1 href="Login.jsx">เข้าสู่ระบบ</p1>
+            <h1 className="form-control" >ลงทะเบียน</h1>
+            <p1>หรือ </p1><p1 className="regis" style={{cursor: 'pointer'}} onClick={() => setForm('login')}>เข้าสู่ระบบ</p1>
             <div className="form-control">
                 <label for="username">ชื่อ-นามสกุล</label>
                 <input type="text" name="" id="username" required/>
@@ -54,5 +52,17 @@ function App() {
     </>
   )
 }
+// function Register({setForm}) {
+//     return(
+//         <>
+//         <h1>Register</h1>
+//         <form>
+//             <input />
+//         </form>
+//         <p style={{cursor: 'pointer'}} onClick={() => setForm('login')}>Login</p>
+//         </>
+//     )
+// }
 
-export default App
+
+export default Register;

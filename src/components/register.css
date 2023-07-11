@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap');
+
+* {
+    font-family: 'Noto Sans Thai', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    width: 100%;
+    height: 100%;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container {
+    position: relative;
+    width: 500px;
+    height: 700px;
+    top: 50px;
+    left:350px;
+    
+}
+
+.form {
+    padding: 30px 40px;
+}
+
+h1 {
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+}
+.regis{
+    color:blue;
+}
+
+.form-control {
+    position: relative;
+    margin-bottom: 10px;
+
+}
+
+.form-control label {
+    color: #000000;
+    display: block;
+    margin-bottom: 1px;
+
+}
+
+.form-control input {
+    border: 2px solid rgb(144, 142, 142);
+    border-radius: 6px;
+    display: block;
+    padding: 5px;
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: rgb(7, 196, 92);
+}
+
+.form-control small {
+    color: red;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form button {
+    cursor: pointer;
+    background-color: #24e16c;
+    border: 2px solid #cdcccc;
+    width: 50%;
+    display: block;
+    font-size: 17px;
+    border-radius: 6px;
+    align-items: center;
+    left:100px;
+}
+
+.form select {
+    cursor: pointer;
+    background-color: #cdcccc;
+}

@@ -2,11 +2,9 @@ import NavBar from "../components/navbar";
 import './css/landingpage.css'
 
 
-
-
 function HomePage(){
     return(
-        <div>
+        <div style={{width: '100vw'}}>
             <NavBar></NavBar>
             <div className="hero-section">
                 <div className="hero-box">
