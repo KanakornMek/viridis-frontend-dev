@@ -1,0 +1,97 @@
+#user-image{
+    height:14rem;
+    width:14rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border:6px solid greenyellow;
+}
+
+#user-house{
+    height: 14rem;
+    width: 14rem;
+    object-fit: cover;
+}
+
+.profile-background{
+    background-color: rgb(45, 45,45);
+}
+
+.Leftzone-profile{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    top:0; left: 0px;
+    padding: 2rem;
+    flex-flow: column;
+    background-color: rgb(45, 45, 45);
+}
+
+.user-profile{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 40%;
+    height: 100%;
+    top: 0;
+    left: 0px;
+    padding: 2rem;
+    margin-top: 2rem;
+    flex-flow: column;
+}
+
+.User-pro{
+    margin-bottom: 5rem;
+}
+
+.Rightzone-profile{
+    position:absolute;
+    display: flex;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    right: 0px;
+    justify-content: center;
+    background-color: rgb(45, 45, 45);
+
+}
+
+.profileform-control{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.profileform-control label {
+    color: #ffffff;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.profileform-control input {
+    border: 2px solid rgb(132, 131, 131);
+    border-radius: 6px;
+    padding: 5px;
+    font-size: 30px;
+    width: 40rem;
+    outline: none;
+    background-color: rgb(98, 100, 100);
+}
+
+.profile-form button {
+    cursor: pointer;
+    background-color: #24e16c;
+    border: 2px solid #cdcccc;
+    width: 20%;
+    display: block;
+    font-size: 30px;
+    border-radius: 6px;
+}
+
+.button-wrapper{
+    width:100%;
+    display:flex;
+    justify-content: right;
+    margin-top: 3.5rem;
+}

@@ -43,6 +43,13 @@
     text-decoration: none;
     color: white;
 }
+
+.profile {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+
 .changableNavComponent button{
     font-size: 1.5rem;
     border: none;

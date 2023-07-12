@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <div className="container">
-        <form id="form" class="form">
+        <form id="form" className="form">
             <h1 className="form-control">ลงทะเบียน</h1>
             <p1>หรือ </p1><p1 href="Login.jsx">เข้าสู่ระบบ</p1>
             <div className="form-control">

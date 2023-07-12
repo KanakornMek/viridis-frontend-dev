@@ -24,6 +24,7 @@ function NavBar(){
                     <li><Link to={`/`} className='home'>Home</Link></li>
                     <li><Link to={`/portfolio`} className='portfolio'>Portfolio</Link></li>
                     <li><Link to={`/services`} className='services'>Services</Link></li>
+                    <li><Link to={`/profile`} className='profile'>Profile</Link></li>
                 </ul>
                 <div className='changableNavComponent'>
                     <button onClick={() => setisGoingToLogin(true)}>Login</button>
