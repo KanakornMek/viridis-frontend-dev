@@ -3,13 +3,14 @@
     width:14rem;
     border-radius: 50%;
     object-fit: cover;
-    border:6px solid greenyellow;
+    border:6px solid rgb(6, 214, 110);
 }
 
 #user-house{
     height: 14rem;
     width: 14rem;
     object-fit: cover;
+    
 }
 
 .profile-background{

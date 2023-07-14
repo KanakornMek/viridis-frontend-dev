@@ -1,0 +1,105 @@
+#user-housePort{
+    height: 20rem;
+    width: 20rem;
+    object-fit: cover;
+}
+
+
+.Leftzone-portfolio{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 45%;
+    height: 100%;
+    top: 0;
+    left: 0px;
+    padding: 2rem;
+    flex-flow: column;
+    background-color: rgb(45, 45, 45);
+}
+
+.user-port{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 40%;
+    height: 100%;
+    top: 0;
+    left: 0px;
+    padding: 2rem;
+    margin-top: 2rem;
+    flex-flow: column;
+}
+
+.Rightzone-portfolio {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 55%;
+    height: 100%;
+    right: 0px;
+    justify-content: center;
+    background-color: rgb(45, 45, 45);
+    flex-flow: column;
+    ;
+}
+
+.port-text{
+    color: white;
+    font-size: 30px;
+}
+
+#CO2-num{
+    font-size: 100px;
+}
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+background-color: rgb(206, 13, 236);
+border-radius: 5px;
+}
+
+.history-bar{
+    position:fixed;
+    background-color: white;
+    top:33rem;
+    width:600px;
+    height:30%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 5px 0 20px;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+}
+
+.historybox{
+    overflow:auto;
+}
+
+.historybox-inner p{
+    font-size: 24px;
+}
+
+.history-bar h1{
+    font-size: 30px;
+}
+
+.history-bar button{
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 0.625rem;
+    color: white;
+    background-color: #06C755;
+    height: 2.8rem;
+    width: 8.375rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.history-bar button:hover{
+    color:black;
+}
