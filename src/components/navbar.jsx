@@ -8,7 +8,6 @@ function NavBar(){
     const [isGoingToLogin,setisGoingToLogin] = useState(false);
     const navigate = useNavigate();
     const [isNavOn, setisNavOn] = useState(false);
-    const screenSize = useScreenSize();
 
     useEffect(() =>{
         console.log(isGoingToLogin)
@@ -23,7 +22,6 @@ function NavBar(){
             document.getElementById('hammy').classList.remove("change");
             document.getElementById('nav-on-screen').className = 'nav-on-screen'
             document.getElementById('blackdrop').className = 'blackdrop'
-            document.getElementById('navBar').className = 'navBar'
             setisNavOn(false);
         }
       })
@@ -33,12 +31,10 @@ function NavBar(){
             document.getElementById('hammy').classList.add("change");
             document.getElementById('nav-on-screen').className += '-on'
             document.getElementById('blackdrop').className += '-on'
-            document.getElementById('navBar').className += '-on'
         }else{
             document.getElementById('hammy').classList.remove("change");
             document.getElementById('nav-on-screen').className = 'nav-on-screen'
             document.getElementById('blackdrop').className = 'blackdrop'
-            document.getElementById('navBar').className = 'navBar'
         }
     }, [isNavOn])
 

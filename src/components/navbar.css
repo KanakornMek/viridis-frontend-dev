@@ -8,15 +8,8 @@
         z-index: 1;
         user-select: none;
     }
-    .navBar-on{
-        display: flex;
-        justify-content: space-between;
-        padding-top: 1.5rem;
-        width: 100%;
-        position: absolute;
-        z-index: 1;
-        background-color: rgba(0, 0, 0, 0.904);
-        user-select: none;
+    .leftSideNav {
+        z-index: 9999;
     }
     .leftSideNav a {
         font-size: 3rem;
@@ -28,26 +21,11 @@
     .rightSideNav{
         display: none;
     }
-    .home{
-        font-size: 1.5rem;
-        text-decoration: none;
-        color: white;
-    }
-    .portfolio{
-        font-size: 1.5rem;
-        text-decoration: none;
-        color: white;
-    }
-    .services{
-        font-size: 1.5rem;
-        text-decoration: none;
-        color: white;
-    }
     .hammy {
         display: inline-block;
         cursor: pointer;
         padding-right: 2.5rem;
-        z-index: -1;
+        z-index: 99999;
       }
       
     .bar1, .bar2, .bar3 {
@@ -89,12 +67,16 @@
     .blackdrop-on{
         display: block !important;
         position: absolute;
+        top: 0;
         width: 100vw;
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.904);
-        margin-top:3rem;
         animation-name: navOn-enter;
         animation-duration: 0.5S;
+    }
+    .navTextOnScreen {
+        padding-bottom: 1rem;
+        margin-bottom: 0;
     }
     .navTextOnScreen li  {
         list-style: none;
@@ -104,22 +86,22 @@
         font-size: 5rem;
         text-decoration: none;
         color: white;
-        margin: 5rem 0;
+        margin: 2.5rem 0;
         animation-name: navOn-enter;
         animation-duration: 0.5S;
     }
     .home{
-        font-size: 5rem;
+        font-size: 3rem;
         text-decoration: none;
         color: white;
     }
     .portfolio{
-        font-size: 5rem;
+        font-size: 3rem;
         text-decoration: none;
         color: white;
     }
     .services{
-        font-size: 5rem;
+        font-size: 3rem;
         text-decoration: none;
         color: white;
     }
@@ -204,9 +186,6 @@
         display: none;
     }
     .nav-on-screen{
-        display: none;
-    }
-    .nav-on-screen-on{
         display: none;
     }
 }

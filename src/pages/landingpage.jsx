@@ -41,7 +41,7 @@ function HomePage(){
                     </p>
                 </div>
             </div>
-            <div className="ourMission-section">
+            {/* <div className="ourMission-section">
 
             </div>
             <div className="ourTeam-section">
@@ -49,7 +49,7 @@ function HomePage(){
             </div>
             <div className="footer">
 
-            </div>
+            </div> */}
         </div>
     )
 }

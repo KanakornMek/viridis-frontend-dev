@@ -1,7 +1,10 @@
 :root {
   background-color:rgb(45, 45, 45);
-  overflow: hidden;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+}
+
+body{
+  margin: 0;
 }
