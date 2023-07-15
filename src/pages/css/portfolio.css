@@ -35,14 +35,15 @@
 .Rightzone-portfolio {
     position: absolute;
     display: flex;
+    padding-top: 100px;
     align-items: center;
     width: 55%;
     height: 100%;
     right: 0px;
-    justify-content: center;
+    
     background-color: rgb(45, 45, 45);
     flex-flow: column;
-    ;
+    
 }
 
 .port-text{
@@ -54,34 +55,57 @@
     font-size: 100px;
 }
 
-::-webkit-scrollbar{
+.history-bar ::-webkit-scrollbar{
     width:10px;
 }
 
-::-webkit-scrollbar-thumb{
-background-color: rgb(206, 13, 236);
-border-radius: 5px;
+.history-bar ::-webkit-scrollbar-thumb{
+    background-color: rgb(13, 236, 165);
+    border-radius: 5px;
 }
 
 .history-bar{
     position:fixed;
     background-color: white;
-    top:33rem;
+    top:26rem;
     width:600px;
-    height:30%;
+    height:48%;
     display: flex;
     flex-direction: column;
     padding: 20px 5px 0 20px;
-    border-top-left-radius: 20%;
-    border-top-right-radius: 20%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.historyhead{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+#History{
+    margin-left: 1rem;
+}
+
+#Cert-button{
+    margin-right: 2rem;
 }
 
 .historybox{
     overflow:auto;
+    
 }
 
 .historybox-inner p{
     font-size: 24px;
+}
+
+.historybox-inner {
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid rgb(255, 255, 255);
+    background-color: antiquewhite;
+    border-radius: 10px;
 }
 
 .history-bar h1{
@@ -102,4 +126,17 @@ border-radius: 5px;
 
 .history-bar button:hover{
     color:rgb(77, 45, 45);
+}
+
+.historylist-1{
+    margin-left: 0.5rem;
+}
+
+.historylist-2 {
+    margin-right: 1rem;
+}
+
+.history-time{
+    justify-content: right;
+    align-items: right;
 }

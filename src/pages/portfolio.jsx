@@ -5,9 +5,7 @@ import './css/portfolio.css'
 function Portfolio(){
     return(
         <>
-        <div>
-            <NavBar></NavBar>
-        </div>
+        <NavBar></NavBar>
         <div className="Leftzone-portfolio">
                 <div className="user-port">
                     <img id="user-housePort" className="User-pro" src="https://images.unsplash.com/photo-1633633292416-1bb8e7b2832b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8M2QlMjBob3VzZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" alt=""/>
@@ -19,20 +17,53 @@ function Portfolio(){
             <p1 className="port-text">= 40 ต้น </p1>
             <p1 className="port-text">Green points : 2,000 points </p1>
             <nav class="history-bar">
-                <h1><pre>     History                                <button>Certificate</button></pre></h1>
+                <div className="historyhead">
+                    <h1 id="History">History</h1>
+                    <button id="Cert-button">Certificate</button>
+                </div>
                 <div className="historybox">
                     <div className="historybox-inner">
-                        <p> &emsp; 54CC &emsp; &emsp; &emsp; &emsp; 14.14น. 30/7/2566</p>
-                        <p> &emsp; 54CC &emsp; &emsp; &emsp; &emsp; 14.14น. 30/7/2566</p>
-                        <p> &emsp; 54CC &emsp; &emsp; &emsp; &emsp; 14.14น. 30/7/2566</p>
-                        <p> &emsp; 54CC &emsp; &emsp; &emsp; &emsp; 14.14น. 30/7/2566</p>
-                        <p> &emsp; 54CC &emsp; &emsp; &emsp; &emsp; 14.14น. 30/7/2566</p>
-                        <p> &emsp; 54CC &emsp; &emsp; &emsp; &emsp; 14.14น. 30/7/2566</p>
-                        <p> &emsp; 54CC &emsp; &emsp; &emsp; &emsp; 14.14น. 30/7/2566</p>
-                        <p> &emsp; 54CC &emsp; &emsp; &emsp; &emsp; 14.14น. 30/7/2566</p>
-                        <p> &emsp; 54CC &emsp; &emsp; &emsp; &emsp; 14.14น. 30/7/2566</p>
-                        <p> &emsp; 54CC &emsp; &emsp; &emsp; &emsp; 14.14น. 30/7/2566</p>
+                        <p className="historylist-1">54CC</p>
+                        <p className="historylist-2">14.14น. 30/7/2566</p>
                     </div>
+                    <div className="historybox-inner">
+                        <p className="historylist-1">54CC</p>
+                        <p className="historylist-2">14.14น. 30/7/2566</p>
+                    </div>
+                    <div className="historybox-inner">
+                        <p className="historylist-1">54CC</p>
+                        <p className="historylist-2">14.14น. 30/7/2566</p>
+                    </div>
+                    <div className="historybox-inner">
+                        <p className="historylist-1">54CC</p>
+                        <p className="historylist-2">14.14น. 30/7/2566</p>
+                    </div>
+                    <div className="historybox-inner">
+                        <p className="historylist-1">54CC</p>
+                        <p className="historylist-2">14.14น. 30/7/2566</p>
+                    </div>
+                    <div className="historybox-inner">
+                        <p className="historylist-1">54CC</p>
+                        <p className="historylist-2">14.14น. 30/7/2566</p>
+                    </div>
+                    <div className="historybox-inner">
+                        <p className="historylist-1">54CC</p>
+                        <p className="historylist-2">14.14น. 30/7/2566</p>
+                    </div>
+                    <div className="historybox-inner">
+                        <p className="historylist-1">54CC</p>
+                        <p className="historylist-2">14.14น. 30/7/2566</p>
+                    </div>
+                    <div className="historybox-inner">
+                        <p className="historylist-1">54CC</p>
+                        <p className="historylist-2">14.14น. 30/7/2566</p>
+                    </div>
+                    <div className="historybox-inner">
+                        <p className="historylist-1">54CC</p>
+                        <p className="historylist-2">14.14น. 30/7/2566</p>
+                    </div>
+                    
+
                 </div>
             </nav>
         </div>
