@@ -31,10 +31,12 @@ function NavBar(){
             document.getElementById('hammy').classList.add("change");
             document.getElementById('nav-on-screen').className += '-on'
             document.getElementById('blackdrop').className += '-on'
+            document.getElementById('body').className += 'fixForHam'
         }else{
             document.getElementById('hammy').classList.remove("change");
             document.getElementById('nav-on-screen').className = 'nav-on-screen'
             document.getElementById('blackdrop').className = 'blackdrop'
+            document.getElementById('body').className = ''
         }
     }, [isNavOn])
 
