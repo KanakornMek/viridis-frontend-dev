@@ -206,6 +206,9 @@
     .nav-on-screen{
         display: none;
     }
+    .nav-on-screen-on{
+        display: none;
+    }
 }
 
 @keyframes navOn-enter {

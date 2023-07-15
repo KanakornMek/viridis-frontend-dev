@@ -1,19 +1,32 @@
 import './navbar.css'
 import { Link, useNavigate, redirect } from 'react-router-dom'
 import { useEffect, useState } from 'react';
+import  useScreenSize from './screenSizeHook'
 
 
 function NavBar(){
     const [isGoingToLogin,setisGoingToLogin] = useState(false);
     const navigate = useNavigate();
     const [isNavOn, setisNavOn] = useState(false);
+    const screenSize = useScreenSize();
 
     useEffect(() =>{
         console.log(isGoingToLogin)
         if(isGoingToLogin){
             navigate('/login');
         }
+
     },)
+
+    window.addEventListener("resize", function() {
+        if (window.matchMedia("(min-width: 800px)").matches) {
+            document.getElementById('hammy').classList.remove("change");
+            document.getElementById('nav-on-screen').className = 'nav-on-screen'
+            document.getElementById('blackdrop').className = 'blackdrop'
+            document.getElementById('navBar').className = 'navBar'
+            setisNavOn(false);
+        }
+      })
 
     useEffect(() => {
         if(isNavOn){
@@ -27,7 +40,7 @@ function NavBar(){
             document.getElementById('blackdrop').className = 'blackdrop'
             document.getElementById('navBar').className = 'navBar'
         }
-    })
+    }, [isNavOn])
 
 
     return(
