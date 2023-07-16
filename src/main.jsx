@@ -8,7 +8,7 @@ import Services from './pages/services'
 import Loginpage from './pages/loginpage'
 import Registerpage from'./pages/register'
 import Docspage from './pages/docs'
-import Buyingpage from './pages/css/buying'
+import Buyingpage from './pages/buying'
 
 const router = createBrowserRouter([
   {
