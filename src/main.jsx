@@ -8,6 +8,7 @@ import Services from './pages/services'
 import Loginpage from './pages/loginpage'
 import Registerpage from'./pages/register'
 import Docspage from './pages/docs'
+import Buyingpage from './pages/css/buying'
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: '/docs',
     element: <Docspage />
+  },
+  {
+    path: '/buying',
+    element: <Buyingpage />
   }
 ]);
 

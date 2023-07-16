@@ -185,6 +185,16 @@
         width: 8.375rem;
         font-weight: bold;
     }
+    .changableNavComponent button{
+        font-size: 1.5rem;
+        border: none;
+        border-radius: 0.625rem;
+        color: white;
+        background-color: #06C755;
+        height: 3.5rem;
+        width: 8.375rem;
+        font-weight: bold;
+    }
     .changableNavComponent button:hover{
         animation-name: hover;
         animation-duration: 2s;

@@ -1,17 +1,29 @@
 import NavBar from "../components/navbar";
+import { Link, useNavigate, redirect } from 'react-router-dom'
 import './css/landingpage.css'
+import { useState, useEffect } from "react";
 
 
 
 
 function HomePage(){
+    const [isGoingToBuy, setisGoingToBuy] = useState(false);
+    const navigate = useNavigate();
+
+    useEffect(() =>{
+        if(isGoingToBuy){
+            navigate('/buying');
+        }
+
+    },)
+
     return(
         <div>
             <NavBar></NavBar>
             <div className="hero-section">
                 <div className="hero-box">
                     <p>"Embrace a Greener Future” Offset Your Carbon Footprint Today.</p>
-                    <button>Buy now</button>
+                    <button onClick={() => setisGoingToBuy(true)} >Buy Now</button>
                 </div>
             </div>
             <div className="knowMore-section">
