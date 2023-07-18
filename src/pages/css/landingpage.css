@@ -1,70 +1,415 @@
-body{
-    margin: 0px;
+@media  screen and (max-width: 850px) {
+    .hero-section{
+        height: 100vh;
+        background-image: url('/src/assets/picture/farmerLooking.jpg');
+        background-color:rgb(69, 69, 69);
+        background-blend-mode: multiply;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-box{
+        width: 80vw;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-box p{
+        text-align: center;
+        color: white;
+        font-size: clamp(1rem, 10vw ,4rem);
+        font-family: 'Josefin Sans', sans-serif;
+        margin-bottom: 0;
+    }
+    .hero-box button{
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 2rem;
+        color: white;
+        padding: 1.25rem 1.75rem 1.25rem 1.75rem;
+        margin-left: 1rem;
+        margin-top: 3rem;
+        background-color: #06C755;
+        border: none;
+        border-radius: 4rem;
+        text-shadow:black 2px 2px 10px;
+    }
+    .knowMore-section{
+        height: 250vw;
+        width: 100vw;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+    .knowMore-head{
+        line-height: 1;
+        width: 60vw;
+        font-size: clamp(1rem, 10vw ,3rem);
+        color: black;
+        font-family: 'Josefin Sans', sans-serif;
+        text-align: center;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+    .cardComponent{
+        width: 75vw;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .leftCard{
+        height: 90vw;
+        width: 75vw;
+        border-radius: 1rem;
+        box-shadow: 1px 2px 4px grey;
+    }
+    .rightCard{
+        height: 90vw;
+        width: 75vw;
+        border-radius: 1rem;
+        box-shadow: 1px 2px 4px grey;
+    }
+    .leftCard-img{
+        height: 40%;
+        margin: 1rem;
+        background-size: cover;
+        background-image: url('/src/assets/picture/carbon-footprint-CO2.jpg');
+    }
+    .rightCard-img{
+        height: 40%;
+        margin: 1rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('/src/assets/picture/cc-logo-green.png');
+    }
+    .Card-content{
+        height: 40%;
+        margin: 1rem;
+    }
+    .Card-content h3{
+        font-size: clamp(0.75rem, 7vw ,3rem);
+        font-family: 'Josefin Sans', sans-serif;
+        margin-bottom: 0px;
+    }
+    .Card-content p{
+        font-size: clamp(0.75rem, 5vw ,2rem);
+        font-family: 'Josefin Sans', sans-serif;
+        margin-top: 0.5rem;
+        color: #696969;
+    }
+    .whatWeDo-section{
+        height: 100vh;
+        width: 100vw;
+        background-image: url('/src/assets/picture/smilingFarmer.jpg');
+        background-size: cover;
+        background-position: right;
+        background-color:rgb(69, 69, 69);
+        background-blend-mode: multiply;
+    }
+    .whatWeDo-box{
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    .whatWeDo-box h3{
+        font-size: clamp(1rem, 10vw ,3.5rem);
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 400;
+        margin-bottom: 0.75em;
+    }
+    .whatWeDo-box p { 
+        font-size: clamp(1rem, 6vw ,2rem);
+        font-family: 'Josefin Sans', sans-serif;
+        width: 80%;
+        text-align: center;
+        margin-top: 0px;
+    }
+
 }
-.hero-section{
-    width: 100%;
-    height: 42.75rem;
-    background-image: url('/src/assets/picture/farmerLooking.jpg');
-    background-color:rgb(45, 45, 45);
-    background-blend-mode: multiply;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: flex-start;}
-.hero-box{
-    width: 60rem;
-    height: 2rem;
-    padding: 10rem 0 0 8rem;
-}
-.hero-box p{
-    color: white;
-    font-size: 4rem;
-    font-family: 'Josefin Sans', sans-serif;
-    margin-bottom: 1.25rem;
-}
-.hero-box button{
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 2rem;
-    color: white;
-    padding: 1.25rem 1.75rem 1.25rem 1.75rem;
-    margin-left: 1rem;
-    background-color: #06C755;
-    border: none;
-    border-radius: 4rem;
-    text-shadow:black 2px 2px 10px;
+@media  screen and (min-width: 850px) {
+    .hero-section{
+        height: 100vh;
+        background-image: url('/src/assets/picture/farmerLooking.jpg');
+        background-color:rgb(69, 69, 69);
+        background-blend-mode: multiply;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-box{
+        width: 80vw;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-box p{
+        text-align: center;
+        color: white;
+        font-size: clamp(1rem, 10vw ,4rem);
+        font-family: 'Josefin Sans', sans-serif;
+        margin-bottom: 0;
+    }
+    .hero-box button{
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 2rem;
+        color: white;
+        padding: 1.25rem 1.75rem 1.25rem 1.75rem;
+        margin-left: 1rem;
+        margin-top: 3rem;
+        background-color: #06C755;
+        border: none;
+        border-radius: 4rem;
+        text-shadow:black 2px 2px 10px;
+    }
+    .knowMore-section{
+        height: 100vh;
+        width: 100vw;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+    .knowMore-head{
+        line-height: 1;
+        width: 60vw;
+        font-size: clamp(1rem, 10vw ,3rem);
+        color: black;
+        font-family: 'Josefin Sans', sans-serif;
+        text-align: center;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+    .cardComponent{
+        width: 100vw;
+        height: 70vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .leftCard{
+        height: 33vw;
+        width: 30vw;
+        border-radius: 1rem;
+        box-shadow: 1px 2px 4px grey;
+    }
+    .rightCard{
+        height: 33vw;
+        width: 30vw;
+        border-radius: 1rem;
+        box-shadow: 1px 2px 4px grey;
+    }
+    .leftCard-img{
+        height: 40%;
+        margin: 1rem;
+        background-size: cover;
+        background-image: url('/src/assets/picture/carbon-footprint-CO2.jpg');
+    }
+    .rightCard-img{
+        height: 40%;
+        margin: 1rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('/src/assets/picture/cc-logo-green.png');
+    }
+    .Card-content{
+        height: 40%;
+        margin: 1rem;
+    }
+    .Card-content h3{
+        font-size: clamp(1rem, 3vw ,3rem);
+        font-family: 'Josefin Sans', sans-serif;
+        margin-bottom: 0px;
+    }
+    .Card-content p{
+        font-size: clamp(0.75rem, 2vw ,1.5rem);
+        font-family: 'Josefin Sans', sans-serif;
+        margin-top: 0.5rem;
+        color: #696969;
+    }
+    .whatWeDo-section{
+        height: 100vh;
+        width: 100vw;
+        background-image: url('/src/assets/picture/smilingFarmer.jpg');
+        background-size: cover;
+        background-position: right;
+        background-color:rgb(69, 69, 69);
+        background-blend-mode: multiply;
+    }
+    .whatWeDo-box{
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    .whatWeDo-box h3{
+        font-size: clamp(1rem, 10vw ,3.5rem);
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 400;
+        margin-bottom: 0.75em;
+    }
+    .whatWeDo-box p { 
+        font-size: clamp(1rem, 6vw ,2rem);
+        font-family: 'Josefin Sans', sans-serif;
+        width: 80%;
+        text-align: center;
+        margin-top: 0px;
+    }
 
 }
 
 
-.knowMore-section{
-    width: 100%;
-    height: 41.75rem;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
-}
-.knowMore-head{
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-    color: black;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 3rem;
-}
-.cardComponent{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-}
-.leftCard{
-    height: 26.25rem;
-    width: 26.25rem;
-    background-color: #06C755;
-}
-.rightCard{
-    height: 26.25rem;
-    width: 26.25rem;
-    background-color: #06C755;
+
+
+
+@media  screen and (min-width: 1920px) {
+    .hero-section{
+        width: 100%;
+        height: 100vh;
+        background-image: url('/src/assets/picture/farmerLooking.jpg');
+        background-color:rgb(45, 45, 45);
+        background-blend-mode: multiply;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;}
+    .hero-box{
+        width: 60rem;
+        height: 2rem;
+    }
+    .hero-box p{
+        color: white;
+        font-size: 4rem;
+        font-family: 'Josefin Sans', sans-serif;
+        margin-bottom: 1.25rem;
+    }
+    .hero-box button{
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 2rem;
+        color: white;
+        padding: 1.25rem 1.75rem 1.25rem 1.75rem;
+        margin-left: 1rem;
+        background-color: #06C755;
+        border: none;
+        border-radius: 4rem;
+        text-shadow:black 2px 2px 10px;
+    
+    }
+    
+    
+    .knowMore-section{
+        width: 100%;
+        height: 41.75rem;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    }
+    .knowMore-head{
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+        color: black;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 3rem;
+    }
+    .cardComponent{
+        max-width: 94.5rem;
+        min-width: 120rem;
+        display: flex;
+        justify-content: space-around;
+    }
+    .leftCard{
+        height: 26.25rem;
+        width: 26.25rem;
+        border-radius: 1rem;
+        box-shadow: 1px 2px 4px grey;
+    }
+    .leftCard-img{
+        height: 40%;
+        margin: 1rem;
+        background-size: cover;
+        background-image: url('/src/assets/picture/carbon-footprint-CO2.jpg');
+    }
+    .Card-content{
+        height: 40%;
+        margin: 1rem;
+    }
+    .Card-content h3{
+        font-size: 2rem;
+        font-family: 'Josefin Sans', sans-serif;
+        margin-bottom: 0px;
+    }
+    .Card-content p{
+        font-size: 1.5rem;
+        font-family: 'Josefin Sans', sans-serif;
+        margin-top: 1rem;
+        color: #696969;
+    }
+    .rightCard{
+        height: 26.25rem;
+        width: 26.25rem;
+        border-radius: 1rem;
+        box-shadow: 1px 2px 4px grey;
+    }
+    .rightCard-img{
+        height: 40%;
+        margin: 1rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('/src/assets/picture/cc-logo-green.png');
+    }
+    .whatWeDo-section{
+        height: 34.2rem;
+        display: flex;
+        justify-content: center;
+        background-image: url('/src/assets/picture/smilingFarmer.jpg');
+        background-size: cover;
+        background-position: center;
+        background-color:rgb(69, 69, 69);
+        background-blend-mode: multiply;
+    }
+    .whatWeDo-box{
+        display: flex;
+        height: 100%;
+        width: 1920px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    .whatWeDo-box h3{
+        font-size: 4rem;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 400;
+        margin-bottom: 0.75em;
+    }
+    .whatWeDo-box p { 
+        font-size: 2.25rem;
+        font-family: 'Josefin Sans', sans-serif;
+        width: 80%;
+        text-align: center;
+        margin-top: 0px;
+    }
 }

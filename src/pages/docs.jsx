@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
 
-function Registerpage(){
+
+function Docspage(){
     return(
-        <div>Register
+        <div>Docs
             <Link to = '/'>Back to home</Link>
         </div>
     )
 }
 
-export default Registerpage;
+export default Docspage;

@@ -6,6 +6,8 @@ import HomePage from './pages/landingpage'
 import Portfolio from './pages/portfolio'
 import Services from './pages/services'
 import Loginpage from './pages/loginpage'
+import Registerpage from'./pages/register'
+import Docspage from './pages/docs'
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,14 @@ const router = createBrowserRouter([
   {
     path: '/login',
     element: <Loginpage />
+  },
+  {
+    path: '/register',
+    element: <Registerpage />
+  },
+  {
+    path: '/docs',
+    element: <Docspage />
   }
 ]);
 
