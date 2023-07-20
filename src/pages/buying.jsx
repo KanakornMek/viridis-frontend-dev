@@ -1,10 +1,66 @@
 import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react';
 import './css/buying.css'
+import { clear } from 'localforage';
 
 function Buyingpage(){
+    const [swiperCounter, setswiperCounter] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() =>{
+
+            if(swiperCounter >=2){
+                setswiperCounter(0);
+            }else{
+                setswiperCounter(swiperCounter + 1);
+            }
+            console.log(swiperCounter);
+        },2000);
+
+        return () => {
+            clearInterval(interval);
+        }
+    })
+
+    useEffect(() => {
+        if(swiperCounter === 0){
+            document.getElementById('swiper1').className = 'left-side-container-in';
+            document.getElementById('swiper2').className = 'left-side-container';
+            document.getElementById('swiper3').className = 'left-side-container-out';
+        }else if(swiperCounter === 1){
+            document.getElementById('swiper1').className = 'left-side-container-out';
+            document.getElementById('swiper2').className = 'left-side-container-in';
+            document.getElementById('swiper3').className = 'left-side-container';
+        }else if(swiperCounter === 2){
+            document.getElementById('swiper1').className = 'left-side-container';
+            document.getElementById('swiper2').className = 'left-side-container-out';
+            document.getElementById('swiper3').className = 'left-side-container-in';
+        }else{
+            setswiperCounter(0);
+        }
+    })
     return(
         <div className='buy-page'>
-            <div className="left-side-buy"></div>
+            <div className="left-side-buy">
+                <div className="left-side-container"id='swiper1'>
+                    <h1>Equivalent to</h1>
+                    <img src='/src/assets/picture/Trees.png'></img>
+                    <h1>planting</h1>
+                    <h1><span>10</span> Trees</h1>
+                </div>
+                <div className="left-side-container"id='swiper2'>
+                    <h1>Equivalent to</h1>
+                    <img src='/src/assets/picture/Trees.png'></img>
+                    <h1>planting</h1>
+                    <h1><span>20</span> Trees</h1>
+                </div>
+                <div className="left-side-container"id='swiper3'>
+                    <h1>Equivalent to</h1>
+                    <img src='/src/assets/picture/Trees.png'></img>
+                    <h1>planting</h1>
+                    <h1><span>30</span> Trees</h1>
+                </div>
+            </div>
             <div className="right-side-buy">
                 <div className="slip-buying">
                     <h1>viridis.</h1>
