@@ -14,9 +14,11 @@ function Portfolio(){
             </div>
             <div className="Rightzone-portfolio">
                 <h1 className="port-text" id="CO2-num">50</h1>
-                <p1 className="port-text">tCO2eqv ถูกกำจัด</p1>
-                <p1 className="port-text">= 40 ต้น </p1>
-                <p1 className="port-text">Green points : 2,000 points </p1>
+                <div className="port-text1">
+                    <p1 className="port-text">tCO2eqv ถูกกำจัด</p1>
+                    <p1 className="port-text">= 40 ต้น </p1>
+                    <p1 className="port-text">Green points : 2,000 points </p1>
+                </div>
                 <nav class="history-bar">
                     <div className="historyhead">
                         <h1 id="History">History</h1>

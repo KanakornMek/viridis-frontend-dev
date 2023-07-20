@@ -3,6 +3,7 @@
 * {
     font-family: 'Noto Sans Thai', sans-serif;
     box-sizing: border-box;
+    
 }
 
 
@@ -16,6 +17,7 @@
             height: 100%;
             left: 0px;
             padding: 2rem;
+            background-color: white;
         }
     
     .right-containerLog {
@@ -123,6 +125,7 @@
         height: 100%;
         left: 0px;
         padding: 2rem;
+        background-color: white;
     }
     
     .form-container {

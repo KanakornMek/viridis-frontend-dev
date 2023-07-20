@@ -8,7 +8,7 @@
         .Leftzone-portfolio {
             display: flex;
             align-items: center;
-            position: absolute;
+            position: fixed;
             width: 45%;
             height: 100%;
             top: 0;
@@ -40,7 +40,7 @@
             width: 55%;
             height: 100%;
             right: 0px;
-    
+            
             background-color: rgb(45, 45, 45);
             flex-flow: column;
     
@@ -49,10 +49,22 @@
         .port-text {
             color: white;
             font-size: 30px;
+            padding-bottom: 1rem;
         }
     
+        .port-text1{
+            color: white;
+                font-size: 30px;
+                padding-bottom: 1rem;
+                
+                display: flex;
+                align-items: center;
+                flex-flow: column;
+        }
+
         #CO2-num {
             font-size: 100px;
+            margin-bottom: 0px;
         }
     
         .history-bar ::-webkit-scrollbar {
@@ -65,21 +77,22 @@
         }
     
         .history-bar {
-            margin-top: 15px;
+            
             background-color: white;
             width: 600px;
-            height: 48%;
+            height: 110rem;
             display: flex;
             flex-direction: column;
             padding: 20px 5px 0 20px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
+            border-radius: 20px;
+            
         }
     
         .historyhead {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 1rem;
+            align-items: center;
+            margin-bottom: 0rem;
         }
     
         #History {
@@ -91,12 +104,14 @@
         }
     
         .historybox {
-            overflow: auto;
-    
+            
+            padding-right: 1rem;
+            padding-bottom: 2rem;
         }
     
         .historybox-inner p {
             font-size: 24px;
+            
         }
     
         .historybox-inner {
@@ -105,6 +120,7 @@
             border: 3px solid rgb(255, 255, 255);
             background-color: antiquewhite;
             border-radius: 10px;
+            margin-bottom: 0.7rem;
         }
     
         .history-bar h1 {
@@ -188,7 +204,7 @@
             align-items: center;
             width: 100%;
             height: 100%;
-            right: 0px;
+            
             top:28rem;
             padding-top:1rem;
             background-color: rgb(45, 45, 45);
@@ -196,6 +212,16 @@
     
         }
     
+        .port-text1 {
+            color: white;
+            font-size: 30px;
+            padding-bottom: 2rem;
+        
+            display: flex;
+            align-items: center;
+            flex-flow: column;
+        }
+
         .port-text {
             color: white;
             font-size: 24px;
@@ -203,6 +229,8 @@
     
         #CO2-num {
             font-size: 80px;
+            margin-bottom: 0px;
+            margin-top: 0px;
         }
     
         .history-bar ::-webkit-scrollbar {
@@ -215,24 +243,23 @@
         }
     
         .history-bar {
-            position: fixed;
+            
             background-color: white;
             top: 54rem;
             left:1.5rem;
             right:1.5rem;
             width: 350px;
-            height: 11.4%;
+
             display: flex;
             flex-direction: column;
             padding: 20px 5px 0 20px;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
+            border-radius:20px;
         }
     
         .historyhead {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 1rem;
+            align-items: center;
         }
     
         #History {
@@ -245,7 +272,8 @@
     
         .historybox {
             overflow: auto;
-    
+            padding-bottom: 1rem;
+            padding-right:1rem;
         }
     
         .historybox-inner p {
@@ -258,6 +286,7 @@
             border: 3px solid rgb(255, 255, 255);
             background-color: antiquewhite;
             border-radius: 10px;
+            margin-bottom: 1rem;
         }
     
         .history-bar h1 {
