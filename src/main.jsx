@@ -7,6 +7,8 @@ import Portfolio from './pages/portfolio'
 import Services from './pages/services'
 import Loginpage from './pages/loginpage'
 import Profile from './pages/profile'
+import Registerpage from'./pages/register'
+import Docspage from './pages/docs'
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
   {
     path: '/profile',
     element: <Profile />
+  },
+  {
+    path: '/register',
+    element: <Registerpage />
+  },
+  {
+    path: '/docs',
+    element: <Docspage />
   }
 ]);
 
