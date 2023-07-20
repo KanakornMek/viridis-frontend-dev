@@ -65,9 +65,8 @@
         }
     
         .history-bar {
-            position: fixed;
+            margin-top: 15px;
             background-color: white;
-            top: 26rem;
             width: 600px;
             height: 48%;
             display: flex;
