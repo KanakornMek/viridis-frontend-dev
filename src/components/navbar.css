@@ -1,0 +1,84 @@
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.leftSideNav a {
+    font-size: 3rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: normal;
+    color: white;
+    padding-left: 2.5rem;
+}
+
+.rightSideNav {
+    display: flex;
+    padding-right: 2.5rem;
+    align-items: center;
+}
+
+.innerRightSideNav {
+    display: flex;
+}
+
+.innerRightSideNav li {
+    color: white;
+    list-style: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    padding-right: 2.5rem;
+}
+
+.home {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.portfolio {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.services {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.profile {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.changableNavComponent button {
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 0.625rem;
+    color: white;
+    background-color: #06C755;
+    height: 3.5rem;
+    width: 8.375rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.changableNavComponent button:hover {
+    color: #003315;
+}
+
+.profile img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3.5px solid rgb(6, 214, 110);
+}
+
