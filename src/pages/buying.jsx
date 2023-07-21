@@ -105,8 +105,8 @@ function Buyingpage(){
                     <h1>What activity you want to offset</h1>
                     <button className='dropdown-btn'><span className='activity-icon'>{activity[0].icon}</span>{activity[0].name}</button>
                     <h1>How many {activity[0].unit}</h1>
-                    <div className="dropdown-btn">
-                        <input placeholder='200' type= 'text' className='amount-activity-holder'></input>
+                    <div className="activity-holder">
+                        <input placeholder='200' className='amount-activity-holder' ></input>
                         <div className="activity-unit">
                             <p>{activity[0].unit}</p>
                         </div>

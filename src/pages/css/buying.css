@@ -215,13 +215,30 @@
         border: none;
         border-radius: 1rem;
     }
+    .activity-holder{
+        background-color: white;
+        width: 25rem;
+        height: 6.25rem;
+        border: solid #C3C3C3 3px;
+        border-radius:  0.5rem;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        font-family: 'Josefin Sans', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .amount-activity-holder{
         background-color: white;
-        width: 90%;
+        width: 20%;
         height: 90%;
         border: none;
         text-align: center;
         font-size: 2rem;
+    }
+    .amount-activity-holder:focus{
+        outline: none;
+        border: none;
     }
     .activity-unit{
         width: 10rem;
@@ -229,6 +246,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-right: 1rem;
     }
 }
 
