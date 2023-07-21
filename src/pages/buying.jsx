@@ -65,9 +65,9 @@ function Buyingpage(){
                 <div className="slip-buying">
                     <h1>viridis.</h1>
                     <h2>carbon offset service</h2>
-                    <p>**********************************************</p>
+                    <p>********************************************************</p>
                     <h3>How many</h3>
-                    <p>**********************************************</p>
+                    <p>********************************************************</p>
                     <div className="value-box">
                         <input placeholder='200' type= 'text' className='value-holder'></input>
                         <div className="value-right">
@@ -75,7 +75,7 @@ function Buyingpage(){
                             <p>THB</p>
                         </div>
                     </div>
-                    <p>**********************************************</p>
+                    <p>********************************************************</p>
                     <div className="purchase-detail-section">
                         <div className="detail-line">
                             <p>Carbon offset</p>
