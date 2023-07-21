@@ -11,7 +11,7 @@ function Login({setForm}) {
         <div className="form-container">
           <h1 className="form-control" >เข้าสู่ระบบ</h1>
           <p1>หรือ </p1><p1 className="regis" style={{cursor: 'pointer'}} onClick={() => setForm('register')}>ลงทะเบียน</p1>
-          <form id="form" class="form">
+          <form id="form" className="form">
             <div className="form-control">
                 <label for="username">อีเมล</label>
                 <input type="email" name="" id="email" required/>
