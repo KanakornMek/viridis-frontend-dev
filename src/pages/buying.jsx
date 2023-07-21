@@ -5,7 +5,11 @@ import { clear } from 'localforage';
 
 function Buyingpage(){
     const [swiperCounter, setswiperCounter] = useState(0);
-    const [activitySelector, setactivitySelector] = useState(`%{}`);
+    const activity = [{
+        name: 'Commute',
+        unit: 'kilometers',
+        icon: '🚗',
+    }]
 
     useEffect(() => {
         const interval = setInterval(() =>{
@@ -98,10 +102,16 @@ function Buyingpage(){
         </div>
         <div className="activitycalc">
                 <div className="activitycalc-container">
-                    <h1>
-                    What activity you want to offset
-                    </h1>
-                    <button className='dropdown-btn'>{}</button>
+                    <h1>What activity you want to offset</h1>
+                    <button className='dropdown-btn'><span className='activity-icon'>{activity[0].icon}</span>{activity[0].name}</button>
+                    <h1>How many {activity[0].unit}</h1>
+                    <div className="dropdown-btn">
+                        <input placeholder='200' type= 'text' className='amount-activity-holder'></input>
+                        <div className="activity-unit">
+                            <p>{activity[0].unit}</p>
+                        </div>
+                    </div>
+
                     <button className='Next-btn'>Next</button>
                 </div>
         </div>
