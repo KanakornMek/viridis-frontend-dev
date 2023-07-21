@@ -5,6 +5,7 @@ import { clear } from 'localforage';
 
 function Buyingpage(){
     const [swiperCounter, setswiperCounter] = useState(0);
+    const [activitySelector, setactivitySelector] = useState(`%{}`);
 
     useEffect(() => {
         const interval = setInterval(() =>{
@@ -40,6 +41,7 @@ function Buyingpage(){
         }
     })
     return(
+    <>
         <div className='buy-page'>
             <div className="left-side-buy">
                 <div className="left-side-container"id='swiper1'>
@@ -94,6 +96,16 @@ function Buyingpage(){
                 </div>
             </div>
         </div>
+        <div className="activitycalc">
+                <div className="activitycalc-container">
+                    <h1>
+                    What activity you want to offset
+                    </h1>
+                    <button className='dropdown-btn'>{}</button>
+                    <button className='Next-btn'>Next</button>
+                </div>
+        </div>
+    </>
     )
 }
 

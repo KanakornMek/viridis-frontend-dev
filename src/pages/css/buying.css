@@ -25,7 +25,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 9999;
+        z-index: 10;
     }
     .slip-buying{
         width:600px;
@@ -159,7 +159,61 @@
         font-size: 8rem;
         color: #06C755;
     }
+
+
+
+    .activitycalc{
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 12;
+    }
+    .activitycalc-container{
+        width: 90vw;
+        height: 90vh;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .activitycalc-container h1{
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 4rem;
+    }
+    .dropdown-btn{
+        background-color: white;
+        width: 25rem;
+        height: 6.25rem;
+        border: solid #C3C3C3 3px;
+        border-radius:  0.5rem;
+        margin-bottom: 2rem;
+    }
+    .Next-btn{
+        color: white;
+        background-color: #06C755;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 3rem;
+        padding: 1rem 2rem 1rem 2rem;
+        border: none;
+        border-radius: 1rem;
+    }
+
 }
+
+/* sadsddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd */
+
+
+
+
+
+
 
 @media screen and (max-width: 1280px){
     p{
