@@ -298,6 +298,7 @@
     font-size: 1.5rem;
     text-decoration: none;
     color: white;
+    
 }
 
 .profile img {
@@ -306,5 +307,6 @@
     border-radius: 50%;
     object-fit: cover;
     border: 3.5px solid rgb(6, 214, 110);
+    
 }
 
