@@ -67,15 +67,6 @@
             margin-bottom: 0px;
         }
     
-        .history-bar ::-webkit-scrollbar {
-            width: 10px;
-        }
-    
-        .history-bar ::-webkit-scrollbar-thumb {
-            background-color: rgb(13, 236, 165);
-            border-radius: 5px;
-        }
-    
         .history-bar {
             
             background-color: white;
@@ -176,7 +167,7 @@
         }
     
         .pagination a.active {
-            background-color: dodgerblue;
+            background-color: rgb(18, 202, 174);
             color: white;
         }
     
@@ -260,15 +251,6 @@
             font-size: 80px;
             margin-bottom: 0px;
             margin-top: 0px;
-        }
-    
-        .history-bar ::-webkit-scrollbar {
-            width: 10px;
-        }
-    
-        .history-bar ::-webkit-scrollbar-thumb {
-            background-color: rgb(13, 236, 165);
-            border-radius: 5px;
         }
     
         .history-bar {
@@ -371,7 +353,7 @@
         }
     
         .pagination a.active {
-            background-color: rgb(84, 218, 102);
+            background-color: rgb(18, 202, 174);
             color: white;
         }
     
@@ -560,7 +542,7 @@
         }
     
         .pagination a.active {
-            background-color: rgb(4, 243, 84);
+            background-color: rgb(18, 202, 174);
             color: white;
         }
     
