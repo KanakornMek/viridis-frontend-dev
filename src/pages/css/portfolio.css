@@ -380,7 +380,7 @@
         }
 }
 
-@media screen and (max-width:821px){
+@media screen and (max-width:821px) and (min-width:400px){
     #user-housePort {
         height: 20rem;
         width: 20rem;
@@ -447,11 +447,11 @@
 
     .port-text {
         color: white;
-        font-size: 24px;
+        font-size: 4vw;
     }
 
     #CO2-num {
-        font-size: 80px;
+        font-size: 18vw;
         margin-bottom: 0px;
         margin-top: 0px;
     }

@@ -122,7 +122,7 @@
     }
 }
 
-@media screen and (max-width: 391px){
+@media screen and (max-width: 400px){
     .left-container {
         display: flex;
         align-items: center;
@@ -215,7 +215,7 @@
         }
 }
 
-@media screen and (max-width:820px){
+@media screen and (max-width:820px) and (min-width:400px){
     .left-container {
         display: flex;
         align-items: center;
@@ -225,6 +225,7 @@
         left: 0px;
         padding: 2rem;
         background-color: white;
+        padding-bottom:10vw;
     }
 
     .form-container {
