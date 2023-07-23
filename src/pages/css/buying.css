@@ -61,7 +61,7 @@
     .value-box{
         width: 70%;
         height: 10vh;
-        background-color: lightgrey;
+        background-color: rgb(235, 235, 235);
         border-radius: 0.75rem;
         margin: 0;
         display: flex;
@@ -80,13 +80,14 @@
         width: 60%;
         height: 80%;
         margin-left: 0.5rem;
-        background-color: lightgrey;
+        background-color: rgb(235, 235, 235);
         border: none;
+        outline: none;
         text-align: center;
         font-size: 1.5rem;
     }
-    input[type=text]:focus{
-        border: 1px solid #555;
+    .value-holder:focus::placeholder{
+        color: transparent;
     }
     .divider{
         border-left:0.1rem solid grey;
@@ -172,6 +173,7 @@
         justify-content: center;
         align-items: center;
         z-index: 12;
+        user-select: none;
     }
     .activity-calc-off{
         display: none;
@@ -191,7 +193,7 @@
         font-size: 4rem;
     }
     .activity-dropdown{
-        padding-bottom: 0.5rem;
+        padding-bottom: 0.3rem;
     }
     .activity-dropdown-content{
         position:absolute;
@@ -201,7 +203,7 @@
         border-radius: 0.5rem;
         align-items: center;
         box-shadow: 0px 0px 24px -10px rgba(0,0,0,0.75);
-        margin-top: 0.5rem;
+        margin-top: 0.3rem;
         display: none;
     }
     .activity-dropdown-content a{
@@ -213,6 +215,7 @@
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
         text-align: center;
+        user-select: none;
     }
     .dropdown-btn{
         background-color: white;
@@ -224,8 +227,7 @@
         font-family: 'Josefin Sans', sans-serif;
         display: flex;
         justify-content: center;
-        align-items: center;
-    }
+        align-items: center;    }
     .activity-dropdown:hover .activity-dropdown-content{
         display: flex;
     }
@@ -235,7 +237,7 @@
     }
     .activity-icon{
         font-size: 3rem;
-        padding-bottom: 1rem;
+        padding-bottom: 0.5rem;
         padding-right: 1rem;
     }
     .Next-btn{
@@ -278,6 +280,9 @@
         border: none;
         text-align: center;
         font-size: 2rem;
+    }
+    .amount-activity-holder:focus::placeholder{
+        color: transparent;
     }
     .amount-activity-holder:focus{
         outline: none;
@@ -390,9 +395,20 @@
         background-color: lightgrey;
         border: none;
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1.5rem;   
     }
-    input[type=text]:focus{
+    .value-holder::placeholder{
+        color: black;
+    }
+    .value-holder:focus::placeholder{
+        color: transparent;
+    }
+    
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+    input[type=number]:focus{
         border: 1px solid #555;
     }
     .divider{

@@ -9,18 +9,32 @@ function Buyingpage(){
         name: 'Commute',
         unit: 'kilometers',
         icon: '🚗',
+        exampleamount: 100,
+        ratioprice: 0.4,
+        ratiocarbon: 0.2,
+        image: '/src/assets/picture/car.png',
     },{
         name: 'Meal',
-        unit: 'portions',
+        unit: 'servings',
         icon: '🍔',
+        exampleamount: 2,
+        ratioprice: 20,
+        ratiocarbon: 10,
+        image: '/src/assets/picture/hamburger.png',
     },{
         name: 'Plastic Bag',
         unit: 'bags',
         icon: '🛍️',
+        exampleamount: 8,
+        ratioprice: 4,
+        ratiocarbon: 2,
+        image: '/src/assets/picture/shoppingBag.png',
     }]
     const [activityCounter, setactivityCounter] =useState(0);
     const [activityCalcStage, setactivityCalcStage] = useState(0);
-    const [amountToBuy, setamountToBuy] = useState();
+    const [amountToBuy, setamountToBuy] = useState(0);
+    const [price, setprice] = useState(0);
+
 
     function activityCalcStageHandle(){
         if(activityCalcStage < 2 && activityCalcStage >= 0){
@@ -28,6 +42,15 @@ function Buyingpage(){
         }else{
             setactivityCalcStage(0);
         }
+        // setprice(amountToBuy * activity[activityCounter].price);
+        console.log(price);
+        console.log(amountToBuy);
+        console.log(activity[activityCounter].ratioprice);
+        console.log(amountToBuy * activity[activityCounter].ratioprice);
+    }
+    function amountSetting(){
+        var temp = amountToBuy * activity[activityCounter].ratioprice;
+        setprice(Math.round(temp * 10) / 10);
     }
 
     useEffect(() => {
@@ -46,8 +69,6 @@ function Buyingpage(){
         }
     })
 
-
-
     useEffect(() => {
         const interval = setInterval(() =>{
 
@@ -56,8 +77,7 @@ function Buyingpage(){
             }else{
                 setswiperCounter(swiperCounter + 1);
             }
-            console.log(swiperCounter);
-        },2000);
+        },5000);
 
         return () => {
             clearInterval(interval);
@@ -86,22 +106,22 @@ function Buyingpage(){
         <div className='buy-page'>
             <div className="left-side-buy">
                 <div className="left-side-container"id='swiper1'>
-                    <h1>Equivalent to</h1>
-                    <img src='/src/assets/picture/Trees.png'></img>
-                    <h1>planting</h1>
-                    <h1><span>10</span> Trees</h1>
+                    <h1>Equal to</h1>
+                    <img src={activity[activityCounter].image}></img>
+                    <h1>{activity[activityCounter].name}</h1>
+                    <h1><span>{amountToBuy}</span> {activity[activityCounter].unit}</h1>
                 </div>
                 <div className="left-side-container"id='swiper2'>
                     <h1>Equivalent to</h1>
                     <img src='/src/assets/picture/Trees.png'></img>
                     <h1>planting</h1>
-                    <h1><span>20</span> Trees</h1>
+                    <h1><span>{((price/activity[activityCounter].ratioprice) * activity[activityCounter].ratiocarbon) * 0.04}</span> Trees</h1>
                 </div>
                 <div className="left-side-container"id='swiper3'>
                     <h1>Equivalent to</h1>
-                    <img src='/src/assets/picture/Trees.png'></img>
-                    <h1>planting</h1>
-                    <h1><span>30</span> Trees</h1>
+                    <img src='/src/assets/picture/solarPanel.png'></img>
+                    <h1>Install</h1>
+                    <h1><span>{Math.round(((price/activity[activityCounter].ratioprice) * activity[activityCounter].ratiocarbon/650) * 10) / 10}</span> Solar Panel</h1>
                 </div>
             </div>
             <div className="right-side-buy">
@@ -112,7 +132,7 @@ function Buyingpage(){
                     <h3>How many</h3>
                     <p>********************************************************</p>
                     <div className="value-box">
-                        <input placeholder='200' type= 'text' className='value-holder'></input>
+                        <input placeholder='-- --' type= 'number' className='value-holder' id='valueHolder' onChange={(e)=>{setprice(e.target.value);}} value={price}></input>
                         <div className="value-right">
                             <div className="divider"></div>
                             <p>THB</p>
@@ -122,15 +142,15 @@ function Buyingpage(){
                     <div className="purchase-detail-section">
                         <div className="detail-line">
                             <p>Carbon offset</p>
-                            <p>2,000 kgCO2e</p>
+                            <p>{(price/activity[activityCounter].ratioprice) * activity[activityCounter].ratiocarbon} kgCO2e</p>
                         </div>
                         <div className="detail-line">
                             <p>Points get</p>
-                            <p>2,000 points</p>
+                            <p>{(price/activity[activityCounter].ratioprice) * activity[activityCounter].ratiocarbon} points</p>
                         </div>
                         <div className="detail-line">
                             <p>Price</p>
-                            <p>80 baht</p>
+                            <p>{price} baht</p>
                         </div>
                     </div>
                     <button className='purchase-button'>Buy</button>
@@ -151,7 +171,7 @@ function Buyingpage(){
                     <div className="next-component-on" id='nextComponent'>
                         <h1>How many {activity[activityCounter].unit}</h1>
                         <div className="activity-holder">
-                            <input placeholder='200' className='amount-activity-holder' ></input>
+                            <input type='number' placeholder={activity[activityCounter].exampleamount} className='amount-activity-holder' id='activityAmount' onChange={() => setamountToBuy(document.getElementById('activityAmount').value)}></input>
                             <div className="activity-unit">
                                 <p>{activity[activityCounter].unit}</p>
                             </div>
@@ -159,7 +179,7 @@ function Buyingpage(){
                     </div>
                     
 
-                    <button className='Next-btn' onClick={activityCalcStageHandle}>Next</button>
+                    <button className='Next-btn' onClick={()=>{activityCalcStageHandle(); amountSetting();}}>Next</button>
                 </div>
         </div>
     </>
