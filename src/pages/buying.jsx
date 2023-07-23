@@ -9,7 +9,44 @@ function Buyingpage(){
         name: 'Commute',
         unit: 'kilometers',
         icon: '🚗',
+    },{
+        name: 'Meal',
+        unit: 'portions',
+        icon: '🍔',
+    },{
+        name: 'Plastic Bag',
+        unit: 'bags',
+        icon: '🛍️',
     }]
+    const [activityCounter, setactivityCounter] =useState(0);
+    const [activityCalcStage, setactivityCalcStage] = useState(0);
+    const [amountToBuy, setamountToBuy] = useState();
+
+    function activityCalcStageHandle(){
+        if(activityCalcStage < 2 && activityCalcStage >= 0){
+            setactivityCalcStage(activityCalcStage + 1);
+        }else{
+            setactivityCalcStage(0);
+        }
+    }
+
+    useEffect(() => {
+        if(activityCalcStage === 0){
+            document.getElementById('activityCalc').className = 'activity-calc-on';
+            document.getElementById('nextComponent').className = 'next-component-off';
+        }
+        else if(activityCalcStage === 1){
+            document.getElementById('activityCalc').className = 'activity-calc-on';
+            document.getElementById('nextComponent').className = 'next-component-on';
+        }else if(activityCalcStage === 2){
+            document.getElementById('activityCalc').className = 'activity-calc-off';
+            document.getElementById('nextComponent').className = 'next-component-off';
+        }else{
+            setactivityCalcStage(0);
+        }
+    })
+
+
 
     useEffect(() => {
         const interval = setInterval(() =>{
@@ -100,19 +137,29 @@ function Buyingpage(){
                 </div>
             </div>
         </div>
-        <div className="activitycalc">
+        <div className="activity-calc-on" id='activityCalc'>
                 <div className="activitycalc-container">
                     <h1>What activity you want to offset</h1>
-                    <button className='dropdown-btn'><span className='activity-icon'>{activity[0].icon}</span>{activity[0].name}</button>
-                    <h1>How many {activity[0].unit}</h1>
-                    <div className="activity-holder">
-                        <input placeholder='200' className='amount-activity-holder' ></input>
-                        <div className="activity-unit">
-                            <p>{activity[0].unit}</p>
+                    <div className="activity-dropdown">
+                        <button className='dropdown-btn'><span className='activity-icon'>{activity[activityCounter].icon}</span>{activity[activityCounter].name}</button>
+                        <div className="activity-dropdown-content">
+                            <a onClick={() => {setactivityCounter(0)}}><span className='activity-icon'>{activity[0].icon}</span>{activity[0].name}</a>
+                            <a onClick={() => {setactivityCounter(1)}}><span className='activity-icon'>{activity[1].icon}</span>{activity[1].name}</a>
+                            <a onClick={() => {setactivityCounter(2)}}><span className='activity-icon'>{activity[2].icon}</span>{activity[2].name}</a>
                         </div>
                     </div>
+                    <div className="next-component-on" id='nextComponent'>
+                        <h1>How many {activity[activityCounter].unit}</h1>
+                        <div className="activity-holder">
+                            <input placeholder='200' className='amount-activity-holder' ></input>
+                            <div className="activity-unit">
+                                <p>{activity[activityCounter].unit}</p>
+                            </div>
+                        </div>
+                    </div>
+                    
 
-                    <button className='Next-btn'>Next</button>
+                    <button className='Next-btn' onClick={activityCalcStageHandle}>Next</button>
                 </div>
         </div>
     </>
