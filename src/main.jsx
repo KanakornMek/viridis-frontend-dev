@@ -1,49 +1,43 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Navigate  } from 'react-router-dom'
 import HomePage from './pages/landingpage'
 import Portfolio from './pages/portfolio'
 import Services from './pages/services'
 import Loginpage from './pages/loginpage'
 import Profile from './pages/profile'
-import Registerpage from'./pages/register'
 import Docspage from './pages/docs'
 
-const router = createBrowserRouter([
-  {
-    path:'/',
-    element: <HomePage />
-  },
-  {
-    path: '/portfolio',
-    element: <Portfolio />
-  },
-  {
-    path: '/services',
-    element: <Services />
-  },
-  {
-    path: '/login',
-    element: <Loginpage />
-  },
-  {
-    path: '/profile',
-    element: <Profile />
-  },
-  {
-    path: '/register',
-    element: <Registerpage />
-  },
-  {
-    path: '/docs',
-    element: <Docspage />
+import { AuthProvider, AuthContext } from './contexts/AuthContext'
+const PrivateRoute = ({ children }) => {
+  const { auth } = useContext(AuthContext);
+  console.log(auth)
+  if (auth === null) {
+    return <div>Loading...</div>;
   }
-]);
 
+  if (!auth) {
+    return <Navigate to='/login' />;
+  }
 
+  return children;
+};
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/login" element={<Loginpage />} />
+          <Route path="/docs" element={<Docspage />} />
+
+          <Route path="/portfolio" element={<PrivateRoute><Portfolio/></PrivateRoute>} />
+          <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
+        </Routes>
+      </Router>
+    </AuthProvider>
   </React.StrictMode>,
 )
+

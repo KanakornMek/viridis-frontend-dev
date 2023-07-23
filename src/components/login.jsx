@@ -1,12 +1,13 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import './login.css';
 import { viridisAuth } from '../api/axiosConfig';
-
+import axios from 'axios';
+import { AuthContext } from '../contexts/AuthContext';
 
 function Login({setForm}) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  const { auth, login, logout } = useContext(AuthContext);
 
   return (
     <>
@@ -19,12 +20,10 @@ function Login({setForm}) {
             className="form"
             onSubmit={(e) => {
               e.preventDefault();
-              viridisAuth.post('/signin', {
-                email,
-                password
-              }).then((res) => {
-                console.log(res.data)
-              })
+              console.log(auth)
+              login(email, password)
+              
+              window.location = '/'
             }}
           >
             <div className="form-control">
