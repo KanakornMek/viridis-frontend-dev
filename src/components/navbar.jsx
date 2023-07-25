@@ -1,7 +1,6 @@
 import './navbar.css'
 import { Link, useNavigate, redirect } from 'react-router-dom'
 import { useEffect, useState } from 'react';
-import  useScreenSize from './screenSizeHook'
 
 
 function NavBar(){
@@ -52,6 +51,7 @@ function NavBar(){
                     <li><Link to={`/`} className='home'>Home</Link></li>
                     <li><Link to={`/portfolio`} className='portfolio'>Portfolio</Link></li>
                     <li><Link to={`/services`} className='services'>Services</Link></li>
+                    <li><Link to={`/profile`} className='profile'><img src="https://www.the-sun.com/wp-content/uploads/sites/6/2022/08/OP-OMF-TELETUBBY-SUN.jpg?strip=all&quality=100&w=1620&h=1080&crop=1"></img></Link></li>
                 </ul>
                 <div className='changableNavComponent'>
                     <button onClick={() => setisGoingToLogin(true)}>Login</button>
@@ -66,7 +66,7 @@ function NavBar(){
                 <ul className='navTextOnScreen'>
                     <li><Link to={`/`} className='home'>Home</Link></li>
                     <li><Link to={`/portfolio`} className='portfolio'>Portfolio</Link></li>
-                    <li><Link to={`/services`} className='services'>Services</Link></li>
+                    {/* <li><Link to={`/services`} className='services'>Services</Link></li> */}
                 </ul>
                 <div className='buttonOnScreen'>
                     <button onClick={() => setisGoingToLogin(true)}>Login</button>

@@ -42,6 +42,7 @@
       
     .change .bar2 {opacity: 0;}
       
+
     .change .bar3 {
         transform: translate(0, -11px) rotate(45deg);
     }
@@ -302,3 +303,20 @@
     50%{ transform: translateY(-0.3rem);}
     100%{ transform: translateY(0);}
 }
+
+.profile {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    
+}
+
+.profile img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3.5px solid rgb(6, 214, 110);
+    
+}
+
