@@ -1,0 +1,240 @@
+@media screen and (min-width: 1200px){
+    .gen-qr-screen{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+    }
+    .leftside-banner{
+        height:100vh;
+        width: 25%;
+        background-image: url(/src//assets/picture/smiling-market.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: -15rem;
+    }
+    .greenbanner{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height:100vh;
+        width: 25vw;
+        background-color: #06c7562e;
+    }
+    .rightside-form{
+        background-color: white;
+        width: 75%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .rightside-container{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+    .rightside-container h1{
+        color: black;
+        font-size: 2.5rem;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 600;
+        margin: 0 0 1rem 0;
+    }
+    .rightside-container h2{
+        color: #696969;
+        font-size: 2rem;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 400;
+        margin: 1rem 0 1rem 0;
+    }
+    .rightside-container label{
+        color: black;
+        font-size: 2rem;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 400;
+        margin: 1rem 0 1rem 0;
+    }
+    .biz-name-input{
+        width: 50vw;
+        height: 5rem;
+        background-color: white;
+        border: solid #C3C3C3 3px;
+        border-radius:  0.5rem;
+        font-size: 2rem;
+        font-family: 'Josefin Sans', sans-serif;
+        padding-left: 1rem;
+    }
+    .biz-type-dropdown{
+        padding-bottom: 0.3rem;
+    }
+    .biz-type-dropdown-btn{
+        background-color: white;
+        width: 20vw;
+        height: 5rem;
+        border: solid #C3C3C3 3px;
+        border-radius:  0.5rem;
+        font-size: 2rem;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    .biz-type-dropdown-content{
+        position: absolute;
+        width: 20vw;
+        background-color: white;
+        border-radius: 0.5rem;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 0px 24px -10px rgba(0,0,0,0.75);
+        margin-top: 0.3rem;
+    }
+    .biz-type-dropdown-content a{
+        width: 100%;
+        font-size: 1.5rem;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 400;
+        padding: 0.5rem 0 0.5rem 0 ;
+        text-align: center;
+    }
+    .biz-type-dropdown:hover .biz-type-dropdown-content{
+        display: flex;
+    }
+    .biz-type-dropdown-content a:hover{
+        background-color: #ebebeb;
+        border-radius:  0.5rem;;
+    }
+    .genqr-btn{
+        width: 13rem;
+        height: 5rem;
+        border-radius: 10px;
+        border: none;
+        background-color: #06C755;
+        color: white;
+        font-size: 2rem;
+        margin: 1rem 0 0 0;
+    }
+}
+@media screen and (max-width: 1200px){
+    .gen-qr-screen{
+        width: 100vw;
+        height: 200vh;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .leftside-banner{
+        height:100vh;
+        width: 100vw;
+        background-image: url(/src//assets/picture/smiling-market.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: -15rem;
+    }
+    .greenbanner{
+        position: absolute;
+        top: 100vh;
+        left: 0;
+        height:100vh;
+        width: 100vw;
+        background-color: #06c7562e;
+    }
+    .rightside-form{
+        background-color: white;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .rightside-container{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .rightside-container h1{
+        color: black;
+        font-size: 2.5rem;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 600;
+        margin: 0 0 1rem 0;
+    }
+    .rightside-container h2{
+        color: #696969;
+        font-size: clamp(1rem, 3vw,2rem);
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 400;
+        margin: 1rem 0 1rem 0;
+        text-align: center;
+        padding: 0 1rem 0 1rem;
+    }
+    .rightside-container label{
+        color: black;
+        font-size: 2rem;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 400;
+        margin: 1rem 0 1rem 0;
+    }
+    .biz-name-input{
+        width: clamp(300px, 50vw,600px);
+        height: 5rem;
+        background-color: white;
+        border: solid #C3C3C3 3px;
+        border-radius:  0.5rem;
+        font-size: clamp(1rem, 3vw,2rem);
+        padding-left: 1rem;
+        font-family: 'Josefin Sans', sans-serif;
+        outline-color: #06C755;
+    }
+    .biz-type-dropdown{
+        padding-bottom: 0.3rem;
+    }
+    .biz-type-dropdown-btn{
+        background-color: white;
+        width: 300px;
+        height: 5rem;
+        border: solid #C3C3C3 3px;
+        border-radius:  0.5rem;
+        font-size: 2rem;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    .biz-type-dropdown-content{
+        position: absolute;
+        width: 300px;
+        background-color: white;
+        border-radius: 0.5rem;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 0px 24px -10px rgba(0,0,0,0.75);
+        margin-top: 0.3rem;
+    }
+    .biz-type-dropdown-content a{
+        width: 100%;
+        font-size: 1.5rem;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 400;
+        padding: 0.5rem 0 0.5rem 0 ;
+        text-align: center;
+    }
+    .biz-type-dropdown:hover .biz-type-dropdown-content{
+        display: flex;
+    }
+    .biz-type-dropdown-content a:hover{
+        background-color: #ebebeb;
+        border-radius:  0.5rem;;
+    }
+    .genqr-btn{
+        width: 13rem;
+        height: 5rem;
+        border-radius: 10px;
+        border: none;
+        background-color: #06C755;
+        color: white;
+        font-size: 2rem;
+        margin: 1rem 0 0 0;
+    }
+}
