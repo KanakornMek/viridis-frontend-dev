@@ -315,8 +315,8 @@
         width: 100vw;
         height: 200vh;
         display:flex;
-        flex-direction: column-reverse;
         overflow: hidden;
+        flex-direction: column-reverse;
     }
     .left-side-buy{
         width: 100vw;
@@ -334,11 +334,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 9999;
+        z-index: 10;
     }
     .slip-buying{
-        width: 370px;
-        height: 80%;
+        width:80vw;
+        height: 80vh;
         background-color: white;
         border-radius: 0.5rem;
         display: flex;
@@ -367,13 +367,10 @@
         color: black;
         margin: 0;
     }
-    .slip-buying p{
-        font-size: clamp(0.75rem, 1vw ,1.75rem);
-    }
     .value-box{
         width: 70%;
         height: 10vh;
-        background-color: lightgrey;
+        background-color: rgb(235, 235, 235);
         border-radius: 0.75rem;
         margin: 0;
         display: flex;
@@ -392,24 +389,14 @@
         width: 60%;
         height: 80%;
         margin-left: 0.5rem;
-        background-color: lightgrey;
+        background-color: rgb(235, 235, 235);
         border: none;
+        outline: none;
         text-align: center;
-        font-size: 1.5rem;   
-    }
-    .value-holder::placeholder{
-        color: black;
+        font-size: 1.5rem;
     }
     .value-holder:focus::placeholder{
         color: transparent;
-    }
-    
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-}
-    input[type=number]:focus{
-        border: 1px solid #555;
     }
     .divider{
         border-left:0.1rem solid grey;
@@ -426,7 +413,7 @@
         justify-content: space-between;
     }
     .detail-line p{
-        font-size: clamp(1rem, 3vw, 1.25rem);
+        font-size: clamp(1rem, 4vw,1.25);
         margin: 0.5rem 0 0.5rem 0;
     }
     .purchase-button{
@@ -471,7 +458,7 @@
     }
     
     .left-side-buy h1{
-        font-size: 2rem;
+        font-size:clamp(2rem, 6vw, 4rem);
         margin: 1rem 0 1rem 0;
         font-family: 'Josefin Sans', sans-serif;
     }
@@ -479,8 +466,145 @@
         height: 40vh;
     }
     span{
-        font-size: 8rem;
+        font-size: clamp(5rem, 6vw, 8rem);
         color: #06C755;
+    }
+
+
+
+    .activity-calc-on{
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 12;
+        user-select: none;
+    }
+    .activity-calc-off{
+        display: none;
+    }
+    .activitycalc-container{
+        width: 90vw;
+        height: 90vh;
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .activitycalc-container h1{
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: clamp(1rem ,5vw,4rem);
+        text-align: center;
+    }
+    .activity-dropdown{
+        padding-bottom: 0.3rem;
+    }
+    .activity-dropdown-content{
+        position:absolute;
+        flex-direction: column;
+        width: 80vw;
+        background-color: white;
+        border-radius: 0.5rem;
+        align-items: center;
+        box-shadow: 0px 0px 24px -10px rgba(0,0,0,0.75);
+        margin-top: 0.3rem;
+        display: none;
+    }
+    .activity-dropdown-content a{
+        width: 100%;
+        text-decoration: none;
+        color: black;
+        font-size: 2rem;
+        font-family: 'Josefin Sans', sans-serif;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        text-align: center;
+        user-select: none;
+    }
+    .dropdown-btn{
+        background-color: white;
+        width: 80vw;
+        height: 6.25rem;
+        border: solid #C3C3C3 3px;
+        border-radius:  0.5rem;
+        font-size: 2rem;
+        font-family: 'Josefin Sans', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;    }
+    .activity-dropdown:hover .activity-dropdown-content{
+        display: flex;
+    }
+    .activity-dropdown-content a:hover{
+        background-color: #ebebeb;
+        border-radius:  0.5rem;
+    }
+    .activity-icon{
+        font-size: 3rem;
+        padding-bottom: 0.5rem;
+        padding-right: 1rem;
+    }
+    .Next-btn{
+        color: white;
+        background-color: #25B660;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 3rem;
+        width: 282px;
+        height: 86px;
+        border: none;
+        border-radius: 1rem;
+        margin-top: 0rem;
+    }
+    .next-component-on{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+    }
+    .next-component-off{
+        display: none;
+    }
+    .activity-holder{
+        background-color: white;
+        width: 80vw;
+        height: 6.25rem;
+        border: solid #C3C3C3 3px;
+        border-radius:  0.5rem;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        font-family: 'Josefin Sans', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .amount-activity-holder{
+        background-color: white;
+        width: 20%;
+        height: 90%;
+        border: none;
+        text-align: center;
+        font-size: 2rem;
+    }
+    .amount-activity-holder:focus::placeholder{
+        color: transparent;
+    }
+    .amount-activity-holder:focus{
+        outline: none;
+        border: none;
+    }
+    .activity-unit{
+        width: 10rem;
+        height: 6.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 1rem;
     }
 }
 

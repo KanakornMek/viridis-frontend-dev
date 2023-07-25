@@ -77,7 +77,7 @@ function Buyingpage(){
             }else{
                 setswiperCounter(swiperCounter + 1);
             }
-        },5000);
+        },4000);
 
         return () => {
             clearInterval(interval);
@@ -115,7 +115,7 @@ function Buyingpage(){
                     <h1>Equivalent to</h1>
                     <img src='/src/assets/picture/Trees.png'></img>
                     <h1>planting</h1>
-                    <h1><span>{((price/activity[activityCounter].ratioprice) * activity[activityCounter].ratiocarbon) * 0.04}</span> Trees</h1>
+                    <h1><span>{Math.round(((price/activity[activityCounter].ratioprice) * activity[activityCounter].ratiocarbon) * 0.04) * 10 / 10}</span> Trees</h1>
                 </div>
                 <div className="left-side-container"id='swiper3'>
                     <h1>Equivalent to</h1>
@@ -128,9 +128,9 @@ function Buyingpage(){
                 <div className="slip-buying">
                     <h1>viridis.</h1>
                     <h2>carbon offset service</h2>
-                    <p>********************************************************</p>
+                    <p>***************************************************</p>
                     <h3>How many</h3>
-                    <p>********************************************************</p>
+                    <p>***************************************************</p>
                     <div className="value-box">
                         <input placeholder='-- --' type= 'number' className='value-holder' id='valueHolder' onChange={(e)=>{setprice(e.target.value);}} value={price}></input>
                         <div className="value-right">
@@ -138,7 +138,7 @@ function Buyingpage(){
                             <p>THB</p>
                         </div>
                     </div>
-                    <p>********************************************************</p>
+                    <p>***************************************************</p>
                     <div className="purchase-detail-section">
                         <div className="detail-line">
                             <p>Carbon offset</p>
