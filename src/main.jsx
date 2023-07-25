@@ -9,6 +9,7 @@ import Loginpage from './pages/loginpage'
 import Profile from './pages/profile'
 import Registerpage from'./pages/register'
 import Docspage from './pages/docs'
+import Buyingpage from './pages/buying'
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: '/docs',
     element: <Docspage />
+  },
+  {
+    path: '/buying',
+    element: <Buyingpage />
   }
 ]);
 
