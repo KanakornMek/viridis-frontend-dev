@@ -1,0 +1,304 @@
+@media screen and (max-width: 800px){
+    .navBar{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1.5rem;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        user-select: none;
+    }
+    .leftSideNav1 {
+        z-index: 9999;
+    }
+    .leftSideNav1 a {
+        font-size: 3rem;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight:normal;
+        color: black;
+        padding-left: 2.5rem;
+    }
+    .rightSideNav{
+        display: none;
+    }
+    .hammy {
+        display: inline-block;
+        cursor: pointer;
+        padding-right: 2.5rem;
+        z-index: 99999;
+      }
+      
+    .bar01, .bar02, .bar03 {
+        width: 35px;
+        height: 5px;
+        background-color: black;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+      
+    .change .bar1 {
+        transform: translate(0, 11px) rotate(-45deg);
+      }
+      
+    .change .bar2 {opacity: 0;}
+      
+    .change .bar3 {
+        transform: translate(0, -11px) rotate(45deg);
+    }
+
+    .nav-on-screen {
+        display: none;
+    }
+    .nav-on-screen-on{
+        width: 100vw;
+        height: 80vh;
+        position: absolute;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 7vh;
+        z-index: 0;
+        /* background-color: #003315; */
+    }
+    .blackdrop{
+        display: none;
+    }
+    .blackdrop-on{
+        display: block !important;
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.904);
+        animation-name: navOn-enter;
+        animation-duration: 0.5S;
+    }
+    .navTextOnScreen {
+        padding-bottom: 1rem;
+        margin-bottom: 0;
+    }
+    .navTextOnScreen li  {
+        list-style: none;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: bold;
+        padding-right: 2.5rem;
+        font-size: 5rem;
+        text-decoration: none;
+        color: white;
+        margin: 2.5rem 0;
+        animation-name: navOn-enter;
+        animation-duration: 0.5S;
+    }
+    .home1{
+        font-size: 3rem;
+        text-decoration: none;
+        color: white;
+    }
+    .portfolio1{
+        font-size: 3rem;
+        text-decoration: none;
+        color: white;
+    }
+    .services1{
+        font-size: 3rem;
+        text-decoration: none;
+        color: white;
+    }
+    .buttonOnScreen button{
+        font-size: 3.5rem;
+        border: none;
+        border-radius: 1.3rem;
+        color: white;
+        background-color: #06C755;
+        height: 7rem;
+        width: 16.75rem;
+        font-weight: bold;
+        animation-name: navOn-enter;
+        animation-duration: 0.5S;
+
+    }
+    .buttonOnScreen button:hover{
+        background-color: white;
+        color: #06C755;
+    }
+    .buttonOnScreen button:active{
+        color: white;
+        background-color: #068139;
+        animation: none;
+    }
+}
+
+
+@media screen and (min-width: 800px){
+    .navBar{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1.5rem;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+    }
+    .leftSideNav1 a {
+        font-size: 3rem;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight:normal;
+        color: black;
+        padding-left: 2.5rem;
+    }
+    .rightSideNav{
+        display:flex;
+        padding-right: 2.5rem;
+    }
+    .innerRightSideNav{
+        display: flex;
+    }
+    .innerRightSideNav li {
+        color: white;
+        list-style: none;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: bold;
+        padding-right: 2.5rem;
+    }
+    .home1{
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: black;
+    }
+    .portfolio1{
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: black;
+    }
+    .services1{
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: black;
+    }
+    .changableNavComponent button{
+        font-size: 1.5rem;
+        border: none;
+        border-radius: 0.625rem;
+        color: white;
+        background-color: #06C755;
+        height: 3.5rem;
+        width: 8.375rem;
+        font-weight: bold;
+    }
+    .changableNavComponent button{
+        font-size: 1.5rem;
+        border: none;
+        border-radius: 0.625rem;
+        color: white;
+        background-color: #06C755;
+        height: 3.5rem;
+        width: 8.375rem;
+        font-weight: bold;
+    }
+    .changableNavComponent button:hover{
+        animation-name: hover;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        background-color: white;
+        color: #06C755;
+    }
+    .changableNavComponent button:active{
+        color: white;
+        background-color: #068139;
+        animation: none;
+    }
+    .hammy{
+        display: none;
+    }
+    .nav-on-screen{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1920px){
+    .navBar{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1.5rem;
+        width: 1920px;
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .leftSideNav1 a {
+        font-size: 3rem;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight:normal;
+        color: black;
+        padding-left: 2.5rem;
+    }
+    .rightSideNav{
+        display:flex;
+        padding-right: 2.5rem;
+    }
+    .innerRightSideNav{
+        display: flex;
+    }
+    .innerRightSideNav li {
+        color: white;
+        list-style: none;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: bold;
+        padding-right: 2.5rem;
+    }
+    .home1{
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: black;
+    }
+    .portfolio1{
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: black;
+    }
+    .services1{
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: black;
+    }
+    .changableNavComponent button{
+        font-size: 1.5rem;
+        border: none;
+        border-radius: 0.625rem;
+        color: white;
+        background-color: #06C755;
+        height: 3.5rem;
+        width: 8.375rem;
+        font-weight: bold;
+    }
+    .changableNavComponent button:hover{
+        animation-name: hover;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        background-color: white;
+        color: #06C755;
+    }
+    .changableNavComponent button:active{
+        color: white;
+        background-color: #068139;
+        animation: none;
+    }
+    .hammy{
+        display: none;
+    }
+    .nav-on-screen{
+        display: none;
+    }
+}
+
+@keyframes navOn-enter {
+    0%{ transform: translateY(-100vh);}
+    100%{transform: translateY(0);}
+}
+
+@keyframes hover {
+    0%{ transform: translateY(0);}
+    50%{ transform: translateY(-0.3rem);}
+    100%{ transform: translateY(0);}
+}
