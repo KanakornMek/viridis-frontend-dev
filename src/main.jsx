@@ -8,6 +8,8 @@ import Services from './pages/services'
 import Loginpage from './pages/loginpage'
 import Profile from './pages/profile'
 import Docspage from './pages/docs'
+import Buyingpage from './pages/buying'
+import GenQrPage from './pages/genqrpage'
 
 import { AuthProvider, AuthContext } from './contexts/AuthContext'
 const PrivateRoute = ({ children }) => {

@@ -1,16 +1,16 @@
-import './navbar.css'
+import '../components/navbar-whitebackground.css'
 import { Link, useNavigate, redirect } from 'react-router-dom'
 import { useEffect, useState, useContext } from 'react';
+import  useScreenSize from './screenSizeHook'
 import { AuthContext } from '../contexts/AuthContext';
 
 
-function NavBar(){
+function NavBarwhitebackground(){
+    const {auth, isAuthenticated } = useContext(AuthContext)
     const [isGoingToLogin,setisGoingToLogin] = useState(false);
     const navigate = useNavigate();
     const [isNavOn, setisNavOn] = useState(false);
-    const {auth, isAuthenticated } = useContext(AuthContext)
 
-    useEffect(() => console.log(auth), [])
     useEffect(() =>{
         console.log(isGoingToLogin)
         if(isGoingToLogin){
@@ -45,15 +45,15 @@ function NavBar(){
 
     return(
         <div className='navBar' id='navBar'>
-            <div className='leftSideNav'>
+            <div className='leftSideNav1'>
                 <a>viridis.</a>
             </div>
             <div className="blackdrop" id='blackdrop'></div>
             <div className='rightSideNav'>
                 <ul className='innerRightSideNav'>
-                    <li><Link to={`/`} className='home'>Home</Link></li>
-                    <li><Link to={`/portfolio`} className='portfolio'>Portfolio</Link></li>
-                    <li><Link to={`/services`} className='services'>Services</Link></li>
+                    <li><Link to={`/`} className='home1'>Home</Link></li>
+                    <li><Link to={`/portfolio`} className='portfolio1'>Portfolio</Link></li>
+                    <li><Link to={`/services`} className='services1'>Services</Link></li>
                     {auth && <li><Link to={`/profile`} className='profile'><img src="https://www.the-sun.com/wp-content/uploads/sites/6/2022/08/OP-OMF-TELETUBBY-SUN.jpg?strip=all&quality=100&w=1620&h=1080&crop=1"></img></Link></li>}
                 </ul>
                 {!auth && <div className='changableNavComponent'>
@@ -61,15 +61,15 @@ function NavBar(){
                 </div>}
             </div>
             <div class="hammy" id='hammy' onClick={() => setisNavOn(!isNavOn)}>
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
+                <div class="bar01"></div>
+                <div class="bar02"></div>
+                <div class="bar03"></div>
             </div>
             <div className="nav-on-screen" id='nav-on-screen'>
                 <ul className='navTextOnScreen'>
                     <li><Link to={`/`} className='home'>Home</Link></li>
                     <li><Link to={`/portfolio`} className='portfolio'>Portfolio</Link></li>
-                    {/* <li><Link to={`/services`} className='services'>Services</Link></li> */}
+                    <li><Link to={`/services`} className='services'>Services</Link></li>
                 </ul>
                 <div className='buttonOnScreen'>
                     <button onClick={() => setisGoingToLogin(true)}>Login</button>
@@ -79,4 +79,4 @@ function NavBar(){
     )
 }
 
-export default NavBar;
+export default NavBarwhitebackground;
