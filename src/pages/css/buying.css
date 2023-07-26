@@ -227,7 +227,8 @@
         font-family: 'Josefin Sans', sans-serif;
         display: flex;
         justify-content: center;
-        align-items: center;    }
+        align-items: center;    
+    }
     .activity-dropdown:hover .activity-dropdown-content{
         display: flex;
     }
