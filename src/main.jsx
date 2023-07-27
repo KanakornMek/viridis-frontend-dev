@@ -12,9 +12,9 @@ import Buyingpage from './pages/buying'
 import GenQrPage from './pages/genqrpage'
 
 import { AuthProvider, AuthContext } from './contexts/AuthContext'
+import QRPage from './pages/qr'
 const PrivateRoute = ({ children }) => {
   const { auth } = useContext(AuthContext);
-  console.log(auth)
   if (auth === null) {
     return <div>Loading...</div>;
   }
@@ -34,7 +34,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/services" element={<Services />} />
           <Route path="/login" element={<Loginpage />} />
           <Route path="/docs" element={<Docspage />} />
-
+          <Route path='/generate-qr' element={<GenQrPage />} />
+          <Route path='/qr' element={<QRPage />} />
           <Route path="/portfolio" element={<PrivateRoute><Portfolio/></PrivateRoute>} />
           <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
         </Routes>

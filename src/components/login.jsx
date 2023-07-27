@@ -18,10 +18,10 @@ function Login({setForm}) {
           <form 
             id="form" 
             className="form"
-            onSubmit={(e) => {
+            onSubmit={async(e) => {
               e.preventDefault();
               console.log(auth)
-              login(email, password)
+              await login(email, password)
               
               window.location = '/'
             }}

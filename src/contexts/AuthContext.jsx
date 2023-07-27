@@ -13,16 +13,16 @@ function AuthProvider({ children }) {
         }
     }, []);
 
-    const login = (email, password) => {
-        viridisAuth.post('/signin', {
+    const login = async (email, password) => {
+        const res = await viridisAuth.post('/signin', {
             email,
             password
-        }).then((res) => {
-            const acToken =res.data.accessToken
+        })
+        console.log(res.data);
+        const acToken =res.data.accessToken
             localStorage.setItem('accessToken',JSON.stringify(acToken) );
             console.log(acToken)
             setAuth(acToken);
-        })  
     }
     const logout = () => {
         localStorage.removeItem('accessToken');

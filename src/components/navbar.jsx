@@ -10,7 +10,6 @@ function NavBar(){
     const [isNavOn, setisNavOn] = useState(false);
     const {auth, isAuthenticated } = useContext(AuthContext)
 
-    useEffect(() => console.log(auth), [])
     useEffect(() =>{
         console.log(isGoingToLogin)
         if(isGoingToLogin){

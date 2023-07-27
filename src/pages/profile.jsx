@@ -1,7 +1,24 @@
+import { useEffect, useState } from "react";
 import NavBar from "../components/navbar";
 import './css/profile.css'
+import { viridisApi } from "../api/axiosConfig";
 
 function Profile(){
+    const [firstname, setFirstname] = useState('');
+    const [lastname, setLastname] = useState('');
+    const [email, setEmail] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('')
+    useEffect(() => {
+        async function getProfile() {
+            const response = await viridisApi.get('/user/profile');
+            const { firstname, lastname, email, phoneNumber } = response.data;
+            setFirstname(firstname);
+            setLastname(lastname);
+            setEmail(email);
+            setPhoneNumber(phoneNumber);
+        }
+        getProfile()
+    }, [])
     return(
         <div className="profile-background">
             <div>
@@ -16,12 +33,16 @@ function Profile(){
             <div id="Rightzone-profile" className="profilepage">
                 <form className="profile-form">
                     <div className="profileform-control">
-                        <label for="username">ชื่อ-นามสกุล</label>
-                        < input type="text" name="" id="username" required/>
+                        <label for="username">ชื่อ</label>
+                        <input type="text" name="firstname" value={firstname} required/>
+                    </div> 
+                    <div className="profileform-control">
+                        <label for="username">นามสกุล</label>
+                        <input type="text" name="lastname" value={lastname} required/>
                     </div> 
                     <div className="profileform-control">
                         <label for="Tel">เบอร์โทร</label>
-                        <input type="tel" name="Tel" pattern="^\d{3}-\d{3}-\d{4}$" required/>
+                        <input type="text" name="Tel" pattern="^\d{3}-\d{3}-\d{4}$" required/>
                     </div>
                     <div className="profileform-control">
                         <label for="username">อีเมล</label>
