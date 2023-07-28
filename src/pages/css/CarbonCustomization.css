@@ -1,7 +1,7 @@
-h3 {
+.qr main h3 {
   font-size: 28px;
   font-weight: bold;
-  color: #005500;
+  color: #000000;
   margin-bottom: 24px;
 }
 
@@ -65,6 +65,28 @@ button[type="button"] {
 button[type="button"]:hover {
   background-color: #005200;
 }
+
+.carbon-credit-summary {
+  margin-top: 32px;
+  padding: 20px;
+  background-color: #f0f8ea;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.carbon-credit-summary h4 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #005500;
+  margin-bottom: 16px;
+}
+
+.carbon-credit-summary p {
+  font-size: 18px;
+  color: #005500;
+  margin: 8px 0;
+}
+
 @media (max-width: 600px) {
   .options-grid {
     grid-template-columns: 1fr;

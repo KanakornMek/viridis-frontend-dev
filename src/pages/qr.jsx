@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./css/CarbonCustomization.css";
 import "./css/PhoneNumberInput.css";
@@ -6,6 +6,8 @@ import "./css/qr.css";
 
 const CarbonCustomization = () => {
   const [selectedOption, setSelectedOption] = useState(null);
+  const [customAmount, setCustomAmount] = useState(0);
+  const [carbonCreditTotal, setCarbonCreditTotal] = useState(0);
 
   const options = [
     { label: "1 Meal", value: 1 },
@@ -14,10 +16,26 @@ const CarbonCustomization = () => {
     { label: "Custom Amount", value: "custom" },
   ];
 
+  useEffect(() => {
+    // Calculate carbon credit total when selectedOption or customAmount changes
+    calculateCarbonCreditTotal();
+  }, [selectedOption, customAmount]);
+
   const handleOptionChange = (value) => {
     setSelectedOption(value);
   };
 
+  const handleCustomAmountChange = (event) => {
+    setCustomAmount(event.target.value);
+  };
+
+  const calculateCarbonCreditTotal = () => {
+    if (selectedOption === 'custom') {
+      setCarbonCreditTotal(customAmount*20);
+    } else {
+      setCarbonCreditTotal(selectedOption);
+    }
+  };
   return (
     <>
       <h3>Customize Your Offset:</h3>
@@ -36,18 +54,25 @@ const CarbonCustomization = () => {
       </div>
       {selectedOption === "custom" && (
         <div className="custom-amount-input">
-          <label htmlFor="customAmount">Custom Amount:</label>
+          <label htmlFor="customAmount">Amount of Meal:</label>
           <input
             type="number"
             id="customAmount"
             name="customAmount"
-            min="0"
+            min="1"
             step="1"
             placeholder="Enter amount"
             disabled={selectedOption !== "custom"}
+            value={customAmount}
+            onChange={handleCustomAmountChange} 
           />
         </div>
       )}
+      <div className="carbon-credit-summary">
+        <h4>Carbon Credit Summary:</h4>
+        <p>Selected Option: {selectedOption === 'custom' ? `${customAmount} Meals` : `${selectedOption} Meals`}</p>
+        <p>Total Carbon Credit: {carbonCreditTotal} kg CO2e</p>
+      </div>
       <button type="button">Offset Now</button>
     </>
   );
