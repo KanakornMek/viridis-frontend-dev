@@ -116,8 +116,7 @@
 }
 
 @media (max-width: 767px) {
-  .Portfolio {
-    flex-direction: column;
+  .Portfolio {  
     justify-content: center;
   }
 

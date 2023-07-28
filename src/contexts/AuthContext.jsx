@@ -5,12 +5,14 @@ const AuthContext = createContext();
 
 function AuthProvider({ children }) {
     const [auth, setAuth] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const accessToken = localStorage.getItem('accessToken');
         if (accessToken) {
           setAuth(JSON.parse(accessToken));
         }
+        setIsLoading(false);
     }, []);
 
     const login = async (email, password) => {
@@ -26,14 +28,14 @@ function AuthProvider({ children }) {
     }
     const logout = () => {
         localStorage.removeItem('accessToken');
-        setIsAuthed(null);
+        setAuth(null);
     };
 
     const authContextValue = {
         auth,
         login,
         logout,
-        isAuthenticated: !!auth,
+        isLoading
     }
     return <AuthContext.Provider value={authContextValue}>{children}</AuthContext.Provider>;
 }

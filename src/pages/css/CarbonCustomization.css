@@ -40,7 +40,7 @@
   margin-top: 16px;
 }
 
-input[type="number"] {
+.custom-amount-input input[type="number"]{
   padding: 12px;
   border: 1px solid #005500;
   border-radius: 4px;
@@ -49,6 +49,7 @@ input[type="number"] {
   text-align: center;
   color: #005500;
 }
+
 
 button[type="button"] {
   padding: 16px 24px;
