@@ -11,6 +11,7 @@ import Registerpage from'./pages/register'
 import Docspage from './pages/docs'
 import Buyingpage from './pages/buying'
 import GenQrPage from './pages/genqrpage'
+import QrProfile from './pages/qrpage'
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
   {
     path: '/generate-qr',
     element: <GenQrPage />
+  },
+  {
+    path: 'qr-profile',
+    element: <QrProfile />
   }
 ]);
 
