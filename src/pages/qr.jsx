@@ -114,7 +114,7 @@ function QRPage() {
     setShowPhoneNumberInput(false);
   };
   return (
-    <div className="qr">
+    <div className="qr-purchase">
         <header>
             <h1>viridis.</h1>
             <div className="v-divider"/>

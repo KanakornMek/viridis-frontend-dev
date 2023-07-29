@@ -15,7 +15,7 @@ import Profile from "./pages/profile";
 import Docspage from "./pages/docs";
 import Buyingpage from "./pages/buying";
 import GenQrPage from "./pages/genqrpage";
-
+import QrProfile from "./pages/qrpage";
 import { AuthProvider, AuthContext } from "./contexts/AuthContext";
 import QRPage from "./pages/qr";
 const PrivateRoute = ({ children }) => {
@@ -65,6 +65,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
               <PrivateRoute>
                 <Buyingpage/>
               </PrivateRoute>
+            }
+          />
+          <Route 
+            path="/qr-profile"
+            element={
+              <QrProfile />
             }
           />
         </Routes>

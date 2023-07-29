@@ -1,4 +1,4 @@
-.qr {
+.qr-purchase {
     text-align: center;
     background-color: white;
     height: 100vh;
@@ -9,24 +9,24 @@
     justify-content: center;
 }
 
-.qr main {
+.qr-purchase main {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.qr header {
+.qr-purchase header {
     margin-bottom: 50px;
     gap: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.qr header .v-divider {
+.qr-purchase header .v-divider {
     border: 1px solid gray;
     height: 40px;
 }
-.qr header h1 {
+.qr-purchase header h1 {
     font-family: 'Josefin Sans', sans-serif;
 }
