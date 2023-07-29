@@ -1,5 +1,6 @@
 import NavBar from "../components/navbar";
-import "./css/portfolio.css";
+import "./css/mekport.css";
+import housePort from "../assets/picture/user-port-house.png"
 
 function Portfolio() {
   return (
@@ -11,7 +12,7 @@ function Portfolio() {
             <img
               id="user-housePort"
               className="User-pro"
-              src="https://images.unsplash.com/photo-1633633292416-1bb8e7b2832b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8M2QlMjBob3VzZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
+              src={housePort}
               alt=""
             />
           </div>
@@ -21,9 +22,9 @@ function Portfolio() {
             50
           </h1>
           <div className="port-text1">
-            <p1 className="port-text">tCO2eqv ถูกกำจัด</p1>
-            <p1 className="port-text">= 40 ต้น </p1>
-            <p1 className="port-text">Green points : 2,000 points </p1>
+            <p className="port-text">tCO2eqv ถูกกำจัด</p>
+            <p className="port-text">= 40 ต้น </p>
+            <p className="port-text">Green points : 2,000 points </p>
           </div>
           <div class="history-bar">
             <div className="historyhead">

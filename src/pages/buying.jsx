@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react';
 import './css/buying.css'
 import { clear } from 'localforage';
+import { viridisApi } from '../api/axiosConfig';
 
 function Buyingpage(){
     const [swiperCounter, setswiperCounter] = useState(0);
@@ -35,6 +36,12 @@ function Buyingpage(){
     const [amountToBuy, setamountToBuy] = useState(0);
     const [price, setprice] = useState(0);
 
+    async function purchaseToken() {
+        await viridisApi.post('/token/purchase', {
+            amtToken: amountToBuy,
+            
+        })
+    }
 
     function activityCalcStageHandle(){
         if(activityCalcStage < 2 && activityCalcStage >= 0){

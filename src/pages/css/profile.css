@@ -1,333 +1,127 @@
-html{
-    font-size:calc(60% + 0.8vmin);
+.profile-background {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-wrap: wrap;
 }
 
-@media screen and (max-width: 391px){
-    #user-image {
-            height: 9rem;
-            width: 9rem;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3.5px solid rgb(6, 214, 110);
-        }
-    
-        #user-house {
-            height:9rem;
-            width: 9rem;
-            object-fit: cover;
-    
-        }
-    
-    
-    
-        #Leftzone-profile {
-            display: flex;
-            justify-content: center;
-            position: absolute;
-            width: 100%;
-            height: 41%;
-            top: 0;
-            left: 0px;
-            padding: 2rem;
-            
-            background-color: rgb(45, 45, 45);
-        }
-    
-        .user-profile {
-            display: flex;
-            align-items: center;
-            position: relative;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0px;
-            padding: 2rem;
-            margin-top: 5.5rem;
-            margin-right: 2rem;
-            justify-content: space-between;
-            gap:4rem;
-        }
-    
-        .User-pro {
-            margin-bottom: 5rem;
-        }
-    
-        #Rightzone-profile {
-            position: absolute;
-            display: flex;
-            align-items: center;
-            width: 100%;
-            height: 60%;
-            right: 0px;
-            justify-content: left;
-            padding-left: 3rem;
-            background-color: rgb(45, 45, 45);
-            top:40%;
-        }
-    
-        .profileform-control {
-            position: relative;
-            margin-bottom: 10px;
-            left:2.2rem;
-            bottom:5rem;
-        }
-    
-        .profileform-control label {
-            color: #ffffff;
-            display: block;
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-    
-        .profileform-control input {
-            border: 2px solid rgb(132, 131, 131);
-            border-radius: 6px;
-            padding: 5px;
-            font-size: 18px;
-            width: 20rem;
-            outline: none;
-            background-color: rgb(98, 100, 100);
-            color:#ffffff;
-        }
-    
-        .profile-form button {
-            cursor: pointer;
-            background-color: #24e16c;
-            border: 2px solid #cdcccc;
-            width: 30%;
-            display: block;
-            font-size: 20px;
-            border-radius: 6px;
-        }
-    
-        .button-wrapper {
-            width: 100%;
-            display: flex;
-            justify-content: right;
-            margin-top: 4rem;
-        }
-    
-        .profile-background {
-            display: flex;
-    
-        }
+.Leftzone-profile,
+.Rightzone-profile {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.Leftzone-profile{
+    justify-content: center;
+}
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15%;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.user-image-wrapper {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.choose-image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 14px;
+  display: none;
+  pointer-events: none;
+}
+
+.user-profile-picture:hover {
+    filter: brightness(70%)
+}
+
+.user-image-wrapper:hover .choose-image-text {
+  display: block;
+}
+.user-profile-picture {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.house-profile-picture {
+    width: clamp(150px,60%, 600px);
+}
+
+
+.profile-form {
+    width: 90%;
+    padding: 20px;
+}
+
+.profileform-control {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.profileform-control label {
+    flex: 1;
+    font-size: 2rem;
+    font-family: Kanit;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.profileform-control input {
+    flex:2;
+    padding: 10px;
+    background-color: #474747;
+    border-radius: 5px;
+    color: white;
+    font-family: Kanit;
+    font-size: 1.5rem;
+}
+
+.button-wrapper {
+    text-align: center;
+}
+
+.profileform-control button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+@media (max-width: 970px) {
+    .profile-background{
+        display: block;
     }
-
-@media screen and (min-width:391px){
-    #user-image {
-        height: 15rem;
-        width: 15rem;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3.5px solid rgb(6, 214, 110);
-    }
-
-    #user-house {
-        height: 15rem;
-        width: 15rem;
-        object-fit: cover;
-
-    }
-
-
-
-    #Leftzone-profile {
-        display: flex;
-        justify-content: center;
-        position: absolute;
-        width: 100%;
-        height: 41%;
-        top: 2rem;
-        left: 0px;
-        padding: rem;
-
-        background-color: rgb(45, 45, 45);
-    }
-
     .user-profile {
-        display: flex;
+        flex-direction: column;
         align-items: center;
-        position: relative;
+    }
+
+    .Leftzone-profile,
+    .Rightzone-profile {
         width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0px;
-        padding:6.5rem;
-        margin-top: 5.5rem;
-        margin-right: 2rem;
-        justify-content: space-between;
-        gap: 4rem;
+    }
+    .house-profile-picture{
+        display: none;
     }
 
     .User-pro {
-        margin-bottom: 5rem;
-    }
-
-    #Rightzone-profile {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        width: 100%;
-        height: 60%;
-        right: 0px;
-        left:3.1rem;
-        justify-content: left;
-        
-        background-color: rgb(45, 45, 45);
-        top: 33rem;
-    }
-
-    .profileform-control {
-        position: relative;
-        margin-bottom: 10px;
-        left: 4.7rem;
-        bottom: 5rem;
-    }
-
-    .profileform-control label {
-        color: #ffffff;
-        display: block;
-        margin-bottom: 10px;
-        font-size: 30px;
-    }
-
-    .profileform-control input {
-        border: 2px solid rgb(132, 131, 131);
-        border-radius: 6px;
-        padding: 5px;
-        font-size: 30px;
-        width: 35rem;
-        outline: none;
-        background-color: rgb(98, 100, 100);
-        color: #ffffff;
-    }
-
-    .profile-form button {
-        cursor: pointer;
-        background-color: #24e16c;
-        border: 2px solid #cdcccc;
-        width: 12rem;
-        height:3.5rem;
-        display: block;
-        font-size: 30px;
-        border-radius: 6px;
-    }
-
-    .button-wrapper {
-        width: 100%;
-        display: flex;
-        justify-content: right;
-        margin-top: 4rem;
-    }
-
-    .profile-background {
-        display: flex;
-
-    }
-}
-
-@media screen and (min-width:821px) {
-    #user-image {
-        height: 14rem;
-        width: 14rem;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 6px solid rgb(6, 214, 110);
-    }
-
-    #user-house {
-        height: 14rem;
-        width: 14rem;
-        object-fit: cover;
-    }
-
-
-
-    #Leftzone-profile {
-        display: flex;
-        align-items: center;
-        position: absolute;
-        width: 40%;
-        height: 100%;
-        
-        top: 2rem;
-        left: 0px;
-        padding: 2rem;
-        flex-flow: column;
-        background-color: rgb(45, 45, 45);
-    }
-
-    .user-profile {
-        display: flex;
-        align-items: center;
-        position: relative;
-        width: 40%;
-        height: 100%;
-        top: 0;
-        left: 0px;
-        padding: 2rem;
-        margin-top: 2rem;
-        flex-flow: column;
-    }
-
-    .User-pro {
-        margin-bottom: 5rem;
-    }
-
-    #Rightzone-profile {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        width: 60%;
-        height: 100%;
-        right: 0px;
-        top:9rem;
-        justify-content: center;
-        background-color: rgb(45, 45, 45);
-    
-    }
-
-    .profileform-control {
-        position: relative;
-        margin-bottom: 10px;
-    }
-
-    .profileform-control label {
-        color: #ffffff;
-        display: block;
-        margin-bottom: 10px;
-        font-size: 30px;
-    }
-
-    .profileform-control input {
-        border: 2px solid rgb(132, 131, 131);
-        border-radius: 6px;
-        padding: 5px;
-        font-size: 30px;
-        width: 40rem;
-        outline: none;
-        background-color: rgb(98, 100, 100);
-    }
-
-    .profile-form button {
-        cursor: pointer;
-        background-color: #24e16c;
-        border: 2px solid #cdcccc;
-        width: 20%;
-        display: block;
-        font-size: 30px;
-        border-radius: 6px;
-    }
-
-    .button-wrapper {
-        width: 100%;
-        display: flex;
-        justify-content: right;
-        margin-top: 3.5rem;
-    }
-
-    .profile-background {
-        display: flex;
-
+        margin-bottom: 20px;
     }
 }
