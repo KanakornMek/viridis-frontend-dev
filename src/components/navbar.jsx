@@ -41,7 +41,7 @@ function NavBar(){
 
 
     return(
-        <div className='navBar' id='navBar'>
+        <div className='navBar'>
             <div className='leftSideNav'>
                 <a>viridis.</a>
             </div>
