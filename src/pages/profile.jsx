@@ -1,14 +1,16 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useContext } from "react";
 import NavBar from "../components/navbar";
 import './css/profile.css'
 import housePort from "../assets/picture/user-port-house.png"
 import { viridisApi } from "../api/axiosConfig";
+import { AuthContext } from '../contexts/AuthContext';
 
 function Profile() {
     const [firstname, setFirstname] = useState('');
     const [lastname, setLastname] = useState('');
     const [email, setEmail] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('')
+    const { logout } = useContext(AuthContext);
 
     const inputFileRef = useRef(null);
     useEffect(() => {
@@ -66,7 +68,9 @@ function Profile() {
                     </div>
                     <div className="button-wrapper">
                         <button type="submit" className="profileform-control">บันทึก</button>
+                        <button onClick={() => logout()}>Logout</button>
                     </div>
+                    
                 </form>
             </div>
         </div>

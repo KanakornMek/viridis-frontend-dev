@@ -3,9 +3,12 @@ import { useEffect, useState } from 'react';
 import './css/buying.css'
 import { clear } from 'localforage';
 import { viridisApi } from '../api/axiosConfig';
+import Payment from '../components/Payment/Payment';
 
 function Buyingpage(){
     const [swiperCounter, setswiperCounter] = useState(0);
+    const [page, setPage] = useState('1');
+
     const activity = [{
         name: 'Commute',
         unit: 'kilometers',
@@ -36,12 +39,6 @@ function Buyingpage(){
     const [amountToBuy, setamountToBuy] = useState(0);
     const [price, setprice] = useState(0);
 
-    async function purchaseToken() {
-        await viridisApi.post('/token/purchase', {
-            amtToken: amountToBuy,
-            
-        })
-    }
 
     function activityCalcStageHandle(){
         if(activityCalcStage < 2 && activityCalcStage >= 0){
@@ -133,34 +130,41 @@ function Buyingpage(){
             </div>
             <div className="right-side-buy">
                 <div className="slip-buying">
-                    <h1>viridis.</h1>
-                    <h2>carbon offset service</h2>
-                    <p>***************************************************</p>
-                    <h3>How many</h3>
-                    <p>***************************************************</p>
-                    <div className="value-box">
-                        <input placeholder='-- --' type= 'number' className='value-holder' id='valueHolder' onChange={(e)=>{setprice(e.target.value);}} value={price}></input>
-                        <div className="value-right">
-                            <div className="divider"></div>
-                            <p>THB</p>
+                    {page === '1' && (
+                        <>
+                        <h1>viridis.</h1>
+                        <h2>carbon offset service</h2>
+                        <p>***************************************************</p>
+                        <h3>How many</h3>
+                        <p>***************************************************</p>
+                        <div className="value-box">
+                            <input placeholder='-- --' type= 'number' className='value-holder' id='valueHolder' onChange={(e)=>{setprice(e.target.value);}} value={price}></input>
+                            <div className="value-right">
+                                <div className="divider"></div>
+                                <p>THB</p>
+                            </div>
                         </div>
-                    </div>
-                    <p>***************************************************</p>
-                    <div className="purchase-detail-section">
-                        <div className="detail-line">
-                            <p>Carbon offset</p>
-                            <p>{(price/activity[activityCounter].ratioprice) * activity[activityCounter].ratiocarbon} kgCO2e</p>
+                        <p>***************************************************</p>
+                        <div className="purchase-detail-section">
+                            <div className="detail-line">
+                                <p>Carbon offset</p>
+                                <p>{(price/activity[activityCounter].ratioprice) * activity[activityCounter].ratiocarbon} kgCO2e</p>
+                            </div>
+                            <div className="detail-line">
+                                <p>Points get</p>
+                                <p>{(price/activity[activityCounter].ratioprice) * activity[activityCounter].ratiocarbon} points</p>
+                            </div>
+                            <div className="detail-line">
+                                <p>Price</p>
+                                <p>{price} baht</p>
+                            </div>
                         </div>
-                        <div className="detail-line">
-                            <p>Points get</p>
-                            <p>{(price/activity[activityCounter].ratioprice) * activity[activityCounter].ratiocarbon} points</p>
-                        </div>
-                        <div className="detail-line">
-                            <p>Price</p>
-                            <p>{price} baht</p>
-                        </div>
-                    </div>
-                    <button className='purchase-button'>Buy</button>
+                        <button className='purchase-button' onClick={() => setPage('2')}>Buy</button>
+                        </>
+                    )}
+                    {page === '2' && (
+                        <Payment price={price} quantity={amountToBuy} />
+                    )}
                 </div>
             </div>
         </div>

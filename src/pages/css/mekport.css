@@ -16,7 +16,10 @@
 
 
 .Rightzone-portfolio {
-  flex: 1;
+  flex: 1; 
+  position: sticky;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 .User-pro {

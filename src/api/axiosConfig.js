@@ -6,6 +6,15 @@ const viridisAuth = axios.create({
     withCredentials: true,
 });
 
+const omise = axios.create({
+    baseURL: 'https://api.omise.co/',
+    headers: { "Content-Type": 'application/x-www-form-urlencoded' },
+    timeout: 1000,
+    auth: {
+        username: 'pkey_test_5ok93p8poxc9ociuead'
+    }
+});
+
 const viridisApi = axios.create({
     baseURL: "http://localhost:4000",
     timeout: 10000,
@@ -20,24 +29,25 @@ viridisApi.interceptors.request.use(
         return config
     },
     function (err) {
-        return Promise.reject (err);
+        return Promise.reject(err);
     }
 )
 
 viridisApi.interceptors.response.use(
     (response) => response,
-    (err) => {
-        if(err.response.status === 403){
-            viridisAuth.post('/refresh')
-                .then((res) => {
-                    localStorage.setItem('accessToken', JSON.stringify(res.data.newAccessToken))
-                }).err((err) => {
-                    if(err.response.status === 403) {
-                        localStorage.removeItem('accessToken');
-                        window.location.href = '/'
-                    }
-                })
+    async (err) => {
+        if (err.response.status === 403) {
+            try {
+                const res = await viridisAuth.post('/refresh')
+                localStorage.setItem('accessToken', JSON.stringify(res.data.newAccessToken))
+            } catch (err) {
+                if (err.response.status === 403) {
+                    localStorage.removeItem('accessToken');
+                    window.location.href = '/'
+                }
+            }
+
         }
     }
 )
-export {viridisApi, viridisAuth};
+export { viridisApi, viridisAuth, omise };

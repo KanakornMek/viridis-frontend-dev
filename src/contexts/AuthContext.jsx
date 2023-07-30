@@ -28,7 +28,7 @@ function AuthProvider({ children }) {
     }
     const logout = () => {
         localStorage.removeItem('accessToken');
-        setAuth(null);
+        window.location = '/';
     };
 
     const authContextValue = {
