@@ -29,7 +29,7 @@ function Portfolio() {
               <h1 id="History">History</h1>
               <button id="Cert-button">Certificate</button>
             </div>
-            <div className="historybox">
+            <div className="history-box">
               <div className="historybox-inner">
                 <p className="historylist-1">54CC</p>
                 <p className="historylist-2">14.14น. 30/7/2566</p>
