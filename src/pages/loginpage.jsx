@@ -1,24 +1,26 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
-
-import Login from '../components/login';
-import Register from '../components/register';
-import NavBar from '../components/navbar';
-import './css/LoginRe.css';
+import './css/loginpage.css';
 
 
 function Loginpage(){
-    const [currForm, setCurrForm] = useState('login');
     return(
-        <>
-            <div className='back'>
-                &laquo;
+        <div className="login-page">
+            <div className="left-side-login">
+                <div className="viridis-logo">viridis.</div>
+                <div className="login-form-container">
+                    <h1>Login</h1>
+                    <p>or <Link to={`/register`} className='register-link'>Register</Link></p>
+                    <input type='text' className="login-form" placeholder='Email'></input>
+                    <input type='text' className="login-form" placeholder='Password'></input>
+                    <div className="hidden-login-form-container"></div>
+                    <button className='login-button'>Login</button>
+                </div>
             </div>
-        
-            <div>
-                {currForm === "login" ? <Login setForm={setCurrForm} /> : <Register setForm={setCurrForm} /> }
+            <div className="right-side-login">
+                <img src="/src/assets/picture/image.png"></img>
             </div>
-        </>
+        </div>
     )
 }
 

@@ -1,0 +1,90 @@
+.login-page{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.left-side-login{
+    width: 50vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.viridis-logo{
+    width: 50vw;
+    font-size: 3rem;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    margin-top: 1rem ;
+}
+.login-form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-form-container h1{
+    font-size: 4rem;
+    margin: 0.5rem;
+    font-weight: 400;
+}
+.login-form-container p{
+    font-size: 2rem;
+    margin: 0.5rem;
+    font-weight: 300;
+}
+.register-link{
+    color: #06C755;
+    text-decoration:none;
+}
+
+.login-form{
+    width: 25vw;
+    height: 4rem;
+    border: solid #9F9F9F 2px;
+    border-radius: 1rem;
+    padding: 0 2rem 0 2rem;
+    text-align: center;
+    appearance: none;
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem 0;
+    
+}
+.login-form::placeholder{
+    color: #d7d7d7;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.login-form:focus{ 
+    border: solid #06C755 2px;
+    outline: #06C755;
+}
+.login-button{
+    width: 12rem;
+    height: 4rem;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    font-size: 2rem;
+    background-color: #06C755;
+    border: none;
+    border-radius: 1.5rem;
+    margin: 1rem 0 0 0;
+}
+.right-side-login{
+    width: 50vw;
+    height: 100vh;
+    background-color: #06C755;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right-side-login img{
+    width: 80%;
+}
