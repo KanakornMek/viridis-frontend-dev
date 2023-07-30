@@ -28,6 +28,10 @@ const router = createBrowserRouter([
     element: <Loginpage />
   },
   {
+    path: '/register',
+    element: <Registerpage />
+  },
+  {
     path: '/profile',
     element: <Profile />
   },

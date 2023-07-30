@@ -12,8 +12,7 @@ function Loginpage(){
                     <h1>Login</h1>
                     <p>or <Link to={`/register`} className='register-link'>Register</Link></p>
                     <input type='text' className="login-form" placeholder='Email'></input>
-                    <input type='text' className="login-form" placeholder='Password'></input>
-                    <div className="hidden-login-form-container"></div>
+                    <input type='password' className="login-form" placeholder='Password'></input>
                     <button className='login-button'>Login</button>
                 </div>
             </div>

@@ -1,55 +1,56 @@
-import { useState } from 'react'
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import './css/registerpage.css'
 
+function Registerpage(){
+    const[customerType,setcustomerType] = useState('Personal');
+    const [pageStage,setpageStage] = useState(0);
+    const [registeringName,setregisteringName] = useState();
 
-function App() {
-  const [count, setCount] = useState(0)
+    useEffect(() =>{
+        if(pageStage === 1){
+            document.getElementById('hiddenRegisterFormContainer').className = 'hidden-register-form-container-on';
+            document.getElementById('nextButtonRegister').className = 'next-button-register-off';
+            document.getElementById('registerButtonRegister').className = 'register-button-register';
+        }else if(pageStage === 0 || pageStage != 1){
+            setpageStage(0)
+            document.getElementById('hiddenRegisterFormContainer').className = 'hidden-register-form-container';
+            document.getElementById('nextButtonRegister').className = 'next-button-register'
+            document.getElementById('registerButtonRegister').className = 'register-button-register-off';
+        }
+    })
 
-  return (
-    <>
-      <div className="container">
-        <form id="form" className="form">
-            <h1 className="form-control">ลงทะเบียน</h1>
-            <p1>หรือ </p1><p1 href="Login.jsx">เข้าสู่ระบบ</p1>
-            <div className="form-control">
-                <label for="username">ชื่อ-นามสกุล</label>
-                <input type="text" name="" id="username" required/>
-            </div>  
-            <div className="form-control">
-                <label for="username">อีเมล</label>
-                <input type="email" name="" id="email" required/>
-                
+    return(
+        <div className="register-page">
+            <div className="left-side-register"></div>
+            <div className="right-side-register">
+                <div className="viridis-logo">viridis.</div>
+                <div className="register-form-container">
+                    <h1>Register</h1>
+                    <p>or <Link to={`/login`} className='login-link'>Login</Link></p>
+                    <input type='text' className="register-form" placeholder='Name' onChange={(e)=>{setregisteringName(e.target.value);}} value={registeringName}></input>
+                    <div className="hidden-register-form-container" id="hiddenRegisterFormContainer">
+                        <input type='text' className="register-form" placeholder='Email'></input>
+                        <input type='text' className="register-form" placeholder='Password'></input>
+                        <input type='password' className="register-form" placeholder='Confirm Password'></input>
+                        <input type='number' className="register-form" placeholder='Mobile No.'></input>
+                        <input type='number' className="register-form" placeholder='ID'></input>
+                        <div className="account-type-dropdown">
+                            <button className="account-type-button">{customerType}</button>
+                            <div className="account-type-dropdown-content">
+                                <a onClick={()=>setcustomerType('Personal')}>Personal</a>
+                                <a onClick={()=>setcustomerType('SME')}>SME</a>
+                                <a onClick={()=>setcustomerType('NGO')}>NGO</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button className="next-button-register" onClick={()=>setpageStage(1)} id="nextButtonRegister">Next</button>
+                    <button className="register-button-register" onClick={()=>{}} id="registerButtonRegister">Register</button>
+                </div>
             </div>
-            <div className="form-control">
-                <label for="password">รหัสผ่าน</label>
-                <input type="password" name="" id="password" required/>
-                
-            </div>
-            <div className="form-control">
-                <label for="password">ยืนยันรหัสผ่าน</label>
-                <input type="password" name="" id="password2" required/>
-                
-            </div>
-            <div className="form-control">
-                <label for="Tel">เบอร์โทร</label>
-                <input type="tel" name="Tel" pattern="^\d{3}-\d{3}-\d{4}$" required/>
-            </div>
-            <div className="form-control">
-                <label for="id">เลขบัตรประจำตัวประชาชน</label>
-                <input type="text" name="id" pattern="^\d{1}-\d{4}-\d{5}-\d{2}-\d{1}$" required/>
-            </div>
-            <div className="form-control">
-                <label for="Type">ประเภทผู้ใช้</label>
-                <select name="Type" id="">
-                    <option value="Individual" selected>บุคคล</option>
-                    <option value="SME">SME</option>
-                    <option value="NGO">NGO</option>
-                </select>
-            </div>
-            <button type="submit" className="form-control">ลงทะเบียน</button>
-            </form>
-    </div>
-    </>
-  )
+            <div className="left-side-green-banner"></div>
+        </div>
+    )
 }
 
-export default App
+export default Registerpage

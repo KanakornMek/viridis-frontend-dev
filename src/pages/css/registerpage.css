@@ -1,0 +1,296 @@
+@media  screen and (min-width:1000px) {
+    .register-page{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    .left-side-green-banner{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50vw;
+        height: 100vh;
+        background-color: rgba(37, 182, 95, 0.2);
+    }
+    .left-side-register{
+        width: 50vw;
+        height: 100vh;
+        background-image: url(/src/assets/picture/SmilingFarmerWithBuffalo.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .right-side-register{
+        width: 50vw;
+        height: 100vh;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .register-form-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .register-form-container h1{
+        font-size: 4rem;
+        margin: 0.5rem;
+        font-weight: 400;
+    }
+    .register-form-container p{
+        font-size: 2rem;
+        margin: 0.5rem;
+        font-weight: 300;
+    }
+    .login-link{
+        color: #06C755;
+        text-decoration:none;
+    }
+    .register-form{
+        width: 25vw;
+        height: 3rem;
+        border: solid #9F9F9F 2px;
+        border-radius: 1rem;
+        padding: 0 2rem 0 2rem;
+        text-align: center;
+        appearance: none;
+        font-size: 1rem;
+        margin: 0.5rem 0 0.5rem 0;
+        
+    }
+    .register-form:focus{ 
+        border: solid #06C755 2px;
+        outline: #06C755;
+    }
+    .hidden-register-form-container{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hidden-register-form-container-on{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .account-type-button{
+        width: 8vw;
+        height: 3rem;
+        border: solid #9F9F9F 2px;
+        border-radius: 1rem;
+        text-align: center;
+        appearance: none;
+        font-size: 1rem;
+        margin: 0.5rem 0 0.5rem 0;
+        font-family: 'Josefin Sans', sans-serif;
+        background-color: white;
+    }
+    .account-type-dropdown-content{
+        position: absolute;
+        width: 8vw;
+        height: 10rem;
+        background-color: white;
+        border-radius: 0.5rem;
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        transform: translateY(-14rem);
+        font-size: 1.5rem;
+        box-shadow: 0px 0px 24px -10px rgba(0,0,0,0.75);
+    }
+    .account-type-dropdown-content a{
+        padding: 1rem 0 1rem 0;
+        width:100%;
+        text-align: center;
+    }
+    .account-type-dropdown-content a:hover{
+        background-color: #ebebeb;
+        border-radius: 0.5rem;
+    }
+    .account-type-dropdown:hover .account-type-dropdown-content{
+        display: flex;
+    }
+    .next-button-register{
+        width: 12rem;
+        height: 4rem;
+        font-family: 'Josefin Sans', sans-serif;
+        color: white;
+        font-size: 2rem;
+        background-color: #06C755;
+        border: none;
+        border-radius: 1rem;
+        margin: 1rem 0 0 0;
+    }
+    .next-button-register-off{
+        display: none;
+    }
+    .register-button-register{
+        width: 12rem;
+        height: 4rem;
+        font-family: 'Josefin Sans', sans-serif;
+        color: white;
+        font-size: 2rem;
+        background-color: #06C755;
+        border: none;
+        border-radius: 1rem;
+        margin: 1rem 0 0 0;
+    }
+    .register-button-register-off{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+@media  screen and (max-width:1000px) {
+    .register-page{
+        width: 100vw;
+        height: 200vh;
+        display: flex;
+        flex-direction: column-reverse;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    .left-side-green-banner{
+        position: absolute;
+        top: 100vh;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(37, 182, 95, 0.2);
+    }
+    .left-side-register{
+        width: 100vw;
+        height: 100vh;
+        background-image: url(/src/assets/picture/SmilingFarmerWithBuffalo.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .right-side-register{
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .register-form-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .register-form-container h1{
+        font-size: 4rem;
+        margin: 0.5rem;
+        font-weight: 400;
+    }
+    .register-form-container p{
+        font-size: 2rem;
+        margin: 0.5rem;
+        font-weight: 300;
+    }
+    .login-link{
+        color: #06C755;
+        text-decoration:none;
+    }
+    .register-form{
+        width: clamp(200px,50vw,400px);
+        height: 3rem;
+        border: solid #9F9F9F 2px;
+        border-radius: 1rem;
+        padding: 0 2rem 0 2rem;
+        text-align: center;
+        appearance: none;
+        font-size: 1rem;
+        margin: 0.5rem 0 0.5rem 0;
+        
+    }
+    .register-form:focus{ 
+        border: solid #06C755 2px;
+        outline: #06C755;
+    }
+    .hidden-register-form-container{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hidden-register-form-container-on{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .account-type-button{
+        width: 200px;
+        height: 3rem;
+        border: solid #9F9F9F 2px;
+        border-radius: 1rem;
+        text-align: center;
+        appearance: none;
+        font-size: 1rem;
+        margin: 0.5rem 0 0.5rem 0;
+        font-family: 'Josefin Sans', sans-serif;
+        background-color: white;
+    }
+    .account-type-dropdown-content{
+        position: absolute;
+        width: 200px;
+        height: 10rem;
+        background-color: white;
+        border-radius: 0.5rem;
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        transform: translateY(-14rem);
+        font-size: 1.5rem;
+        box-shadow: 0px 0px 24px -10px rgba(0,0,0,0.75);
+    }
+    .account-type-dropdown-content a{
+        padding: 1rem 0 1rem 0;
+        width:100%;
+        text-align: center;
+    }
+    .account-type-dropdown-content a:hover{
+        background-color: #ebebeb;
+        border-radius: 0.5rem;
+    }
+    .account-type-dropdown:hover .account-type-dropdown-content{
+        display: flex;
+    }
+    .next-button-register{
+        width: 12rem;
+        height: 4rem;
+        font-family: 'Josefin Sans', sans-serif;
+        color: white;
+        font-size: 2rem;
+        background-color: #06C755;
+        border: none;
+        border-radius: 1rem;
+        margin: 1rem 0 0 0;
+    }
+    .next-button-register-off{
+        display: none;
+    }
+    .register-button-register{
+        width: 12rem;
+        height: 4rem;
+        font-family: 'Josefin Sans', sans-serif;
+        color: white;
+        font-size: 2rem;
+        background-color: #06C755;
+        border: none;
+        border-radius: 1rem;
+        margin: 1rem 0 0 0;
+    }
+    .register-button-register-off{
+        display: none;
+    }
+}
