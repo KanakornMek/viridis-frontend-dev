@@ -6,6 +6,22 @@ function Registerpage(){
     const[customerType,setcustomerType] = useState('Personal');
     const [pageStage,setpageStage] = useState(0);
     const [registeringName,setregisteringName] = useState();
+    const [namePlaceholderHandle,setnamePlaceholderHandle] = useState('Name');
+    const [idPlaceholderHandle,setidPlaceholderHandle] = useState('ID');
+
+
+    useEffect(() =>{
+        if(customerType === 'SME'){
+            setnamePlaceholderHandle('Business Name');
+            setidPlaceholderHandle('Tax Payer ID');
+        }else if(customerType === 'NGO'){
+            setnamePlaceholderHandle('Organization ID');
+            setidPlaceholderHandle('Organization ID');
+        }else{
+            setnamePlaceholderHandle('Name');
+            setidPlaceholderHandle('ID');
+        }
+    })
 
     useEffect(() =>{
         if(pageStage === 1){
@@ -28,13 +44,13 @@ function Registerpage(){
                 <div className="register-form-container">
                     <h1>Register</h1>
                     <p>or <Link to={`/login`} className='login-link'>Login</Link></p>
-                    <input type='text' className="register-form" placeholder='Name' onChange={(e)=>{setregisteringName(e.target.value);}} value={registeringName}></input>
+                    <input type='text' className="register-form" placeholder={namePlaceholderHandle} onChange={(e)=>{setregisteringName(e.target.value);}} value={registeringName}></input>
                     <div className="hidden-register-form-container" id="hiddenRegisterFormContainer">
                         <input type='text' className="register-form" placeholder='Email'></input>
                         <input type='text' className="register-form" placeholder='Password'></input>
                         <input type='password' className="register-form" placeholder='Confirm Password'></input>
                         <input type='number' className="register-form" placeholder='Mobile No.'></input>
-                        <input type='number' className="register-form" placeholder='ID'></input>
+                        <input type='number' className="register-form" placeholder={idPlaceholderHandle}></input>
                         <div className="account-type-dropdown">
                             <button className="account-type-button">{customerType}</button>
                             <div className="account-type-dropdown-content">
