@@ -6,7 +6,7 @@ function Portfolio() {
   return (
     <>
       <NavBar></NavBar>
-      <div className="Portfolio">
+      <div className="portfolio">
         <div className="Leftzone-portfolio">
             <img
               id="user-housePort"
