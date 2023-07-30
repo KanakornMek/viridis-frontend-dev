@@ -1,335 +1,183 @@
-html{
-    font-size:calc(60% + 0.8vmin);
-}
-
-@media screen and (max-width: 391px){
-    #user-image {
-            height: 9rem;
-            width: 9rem;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3.5px solid rgb(6, 214, 110);
-        }
-    
-        #user-house {
-            height:9rem;
-            width: 9rem;
-            object-fit: cover;
-    
-        }
-    
-    
-    
-        #Leftzone-profile {
-            display: flex;
-            justify-content: center;
-            position: absolute;
-            width: 100%;
-            height: 41%;
-            top: 0;
-            left: 0px;
-            padding: 2rem;
-            
-            background-color: rgb(45, 45, 45);
-        }
-    
-        .user-profile {
-            display: flex;
-            align-items: center;
-            position: relative;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0px;
-            padding: 2rem;
-            margin-top: 5.5rem;
-            margin-right: 2rem;
-            justify-content: space-between;
-            gap:4rem;
-        }
-    
-        .User-pro {
-            margin-bottom: 5rem;
-        }
-    
-        #Rightzone-profile {
-            position: absolute;
-            display: flex;
-            align-items: center;
-            width: 100%;
-            height: 60%;
-            right: 0px;
-            justify-content: left;
-            padding-left: 3rem;
-            background-color: rgb(45, 45, 45);
-            top:40%;
-        }
-    
-        .profileform-control {
-            position: relative;
-            margin-bottom: 10px;
-            left:2.2rem;
-            bottom:5rem;
-        }
-    
-        .profileform-control label {
-            color: #ffffff;
-            display: block;
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
-    
-        .profileform-control input {
-            border: 2px solid rgb(132, 131, 131);
-            border-radius: 6px;
-            padding: 5px;
-            font-size: 18px;
-            width: 20rem;
-            outline: none;
-            background-color: rgb(98, 100, 100);
-            color:#ffffff;
-        }
-    
-        .profile-form button {
-            cursor: pointer;
-            background-color: #24e16c;
-            border: 2px solid #cdcccc;
-            width: 30%;
-            display: block;
-            font-size: 20px;
-            border-radius: 6px;
-        }
-    
-        .button-wrapper {
-            width: 100%;
-            display: flex;
-            justify-content: right;
-            margin-top: 4rem;
-        }
-    
-        .profile-background {
-            display: flex;
-    
-        }
-    }
-
-
-@media screen and (min-width:821px) {
-    #user-image {
-        height: 14rem;
-        width: 14rem;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 6px solid rgb(6, 214, 110);
-    }
-
-    #user-house {
-        height: 14rem;
-        width: 14rem;
-        object-fit: cover;
-    }
-
-
-
-    #Leftzone-profile {
-        display: flex;
-        align-items: center;
-        position: absolute;
-        width: 40%;
-        height: 100%;
-        
-        top: 2rem;
-        left: 0px;
-        padding: 2rem;
-        flex-flow: column;
-        background-color: rgb(45, 45, 45);
-    }
-
-    .user-profile {
-        display: flex;
-        align-items: center;
-        position: relative;
-        width: 40%;
-        height: 100%;
-        top: 0;
-        left: 0px;
-        padding: 2rem;
-        margin-top: 2rem;
-        flex-flow: column;
-    }
-
-    .User-pro {
-        margin-bottom: 5rem;
-    }
-
-    #Rightzone-profile {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        width: 60%;
-        height: 100%;
-        right: 0px;
-        top:2rem;
-        justify-content: center;
-        background-color: rgb(45, 45, 45);
-        
-    }
-
-    .profileform-control {
-        position: relative;
-        margin-bottom: 10px;
-    }
-
-    .profileform-control label {
-        color: #ffffff;
-        display: block;
-        margin-bottom: 10px;
-        font-size: 30px;
-    }
-
-    .profileform-control input {
-        border: 2px solid rgb(132, 131, 131);
-        border-radius: 6px;
-        padding: 5px;
-        font-size: 30px;
-        width: 40rem;
-        outline: none;
-        background-color: rgb(98, 100, 100);
-    }
-
-    .profile-form button {
-        cursor: pointer;
-        background-color: #24e16c;
-        border: 2px solid #cdcccc;
-        width: 20%;
-        display: block;
-        font-size: 30px;
-        border-radius: 6px;
-    }
-
-    .button-wrapper {
-        width: 100%;
-        display: flex;
-        justify-content: right;
-        margin-top: 3.5rem;
-    }
-
+@media screen and (min-width: 1000px){
     .profile-background {
         display: flex;
-
+        font-family: 'Josefin Sans', sans-serif;
     }
-}
-
-@media screen and (max-width:821px) and (min-width:400px) {
-    #user-image {
-        height: 15rem;
-        width: 15rem;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3.5px solid rgb(6, 214, 110);
+    .left-side-profile{
+        width: 40vw;
+        height: 100vh;
     }
-
-    #user-house {
-        height: 15rem;
-        width: 15rem;
-        object-fit: cover;
-        
-
-    }
-
-
-
-    #Leftzone-profile {
+    .profile-pic-container{
+        height: 40%;
         display: flex;
         justify-content: center;
-        position: absolute;
-        width: 100%;
-        height: 41%;
-        top: 2rem;
-        left: 1.5vw;
-        padding: 1.3rem;
-        
-        background-color: rgb(45, 45, 45);
+        align-items: end;
     }
-
-    .user-profile {
-        display: flex;
-        align-items: center;
-        position: relative;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0px;
-        padding: 7rem;
-        margin-top: 5.5rem;
-        margin-right: 2rem;
-        justify-content: space-between;
-        gap: 5rem;
+    .profile-pic{
+        height: 40%;
     }
-
-    .User-pro {
-        margin-bottom: 5rem;
-    }
-
-    #Rightzone-profile {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        width: 100%;
+    .profile-home-container{
         height: 60%;
-        right: 0px;
-        left: 3.1rem;
-        justify-content: left;
-
-        background-color: rgb(45, 45, 45);
-        top: 33rem;
-    }
-
-    .profileform-control {
-        position: relative;
-        margin-bottom: 10px;
-        left: 4.7rem;
-        bottom: 5rem;
-    }
-
-    .profileform-control label {
-        color: #ffffff;
-        display: block;
-        margin-bottom: 10px;
-        font-size: 30px;
-    }
-
-    .profileform-control input {
-        border: 2px solid rgb(132, 131, 131);
-        border-radius: 6px;
-        padding: 5px;
-        font-size: 30px;
-        width: 35rem;
-        outline: none;
-        background-color: rgb(98, 100, 100);
-        color: #ffffff;
-    }
-
-    .profile-form button {
-        cursor: pointer;
-        background-color: #24e16c;
-        border: 2px solid #cdcccc;
-        width: 12rem;
-        height: 3.5rem;
-        display: block;
-        font-size: 30px;
-        border-radius: 6px;
-    }
-
-    .button-wrapper {
-        width: 100%;
         display: flex;
-        justify-content: right;
-        margin-top: 4rem;
+        justify-content: center;
+        align-items: start;
     }
+    .profile-home{
+        height: 75%;
+    }
+    .right-side-profile{
+        width: 60vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+    .right-side-profile h1{
+        color: white;
+    }
+    .profile-name-container{
+        display: flex;
+        width: 50vw;
+        justify-content: space-between;
+    }
+    .profile-mobile-container{
+        display: flex;
+        width: 50vw;
+        justify-content: space-between;
+    }
+    .profile-email-container{
+        display: flex;
+        width: 50vw;
+        justify-content: space-between;
+    }
+    .profile-form{
+        width: 25vw;
+        height: 3rem;
+        border: solid #9F9F9F 2px;
+        border-radius: 1rem;
+        padding: 0 2rem 0 2rem;
+        text-align: center;
+        appearance: none;
+        font-size: 1rem;
+        margin: 0.5rem 0 0.5rem 0;
+    }
+    .profile-button-container{
+        width: 50vw;
+        display: flex;
+        justify-content: end;
+    }
+    .save-profile-button{
+        width: 12rem;
+        height: 4rem;
+        font-family: 'Josefin Sans', sans-serif;
+        color: white;
+        font-size: 2rem;
+        background-color: #06C755;
+        border: none;
+        border-radius: 1rem;
+        margin: 1rem 0 0 0;
+    }
+}
 
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1000px){
     .profile-background {
         display: flex;
+        flex-direction: column;
+        font-family: 'Josefin Sans', sans-serif;
+        width: 100vw;
+    }
+    .left-side-profile{
+        width: 100vw;
+        height: 35vh;
+        display: flex;
+    }
+    .profile-pic-container{
+        height: 100%;
+        width: 50vw;
+        padding-top: 6vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .profile-pic{
+        height: 40%;
+    }
+    .profile-home-container{
+        width: 50vw;
+        height: 100%;
+        padding-top: 6vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .profile-home{
+        height: 80%;
+    }
+    .right-side-profile{
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top:rem;
 
+    }
+    .right-side-profile h1{
+        font-size: clamp(0.5rem,5vw ,3rem);
+        color: white;
+    }
+    .profile-name-container{
+        display: flex;
+        width: 80vw;
+        height: 6rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .profile-mobile-container{
+        display: flex;
+        width: 80vw;
+        height: 6rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .profile-email-container{
+        display: flex;
+        width: 80vw;
+        height: 6rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .profile-form{
+        width: 25vw;
+        height: 3rem;
+        border: solid #9F9F9F 2px;
+        border-radius: 1rem;
+        padding: 0 2rem 0 2rem;
+        text-align: center;
+        appearance: none;
+        font-size: 1rem;
+        margin: 0.5rem 0 0.5rem 0;
+    }
+    .profile-button-container{
+        width: 80vw;
+        display: flex;
+        justify-content: end;
+    }
+    .save-profile-button{
+        width: 12rem;
+        height: 4rem;
+        font-family: 'Josefin Sans', sans-serif;
+        color: white;
+        font-size: 2rem;
+        background-color: #06C755;
+        border: none;
+        border-radius: 1rem;
+        margin: 1rem 0 0 0;
     }
 }
