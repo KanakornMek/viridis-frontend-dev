@@ -13,9 +13,10 @@
     padding: 20px;
 }
 
-.Leftzone-profile{
+.Leftzone-profile {
     justify-content: center;
 }
+
 .user-profile {
     display: flex;
     flex-direction: column;
@@ -24,23 +25,24 @@
     align-items: center;
     margin-bottom: 20px;
 }
+
 .user-image-wrapper {
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 .choose-image-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  text-align: center;
-  border-radius: 5px;
-  font-size: 14px;
-  display: none;
-  pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 14px;
+    display: none;
+    pointer-events: none;
 }
 
 .user-profile-picture:hover {
@@ -48,16 +50,18 @@
 }
 
 .user-image-wrapper:hover .choose-image-text {
-  display: block;
+    display: block;
 }
+
 .user-profile-picture {
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
 }
+
 .house-profile-picture {
-    width: clamp(150px,60%, 600px);
+    width: clamp(150px, 60%, 600px);
 }
 
 
@@ -81,7 +85,7 @@
 }
 
 .profileform-control input {
-    flex:2;
+    flex: 2;
     padding: 10px;
     background-color: #474747;
     border-radius: 5px;
@@ -94,20 +98,72 @@
     text-align: center;
 }
 
-.profileform-control button {
+.button-wrapper button {
     padding: 10px 20px;
-    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-wrapper #edit {
+    padding: 10px 20px;
+    background-color: #2196f3;
     color: #fff;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button-wrapper #edit:hover,
+.button-wrapper #edit:focus,
+.button-wrapper #edit:active {
+    background-color: #1976d2;
+}
+
+.button-wrapper #cancel {
+    padding: 10px 20px;
+    background-color: #bdbdbd;;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-wrapper #cancel:hover,
+.button-wrapper #cancel:focus,
+.button-wrapper #cancel:active {
+    background-color: #9e9e9e;
+}
+
+.button-wrapper #save {
+    background-color: #4caf50;
+}
+
+.button-wrapper #save:hover,
+.button-wrapper #save:focus,
+.button-wrapper #save:active {
+    background-color: #45a049;
+}
+
+.button-wrapper #logout {
+    background-color: #f44336;
+}
+
+.button-wrapper #logout:hover,
+.button-wrapper #logout:focus,
+.button-wrapper #logout:active {
+    background-color: #d32f2f;
 }
 
 @media (max-width: 970px) {
-    .profile-background{
+    .profile-background {
         display: block;
     }
+
     .user-profile {
         flex-direction: column;
         align-items: center;
@@ -117,7 +173,8 @@
     .Rightzone-profile {
         width: 100%;
     }
-    .house-profile-picture{
+
+    .house-profile-picture {
         display: none;
     }
 

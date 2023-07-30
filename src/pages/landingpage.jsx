@@ -3,9 +3,6 @@ import { Link, useNavigate, redirect } from 'react-router-dom'
 import './css/landingpage.css'
 import { useState, useEffect } from "react";
 
-
-
-
 function HomePage(){
     const [isGoingToBuy, setisGoingToBuy] = useState(false);
     const navigate = useNavigate();

@@ -22,17 +22,14 @@ function PromptPay({ price, quantity }) {
               .then((res) => {
                 viridisApi
                   .post(
-                    "/purchase",
+                    "/token/purchase",
                     {
                       amtToken: quantity,
-                      price: price,
+                      tokenPrice: 20,
+                      totalPrice: price,
                       sourceId: res.data.id,
+                      type: "promptpay",
                     },
-                    {
-                      params: {
-                        type: "promptpay",
-                      },
-                    }
                   )
                   .then((res) => {
                     setQR(res.data.qr_code);
