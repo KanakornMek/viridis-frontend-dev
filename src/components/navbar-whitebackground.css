@@ -8,14 +8,14 @@
         z-index: 1;
         user-select: none;
     }
-    .leftSideNav {
+    .leftSideNav1 {
         z-index: 9999;
     }
-    .leftSideNav a {
+    .leftSideNav1 a {
         font-size: 3rem;
         font-family: 'Josefin Sans', sans-serif;
         font-weight:normal;
-        color: white;
+        color: black;
         padding-left: 2.5rem;
     }
     .rightSideNav{
@@ -28,10 +28,10 @@
         z-index: 99999;
       }
       
-    .bar1, .bar2, .bar3 {
+    .bar01, .bar02, .bar03 {
         width: 35px;
         height: 5px;
-        background-color: white;
+        background-color: black;
         margin: 6px 0;
         transition: 0.4s;
       }
@@ -42,7 +42,6 @@
       
     .change .bar2 {opacity: 0;}
       
-
     .change .bar3 {
         transform: translate(0, -11px) rotate(45deg);
     }
@@ -91,17 +90,17 @@
         animation-name: navOn-enter;
         animation-duration: 0.5S;
     }
-    .home{
+    .home1{
         font-size: 3rem;
         text-decoration: none;
         color: white;
     }
-    .portfolio{
+    .portfolio1{
         font-size: 3rem;
         text-decoration: none;
         color: white;
     }
-    .services{
+    .services1{
         font-size: 3rem;
         text-decoration: none;
         color: white;
@@ -140,11 +139,11 @@
         position: absolute;
         z-index: 1;
     }
-    .leftSideNav a {
+    .leftSideNav1 a {
         font-size: 3rem;
         font-family: 'Josefin Sans', sans-serif;
         font-weight:normal;
-        color: white;
+        color: black;
         padding-left: 2.5rem;
     }
     .rightSideNav{
@@ -161,20 +160,20 @@
         font-weight: bold;
         padding-right: 2.5rem;
     }
-    .home{
+    .home1{
         font-size: 1.5rem;
         text-decoration: none;
-        color: white;
+        color: black;
     }
-    .portfolio{
+    .portfolio1{
         font-size: 1.5rem;
         text-decoration: none;
-        color: white;
+        color: black;
     }
-    .services{
+    .services1{
         font-size: 1.5rem;
         text-decoration: none;
-        color: white;
+        color: black;
     }
     .changableNavComponent button{
         font-size: 1.5rem;
@@ -227,11 +226,11 @@
         left: 50%;
         transform: translateX(-50%);
     }
-    .leftSideNav a {
+    .leftSideNav1 a {
         font-size: 3rem;
         font-family: 'Josefin Sans', sans-serif;
         font-weight:normal;
-        color: white;
+        color: black;
         padding-left: 2.5rem;
     }
     .rightSideNav{
@@ -248,20 +247,20 @@
         font-weight: bold;
         padding-right: 2.5rem;
     }
-    .home{
+    .home1{
         font-size: 1.5rem;
         text-decoration: none;
-        color: white;
+        color: black;
     }
-    .portfolio{
+    .portfolio1{
         font-size: 1.5rem;
         text-decoration: none;
-        color: white;
+        color: black;
     }
-    .services{
+    .services1{
         font-size: 1.5rem;
         text-decoration: none;
-        color: white;
+        color: black;
     }
     .changableNavComponent button{
         font-size: 1.5rem;
@@ -303,20 +302,3 @@
     50%{ transform: translateY(-0.3rem);}
     100%{ transform: translateY(0);}
 }
-
-.profile {
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: white;
-    
-}
-
-.profile img {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3.5px solid rgb(6, 214, 110);
-    
-}
-
