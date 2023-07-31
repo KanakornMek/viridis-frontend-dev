@@ -8,15 +8,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 45vw;
+      width: 50vw;
       height: 100vh;
       flex-flow: column;
       overflow: hidden;
-    }
-
-    .Leftzone-portfolio img{
-        width: 80%;
-        margin-bottom: 0;
     }
   
     .Rightzone-portfolio {
@@ -207,10 +202,6 @@
       overflow: hidden;
     }
 
-    .Leftzone-portfolio img{
-        width:90%;
-        margin-bottom: 0;
-    }
   
     .Rightzone-portfolio {
       display: flex;

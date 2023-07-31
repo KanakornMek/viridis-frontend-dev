@@ -3,6 +3,9 @@ import NavBar from "../components/navbar";
 import { viridisApi } from "../api/axiosConfig";
 import { AuthContext } from "../contexts/AuthContext";
 import "./css/profile.css";
+import { Canvas } from '@react-three/fiber';
+import { OrthographicCamera } from '@react-three/drei';
+import Model from '../components/3DModel';
 
 function Profile() {
   const { logout } = useContext(AuthContext);
@@ -26,6 +29,20 @@ function Profile() {
     getProfile();
   }, []);
 
+  32
+
+    const [size, setsize] = useState(window.innerWidth)
+    
+    //choose the screen size 
+    const handleResize = () => {
+        setsize(window.innerWidth);
+    }
+
+    // create an event listener
+    useEffect(() => {
+    window.addEventListener("resize", handleResize)
+    })
+
   return (
     <div className="profile-background">
       <NavBar />
@@ -37,10 +54,12 @@ function Profile() {
           ></img>
         </div>
         <div className="profile-home-container">
-          <img
-            className="profile-home"
-            src="/src/assets/picture/image.png"
-          ></img>
+            <Canvas style={{ width: '50vw'}}>
+                <OrthographicCamera makeDefault position={[6, 1, 6]} zoom={size/40}></OrthographicCamera>
+                <ambientLight />
+                <pointLight position={[10, 10, 10]} />
+                <Model />
+          </Canvas>
         </div>
       </div>
       <div className="right-side-profile">

@@ -1,6 +1,10 @@
 import NavBar from "../components/navbar";
 import "./css/portfolio.css";
 import housePort from "../assets/picture/image.png"
+import { Canvas } from '@react-three/fiber';
+import { OrthographicCamera } from '@react-three/drei';
+import Model from '../components/3DModel';
+import { useState, useEffect } from "react";
 
 function Portfolio() {
   return (
@@ -8,12 +12,12 @@ function Portfolio() {
       <NavBar></NavBar>
       <div className="portfolio">
         <div className="Leftzone-portfolio">
-            <img
-              id="user-housePort"
-              className="User-pro"
-              src={housePort}
-              alt=""
-            />
+          <Canvas style={{ width: '50vw'}}>
+            <OrthographicCamera makeDefault position={[6, 1, 6]} zoom={35}></OrthographicCamera>
+            <ambientLight />
+            <pointLight position={[10, 10, 10]} />
+            <Model />
+          </Canvas>
         </div>
         <div className="Rightzone-portfolio">
           <h1 className="port-text" id="CO2-num">
