@@ -7,12 +7,19 @@ import { viridisApi } from "../api/axiosConfig";
 function QrProfile(){
     const [name, setName] = useState('');
     const [type, setType] = useState('');
+    const [qr, setQR] = useState(null);
 
     useEffect(() => {
         viridisApi.get("/service/account")
             .then((res) => {
                 setName(res.data.name);
                 setType(res.data.type)
+            }).catch((err) => {
+                console.log(err);
+            })
+        viridisApi.post('/service/generateQR')
+            .then((res) => {
+                setQR(res.data.qrData);
             }).catch((err) => {
                 console.log(err);
             })
@@ -37,7 +44,7 @@ function QrProfile(){
                 </div>
                 <div className="right-side-qr-profile-qrcode">
                     <div className="qr-section">
-                        <img src="/src/assets/picture/qrCodeMock.png" className="qr"></img>
+                        <img src={qr} className="qr"></img>
                     </div>
                     <button className="download-qr-button">Download QR</button>
                 </div>
