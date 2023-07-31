@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
+import qs from "qs";
 import "./css/CarbonCustomization.css";
 import "./css/PhoneNumberInput.css";
 import "./css/qr.css";
+import { viridisApi } from "../api/axiosConfig";
 
 const CarbonCustomization = () => {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -31,7 +33,7 @@ const CarbonCustomization = () => {
 
   const calculateCarbonCreditTotal = () => {
     if (selectedOption === 'custom') {
-      setCarbonCreditTotal(customAmount*20);
+      setCarbonCreditTotal(customAmount * 20);
     } else {
       setCarbonCreditTotal(selectedOption);
     }
@@ -43,9 +45,8 @@ const CarbonCustomization = () => {
         {options.map((option) => (
           <button
             key={option.value}
-            className={`option-button ${
-              selectedOption === option.value ? "selected" : ""
-            }`}
+            className={`option-button ${selectedOption === option.value ? "selected" : ""
+              }`}
             onClick={() => handleOptionChange(option.value)}
           >
             {option.label}
@@ -64,7 +65,7 @@ const CarbonCustomization = () => {
             placeholder="Enter amount"
             disabled={selectedOption !== "custom"}
             value={customAmount}
-            onChange={handleCustomAmountChange} 
+            onChange={handleCustomAmountChange}
           />
         </div>
       )}
@@ -104,7 +105,30 @@ const PhoneNumberInput = ({ onSubmitPhoneNumber }) => {
 };
 
 function QRPage() {
-  let { serviceId } = useParams();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const serviceId = searchParams.get('serviceId')
+  const [serviceName, setServiceName] = useState('')
+  const [loading, setLoading] = useState(true)
+  const [serviceFound, setServiceFound] = useState(false);
+  const fetchInfo = async (serviceId) => {
+    console.log(serviceId)
+    try {
+      const response = await viridisApi.get('/service/info', {
+        params: {
+          serviceId: serviceId,
+        },
+      });
+
+      setServiceName(response.data.name);
+      setServiceFound(true);
+      setLoading(false);
+    } catch (error) {
+      setServiceFound(false);
+    }
+  };
+  useEffect(() => {
+    fetchInfo(serviceId)
+  }, [serviceId]);
 
   const [phoneNumber, setPhoneNumber] = useState("");
   const [showPhoneNumberInput, setShowPhoneNumberInput] = useState(true);
@@ -115,12 +139,13 @@ function QRPage() {
   };
   return (
     <div className="qr-purchase">
-        <header>
-            <h1>viridis.</h1>
-            <div className="v-divider"/>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/1200px-McDonald%27s_Golden_Arches.svg.png" height="50rem" />
-        </header>
+      <header>
+        <h1>viridis.</h1>
+        <div className="v-divider" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/1200px-McDonald%27s_Golden_Arches.svg.png" height="50rem" />
+      </header>
       <main>
+        <h2>{serviceName}</h2>
         {showPhoneNumberInput ? (
           <PhoneNumberInput onSubmitPhoneNumber={handleSubmitPhoneNumber} />
         ) : (
