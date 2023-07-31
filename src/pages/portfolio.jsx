@@ -7,13 +7,24 @@ import Model from '../components/3DModel';
 import { useState, useEffect } from "react";
 
 function Portfolio() {
+  const [size, setsize] = useState(window.innerWidth)
+    
+  //choose the screen size 
+  const handleResize = () => {
+      setsize(window.innerWidth);
+  }
+
+  // create an event listener
+  useEffect(() => {
+  window.addEventListener("resize", handleResize)
+  })
   return (
     <>
       <NavBar></NavBar>
       <div className="portfolio">
         <div className="Leftzone-portfolio">
-          <Canvas style={{ width: '50vw'}}>
-            <OrthographicCamera makeDefault position={[6, 1, 6]} zoom={35}></OrthographicCamera>
+          <Canvas style={{ width: '100vw'}}>
+            <OrthographicCamera makeDefault position={[6, 1, 6]} zoom={(size/40) + 10}></OrthographicCamera>
             <ambientLight />
             <pointLight position={[10, 10, 10]} />
             <Model />

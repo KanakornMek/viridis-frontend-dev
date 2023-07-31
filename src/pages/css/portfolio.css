@@ -71,7 +71,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 0rem;
+      margin-bottom: 1rem;
       margin-top: 1rem;
       width: 90%;
     }
@@ -102,6 +102,7 @@
   
     .historybox-inner {
       width: 90%;
+      height: 3rem;
       display: flex;
       justify-content: space-between;
       align-items: center;   
@@ -292,6 +293,7 @@
   
     .historybox-inner {
       width: 90%;
+      height: 3rem;
       display: flex;
       justify-content: space-between;
       align-items: center;   

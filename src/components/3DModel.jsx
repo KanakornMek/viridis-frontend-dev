@@ -15,8 +15,8 @@ const Model = () => {
         <primitive object={gltf.scene} />
       </group>
       <OrbitControls 
-        enableZoom={true}     // Disable zooming with mouse wheel
-        enablePan={true}      // Disable panning
+        enableZoom={false}     // Disable zooming with mouse wheel
+        enablePan={false}      // Disable panning
         enableRotate={true}    // Enable horizontal rotation (yaw)
         enableDamping         // Smoother camera movement
         dampingFactor={0.1}
