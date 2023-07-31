@@ -1,9 +1,8 @@
 import { useEffect, useState, useRef, useContext } from "react";
 import NavBar from "../components/navbar";
-import "./css/profile.css";
-import housePort from "../assets/picture/user-port-house.png";
 import { viridisApi } from "../api/axiosConfig";
 import { AuthContext } from "../contexts/AuthContext";
+import "./css/profile.css";
 
 function Profile() {
   const { logout } = useContext(AuthContext);
@@ -27,107 +26,66 @@ function Profile() {
     getProfile();
   }, []);
 
-  const handleProfileImageClick = () => {
-    inputFileRef.current.click();
-  };
   return (
     <div className="profile-background">
-      <div>
-        <NavBar />
-      </div>
-      <div className="Leftzone-profile">
-        <div className="user-profile">
-          <div className="user-image-wrapper" onClick={handleProfileImageClick}>
-            <img
-              id="user-image"
-              className="user-profile-picture"
-              src="https://www.the-sun.com/wp-content/uploads/sites/6/2022/08/OP-OMF-TELETUBBY-SUN.jpg?strip=all&quality=100&w=1620&h=1080&crop=1"
-              alt=""
-            />
-            <div className="choose-image-text">📷Choose Image</div>
-            <input
-              type="file"
-              accept="image/*"
-              ref={inputFileRef}
-              style={{ display: "none" }}
-            />
-          </div>
+      <NavBar />
+      <div className="left-side-profile">
+        <div className="profile-pic-container">
           <img
-            id="user-house"
-            className="house-profile-picture"
-            src={housePort}
-            alt=""
-          />
+            className="profile-pic"
+            src="/src/assets/picture/profilePic.png"
+          ></img>
+        </div>
+        <div className="profile-home-container">
+          <img
+            className="profile-home"
+            src="/src/assets/picture/image.png"
+          ></img>
         </div>
       </div>
-      <div className="Rightzone-profile">
-        <form className="profile-form">
-          <div className="profileform-control">
-            <label for="username">ชื่อ</label>
+      <div className="right-side-profile">
+        <div className="right-side-profile-container">
+          <div className="profile-name-container">
+            <h1>Firstname</h1>
             <input
-              type="text"
-              name="firstname"
               value={firstname}
-              onChange={(e) => setFirstname(e.target.value)}
-              readOnly={!edit}
-              required
-            />
-          </div>
-          <div className="profileform-control">
-            <label for="username">นามสกุล</label>
-            <input
               type="text"
-              name="lastname"
+              className="profile-form"
+              placeholder="Name"
+            ></input>
+          </div>
+          <div className="profile-name-container">
+            <h1>Lastname</h1>
+            <input
               value={lastname}
-              onChange={(e) => setLastname(e.target.value)}
-              readOnly={!edit}
-              required
-            />
-          </div>
-          <div className="profileform-control">
-            <label for="username">อีเมล</label>
-            <input
-              type="email"
-              name=""
-              id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              readOnly={!edit}
-              required
-            />
-          </div>
-          <div className="profileform-control">
-            <label for="Tel">เบอร์โทร</label>
-            <input
               type="text"
-              name="Tel"
+              className="profile-form"
+              placeholder="Name"
+            ></input>
+          </div>
+          <div className="profile-mobile-container">
+            <h1>Mobile No.</h1>
+            <input
               value={phoneNumber}
-              onChange={(e) => setPhoneNumber(e.target.value)}
-              readOnly={!edit}
-              required
-            />
+              type="text"
+              className="profile-form"
+              placeholder="Mobile"
+            ></input>
           </div>
-          <div className="button-wrapper">
-            {!edit && (
-              <button id="edit" onClick={() => setEdit(true)}>
-                Edit
-              </button>
-            )}
-            {edit && (
-              <>
-                <button id="cancel" onClick={() => setEdit(false)}>
-                  cancel
-                </button>
-                <button id="save" type="submit">
-                  save
-                </button>
-              </>
-            )}
-            <button id="logout" onClick={() => logout()}>
-              Logout
-            </button>
+          <div className="profile-email-container">
+            <h1>Email</h1>
+            <input
+              value={email}
+              type="text"
+              className="profile-form"
+              placeholder="Email"
+            ></input>
           </div>
-        </form>
+          <div className="profile-button-container">
+            <button onClick={() => logout()}>Logout</button>
+            <button className="save-profile-button">Save</button>
+          </div>
+        </div>
       </div>
     </div>
   );

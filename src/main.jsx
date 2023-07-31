@@ -18,6 +18,7 @@ import GenQrPage from "./pages/genqrpage";
 import QrProfile from "./pages/qrpage";
 import { AuthProvider, AuthContext } from "./contexts/AuthContext";
 import QRPage from "./pages/qr";
+import Registerpage from "./pages/register";
 const PrivateRoute = ({ children }) => {
   const { auth, isLoading } = useContext(AuthContext);
 
@@ -40,6 +41,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/" element={<HomePage />} />
           <Route path="/services" element={<Services />} />
           <Route path="/login" element={<Loginpage />} />
+          <Route path="/register" element={<Registerpage />} />
           <Route path="/docs" element={<Docspage />} />
           <Route path="/generate-qr" element={<GenQrPage />} />
           <Route path="/qr" element={<QRPage />} />
@@ -54,9 +56,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route
             path="/profile"
             element={
-              <PrivateRoute>
+              // <PrivateRoute>
                 <Profile />
-              </PrivateRoute>
+              //  </PrivateRoute> 
             }
           />
           <Route 

@@ -43,7 +43,7 @@ function NavBar(){
 
 
     return(
-        <div className='navBar' id='navBar'>
+        <div className='navBar'>
             <div className='leftSideNav'>
                 <a>viridis.</a>
             </div>
@@ -68,7 +68,7 @@ function NavBar(){
                 <ul className='navTextOnScreen'>
                     <li><Link to={`/`} className='home'>Home</Link></li>
                     <li><Link to={`/portfolio`} className='portfolio'>Portfolio</Link></li>
-                    {/* <li><Link to={`/services`} className='services'>Services</Link></li> */}
+                    <li><Link to={`/services`} className='services'>Services</Link></li>
                 </ul>
                 <div className='buttonOnScreen'>
                     <button onClick={() => setisGoingToLogin(true)}>Login</button>
