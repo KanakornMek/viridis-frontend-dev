@@ -92,7 +92,8 @@ function Register({ setForm }) {
         idNumber,
         email,
         password,
-        phoneNumber
+        phoneNumber,
+        type: accountType
     }).then((res) => {
       console.log(res.data)
         window.location = 'http://localhost:5173/'

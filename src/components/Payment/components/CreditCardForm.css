@@ -1,0 +1,48 @@
+
+
+.credit-card-form {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow-y: scroll;
+}
+
+.credit-card-form div {
+  margin-bottom: 5px;
+}
+
+.credit-card-form label {
+  font-weight: bold;
+}
+
+.credit-card-form input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.credit-card-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #00c535;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.credit-card-form button:hover {
+  background-color: #008710;
+}
+
+.cvv-expiry-wrapper {
+  display: flex;
+  gap: 10px;
+}

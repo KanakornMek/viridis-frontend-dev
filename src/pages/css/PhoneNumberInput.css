@@ -22,7 +22,7 @@ h2 {
   align-items: center;
 }
 
-input[type="tel"] {
+.phoneForm input[type="tel"] {
   padding: 12px;
   border: 1px solid #005500;
   border-radius: 4px;
@@ -33,7 +33,7 @@ input[type="tel"] {
   margin-bottom: 16px;
 }
 
-button[type="submit"] {
+.phoneForm button[type="submit"] {
   padding: 10px 12px;
   border: none;
   width: 100px;
@@ -46,6 +46,6 @@ button[type="submit"] {
   transition: background-color 0.2s ease;
 }
 
-button[type="submit"]:hover {
+.phoneForm button[type="submit"]:hover {
   background-color: #005200;
 }

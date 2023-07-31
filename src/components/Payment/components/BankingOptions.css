@@ -1,0 +1,27 @@
+.bank-selection-container{
+    width: 90%;
+    height: 60px;
+    display: flex;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    border-radius: 5px;
+    align-items: center;
+    gap: 25px;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.bank-selection-container img{
+    border-radius: 5px;
+}
+
+.bank-selection-container p {
+    font-size: 1rem;
+}
+
+.bank-options-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
