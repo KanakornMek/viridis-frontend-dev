@@ -40,6 +40,9 @@ viridisApi.interceptors.response.use(
             try {
                 const res = await viridisAuth.post('/refresh')
                 localStorage.setItem('accessToken', JSON.stringify(res.data.newAccessToken))
+                err.config.headers.Authorization = `Bearer ${res.data.newAccessToken}`;
+                err.config._retry = true;
+                return viridisApi(err.config);
             } catch (err) {
                 if (err.response.status === 403) {
                     localStorage.removeItem('accessToken');
