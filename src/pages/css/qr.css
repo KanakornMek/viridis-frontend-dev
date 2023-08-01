@@ -3,18 +3,23 @@
     background-color: white;
     height: 100vh;
     width: 100vw;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-
+.qr-purchase{
+    font-family: Kanit;
+}
+.qr-purchase h2{
+    margin: 0;
+}
 .qr-purchase main {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 .qr-purchase header {
     margin-bottom: 50px;

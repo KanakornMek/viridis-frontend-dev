@@ -18,7 +18,7 @@ function BankSelection({logo, bank, onClick}) {
     );
 }
 
-function BankingOptions({price, quantity}) {
+function BankingOptions({price, quantity, isQr, qrPhone}) {
     const banks = [
         { name: 'K plus', logo: kplusLogo, type: 'mobile_banking_kbank'},
         { name: 'SCB Easy', logo: scbLogo, type: 'mobile_banking_scb'},
@@ -37,15 +37,29 @@ function BankingOptions({price, quantity}) {
                             currency: 'THB',
                             type: bank.type
                         })).then((res) => {
-                            viridisApi.post('/token/purchase', {
-                                amtToken: quantity,
-                                tokenPrice: 20,
-                                totalPrice: price,
-                                sourceId: res.data.id,
-                                type: "mobile_banking",
-                            }).then((res) => {
-                                window.location = res.data.authorize_uri
-                            })
+                            if(isQr){
+                                viridisApi.post('/service/purchase', {
+                                    amtToken: quantity,
+                                    tokenPrice: 2,
+                                    totalPrice: price,
+                                    phoneNumber: qrPhone,
+                                    sourceId: res.data.id,
+                                    type: "mobile_banking",
+                                }).then((res) => {
+                                    window.location = res.data.authorize_uri
+                                })
+                            } else {
+                                viridisApi.post('/token/purchase', {
+                                    amtToken: quantity,
+                                    tokenPrice: 20,
+                                    totalPrice: price,
+                                    sourceId: res.data.id,
+                                    type: "mobile_banking",
+                                }).then((res) => {
+                                    window.location = res.data.authorize_uri
+                                })
+                            }
+                            
                         })
                     }}
                 />
