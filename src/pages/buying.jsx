@@ -163,7 +163,7 @@ function Buyingpage(){
                         </>
                     )}
                     {page === '2' && (
-                        <Payment price={price} quantity={amountToBuy} />
+                        <Payment price={price} quantity={amountToBuy} isQr={false} />
                     )}
                 </div>
             </div>
