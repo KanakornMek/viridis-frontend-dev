@@ -2,6 +2,7 @@
     .qrPage{
         width: 100vw;
         height: 100vh;
+        overflow: hidden;
     }
     .left-side-qr-profile-information p{
         color: white;
@@ -42,12 +43,60 @@
     }
     .right-side-qr-profile-qrcode{
         width: 50vw;
-        height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
-        padding: 2rem 5rem 0 0;
+        overflow-y: scroll;
+    }
+    .toggle-qr-offset{
+        margin-top: 8rem;
+        display: flex;
+        justify-content: space-between;
+        border: none;
+        background-color: #1B1B1B;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+    }
+    .qr-butt{
+        align-items: center;
+        color: white;
+        font-size: 1rem;
+        font-family: 'Josefin Sans', sans-serif;
+        padding: 0.5rem 1rem;
+    }
+    .qr-butt-on{
+        background-color: #06C755;
+        border-radius: 1rem;
+        align-items: center;
+        color: white;
+        font-size: 1rem;
+        font-family: 'Josefin Sans', sans-serif;
+        padding: 0.5rem 1rem;
+    }
+    .list-butt{
+        align-items: center;
+        color: white;
+        font-size: 1rem;
+        font-family: 'Josefin Sans', sans-serif;
+        padding: 0.5rem 1rem;
+    }
+    .list-butt-on{
+        background-color: #06C755;
+        border-radius: 1rem;
+        align-items: center;
+        color: white;
+        font-size: 1rem;
+        font-family: 'Josefin Sans', sans-serif;
+        padding: 0.5rem 1rem;
+    }
+    .qr-section-hide-handle{
+        display: none;
+    }
+    .qr-section-hide-handle-on{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
     }
     .qr-section{
         width: 400px;
@@ -56,6 +105,7 @@
         margin-bottom: 2rem;
         border-radius: 10px;
     }
+
     .download-qr-button{
         width: 13rem;
         height: 5rem;
@@ -70,7 +120,95 @@
         width: 100%;
         height: 100%;
     }
+    .customer-offset-list-section{
+        width: 50vw;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    .customer-offset-list-section-on{
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .total-customer-offset-container{
+        width: 350px;
+        height: 350px;
+        background-color: #323232;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        margin: 0 0 3rem 0;
+    }
+    .total-customer-offset-container h1{
+        color: white;
+        font-size: 8rem;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    .total-customer-offset-container p{
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+    }
+    .customer-offset-list-container{
+        width: 80%;
+    }
+    .customer-offset-list-container h1{
+        color: white;
+        font: 2.25rem;
+        font-family: 'Josefin Sans', sans-serif;
+        margin-bottom: 1rem;
+    }
+    .customer-offset-list-box{
+        background-color: white;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 1.25rem;
+    }
+    .customer-offset-list-head{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        width: 90%;
+        margin-top: 0.5rem;
+    }
+    .customer-offset-list-head h2{
+        color: black;
+        font: 2.25rem;
+        font-family: 'Josefin Sans', sans-serif;
+        margin: 0;
+        font-weight: 400;
+    }
+    .customer-offset-box{
+        display: flex;
+        justify-content: space-between;
+        background-color: #DFDFDF;
+        width: 90%;
+        height: 4rem;
+        border-radius: 1.25rem;
+        align-items: center;
+        margin: 0.5rem 0;
+    }
+    .customer-offset-box h2{
+        color: black;
+        font-size: 1rem;
+        font-family: 'Josefin Sans', sans-serif;
+        margin: 1rem;
+        font-weight: 400;
+    }
 }
+
+
+
+
+
+
+
 
 
 
@@ -91,7 +229,7 @@
         color: white;
         font-size: 3rem;
         font-family: 'Josefin Sans', sans-serif;
-        margin: 1rem 0 3rem 0;
+        margin: 2rem 0 2rem 0;
     }
     
     .qrPage-container{
@@ -101,12 +239,11 @@
     }
     .left-side-qr-profile-information{
         width: 100vw;
-        height: 40vh;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: end;
         align-items: center;
-        padding-top: 10rem;
+        margin-top: 6rem;
     }
     .business-name-section{
         text-align: center;
@@ -119,19 +256,67 @@
     }
     .right-side-qr-profile-qrcode{
         width: 100vw;
-        height: 70vh;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: start;
+        align-items: center;
+    }
+    .toggle-qr-offset{
+        display: flex;
+        justify-content: space-between;
+        border: none;
+        background-color: #1B1B1B;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+    }
+    .qr-butt{
+        align-items: center;
+        color: white;
+        font-size: 1rem;
+        font-family: 'Josefin Sans', sans-serif;
+        padding: 0.5rem 1rem;
+    }
+    .qr-butt-on{
+        background-color: #06C755;
+        border-radius: 1rem;
+        align-items: center;
+        color: white;
+        font-size: 1rem;
+        font-family: 'Josefin Sans', sans-serif;
+        padding: 0.5rem 1rem;
+    }
+    .list-butt{
+        align-items: center;
+        color: white;
+        font-size: 1rem;
+        font-family: 'Josefin Sans', sans-serif;
+        padding: 0.5rem 1rem;
+    }
+    .list-butt-on{
+        background-color: #06C755;
+        border-radius: 1rem;
+        align-items: center;
+        color: white;
+        font-size: 1rem;
+        font-family: 'Josefin Sans', sans-serif;
+        padding: 0.5rem 1rem;
+    }
+    .qr-section-hide-handle{
+        display: none;
+    }
+    .qr-section-hide-handle-on{
+        display:flex;
+        flex-direction: column;
         align-items: center;
     }
     .qr-section{
-        width: 300px;
-        height: 300px;
+        width: 80vw;
+        height: 80vw;
         background-color: white;
         margin-bottom: 2rem;
         border-radius: 10px;
     }
+
     .download-qr-button{
         width: 13rem;
         height: 5rem;
@@ -141,10 +326,94 @@
         color: white;
         font-size: 1.5rem;
         font-family: 'Josefin Sans', sans-serif;
+        margin-bottom: 2rem;
     }
     .qr{
         width: 100%;
         height: 100%;
     }
+    .customer-offset-list-section{
+        width: 50vw;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    .customer-offset-list-section-on{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .total-customer-offset-container{
+        width: 90vw;
+        height: 90vw;
+        background-color: #323232;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        margin: 0 0 3rem 0;
+    }
+    .total-customer-offset-container h1{
+        color: white;
+        font-size: 8rem;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    .total-customer-offset-container p{
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+    }
+    .customer-offset-list-container{
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+    .customer-offset-list-container h1{
+        color: white;
+        font: 2.25rem;
+        font-family: 'Josefin Sans', sans-serif;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    .customer-offset-list-box{
+        background-color: white;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 1.25rem;
+        padding-bottom: 1rem;
+    }
+    .customer-offset-list-head{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        width: 90%;
+        margin-top: 0.5rem;
+    }
+    .customer-offset-list-head h2{
+        color: black;
+        font-size: clamp(1rem, 5vw, 2rem);
+        font-family: 'Josefin Sans', sans-serif;
+        margin: 0;
+        font-weight: 400;
+    }
+    .customer-offset-box{
+        display: flex;
+        justify-content: space-between;
+        background-color: #DFDFDF;
+        width: 90%;
+        height: 4rem;
+        border-radius: 1.25rem;
+        align-items: center;
+        margin: 0.5rem 0;
+    }
+    .customer-offset-box h2{
+        color: black;
+        font-size: clamp(0.5rem, 3vw, 1.5rem);
+        font-family: 'Josefin Sans', sans-serif;
+        margin: 1rem;
+        font-weight: 400;
+    }
 }
-
