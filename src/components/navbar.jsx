@@ -4,7 +4,7 @@ import { useEffect, useState, useContext } from 'react';
 import { AuthContext } from '../contexts/AuthContext';
 
 
-function NavBar(){
+function NavBar({isHome}){
     const [isGoingToLogin,setisGoingToLogin] = useState(false);
     const navigate = useNavigate();
     const [isNavOn, setisNavOn] = useState(false);
@@ -43,7 +43,7 @@ function NavBar(){
 
 
     return(
-        <div className='navBar'>
+        <div className='navBar' style={{backgroundColor: isHome ? undefined : 'rgb(45, 45, 45)', width: (isHome ? undefined: 'calc(100vw - 50px)')}}>
             <div className='leftSideNav'>
                 <a>viridis.</a>
             </div>

@@ -1,10 +1,23 @@
 import NavBar from "../components/navbar";
 import "./css/portfolio.css";
-import housePort from "../assets/picture/image.png";
-import { useEffect, useState } from "react";
 import { viridisApi } from "../api/axiosConfig";
+import { Canvas } from '@react-three/fiber';
+import { OrthographicCamera } from '@react-three/drei';
+import Model from '../components/3DModel';
+import { useState, useEffect } from "react";
 
 function Portfolio() {
+  const [size, setsize] = useState(window.innerWidth)
+    
+  //choose the screen size 
+  const handleResize = () => {
+      setsize(window.innerWidth);
+  }
+
+  // create an event listener
+  useEffect(() => {
+  window.addEventListener("resize", handleResize)
+  })
   const [wallet, setWallet] = useState({});
   const [trans, setTrans] = useState([]);
   const [transInfo, setTransInfo] = useState({});
@@ -74,23 +87,23 @@ function Portfolio() {
       <NavBar></NavBar>
       <div className="portfolio">
         <div className="Leftzone-portfolio">
-          <img
-            id="user-housePort"
-            className="User-pro"
-            src={housePort}
-            alt=""
-          />
+          <Canvas style={{ width: '100vw'}}>
+            <OrthographicCamera makeDefault position={[6, 1, 6]} zoom={(size/40) + 10}></OrthographicCamera>
+            <ambientLight />
+            <pointLight position={[10, 10, 10]} />
+            <Model />
+          </Canvas>
         </div>
         <div className="Rightzone-portfolio">
           <h1 className="port-text" id="CO2-num">
             {wallet.totalTokens}
           </h1>
           <div className="port-text1">
-            <p1 className="port-text">tCO2eqv ถูกชดเชย</p1>
+            <p1 className="port-text">kgCO2eqv ถูกชดเชย</p1>
             <p1 className="port-text">
-              = 40 ต้น <img src="/src/assets/picture/cuteTreeIcon.png"></img>
+              = {Math.floor(wallet.totalTokens * 50/12)} ต้น <img src="/src/assets/picture/cuteTreeIcon.png"></img>
             </p1>
-            <p1 className="port-text">Green points : points </p1>
+            <p1 className="port-text">Green points : {wallet.totalPoints} points </p1>
           </div>
           <div class="history-bar">
             <div className="historyhead">
@@ -109,10 +122,6 @@ function Portfolio() {
                   </div>
                 );
               })}
-              <div className="historybox-inner">
-                <p className="historylist-1">54CC</p>
-                <p className="historylist-2">14.14น. 30/7/2566</p>
-              </div>
             </div>
             <div class="pagination">
               <a key="prev" href="#" onClick={() => handleClick(prevPage)}>

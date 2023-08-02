@@ -153,6 +153,7 @@
     }
     .innerRightSideNav{
         display: flex;
+        align-items: center;
     }
     .innerRightSideNav li {
         color: white;
@@ -240,6 +241,7 @@
     }
     .innerRightSideNav{
         display: flex;
+        align-items: center;
     }
     .innerRightSideNav li {
         color: white;

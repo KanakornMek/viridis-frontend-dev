@@ -16,7 +16,7 @@ function HomePage(){
 
     return(
         <div>
-            <NavBar></NavBar>
+            <NavBar isHome></NavBar>
             <div className="hero-section">
                 <div className="hero-box">
                     <p>"Embrace a Greener Future” Offset Your Carbon Footprint Today.</p>

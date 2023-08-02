@@ -28,9 +28,9 @@ const PrivateRoute = ({ children }) => {
     return <div class="loader"></div>;
   }
 
-  if (!auth || isLoading) {
-    return <Navigate to="/login" />;
-  }
+  // if (!auth || isLoading) {
+  //   return <Navigate to="/login" />;
+  // }
 
   return children;
 };

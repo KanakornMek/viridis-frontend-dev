@@ -63,7 +63,19 @@
     .profile-button-container{
         width: 50vw;
         display: flex;
+        gap: 15px;
         justify-content: end;
+    }
+    .logout-profile-button {
+        width: 12rem;
+        height: 4rem;
+        font-family: 'Josefin Sans', sans-serif;
+        color: white;
+        font-size: 2rem;
+        background-color: #c72606;
+        border: none;
+        border-radius: 1rem;
+        margin: 1rem 0 0 0; 
     }
     .save-profile-button{
         width: 12rem;
@@ -112,7 +124,7 @@
     .profile-home-container{
         width: 50vw;
         height: 100%;
-        padding-top: 6vw;
+        padding-top: 10vw;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -168,6 +180,17 @@
         width: 80vw;
         display: flex;
         justify-content: end;
+    }
+    .logout-profile-button {
+        width: 12rem;
+        height: 4rem;
+        font-family: 'Josefin Sans', sans-serif;
+        color: white;
+        font-size: 2rem;
+        background-color: #c72606;
+        border: none;
+        border-radius: 1rem;
+        margin: 1rem 0 0 0; 
     }
     .save-profile-button{
         width: 12rem;
