@@ -101,7 +101,7 @@ function Profile() {
             ></input>
           </div>
           <div className="profile-button-container">
-            <button onClick={() => logout()}>Logout</button>
+            <button className="logout-profile-button" onClick={() => logout()}>Logout</button>
             <button className="save-profile-button">Save</button>
           </div>
         </div>

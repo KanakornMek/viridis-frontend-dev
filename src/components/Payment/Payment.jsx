@@ -42,7 +42,7 @@ function ChoosePayment(props) {
     );
 }
 
-function Payment({ quantity, price }) {
+function Payment({ quantity, price, isQr, qrPhone }) {
     const [selected, setSelected] = useState(null);
 
     const payment_methods = [
@@ -55,9 +55,9 @@ function Payment({ quantity, price }) {
             case 0:
                 return <CreditCardForm price={price} />;
             case 1:
-                return <BankingOptions price={price} quantity={quantity} />;
+                return <BankingOptions qrPhone={qrPhone} isQr={isQr} price={price} quantity={quantity} />;
             case 2:
-                return <PromptPay price={price} quantity={quantity} />;
+                return <PromptPay qrPhone={qrPhone} isQr={isQr} price={price} quantity={quantity} />;
             default:
                 return null;
         }
