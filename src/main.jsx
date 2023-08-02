@@ -19,6 +19,7 @@ import QrProfile from "./pages/qrpage";
 import { AuthProvider, AuthContext } from "./contexts/AuthContext";
 import QRPage from "./pages/qr";
 import Registerpage from "./pages/register";
+import PaymentSuccessfulPage from "./pages/paymentSuccessPage";
 const PrivateRoute = ({ children }) => {
   const { auth, isLoading } = useContext(AuthContext);
 
@@ -56,9 +57,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route
             path="/profile"
             element={
-              // <PrivateRoute>
+              <PrivateRoute>
                 <Profile />
-              //  </PrivateRoute> 
+               </PrivateRoute> 
             }
           />
           <Route 
@@ -72,7 +73,17 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route 
             path="/qr-profile"
             element={
-              <QrProfile />
+              <PrivateRoute>
+                <QrProfile />
+              </PrivateRoute>
+            }
+          />
+          <Route 
+            path="/slip"
+            element={
+              <PrivateRoute>
+                <PaymentSuccessfulPage />
+              </PrivateRoute>
             }
           />
         </Routes>
