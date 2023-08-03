@@ -38,11 +38,7 @@ function NavBar({ isHome }) {
 
   return (
     <div
-      className="navBar"
-      style={{
-        backgroundColor: isHome ? undefined : "rgb(45, 45, 45)",
-        width: isHome ? undefined : "calc(100vw - 50px)",
-      }}
+      className={`navBar ${isHome ? undefined : 'homeNav' }`}
     >
       <div className="leftSideNav">
         <a>viridis.</a>
