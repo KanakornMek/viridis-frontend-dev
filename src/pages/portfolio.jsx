@@ -35,8 +35,15 @@ function Portfolio() {
 
     getPortData();
   }, []);
-  const handleClick = (pageNum) => {
-    console.log("Clicked Page:", pageNum);
+  const handleClick = async (pageNum) => {
+    const transRes = await viridisApi.get("/user/transaction", {params: {
+      page: pageNum
+    }});
+      setTrans(transRes.data.transactions);
+      setTransInfo({
+        currentPage: transRes.data.currentPage,
+        totalPages: transRes.data.totalPages,
+      });
   };
   const renderButtons = () => {
     const currentPage = transInfo.currentPage;
@@ -50,7 +57,6 @@ function Portfolio() {
         <a
         key={prevPage}
         href="#"
-        className="active"
         onClick={() => handleClick(prevPage)}
       >
         {prevPage}
@@ -70,14 +76,15 @@ function Portfolio() {
     );
 
     if(nextPage <= totalPages) {
-      <a
-        key={nextPage}
-        href="#"
-        className="active"
-        onClick={() => handleClick(nextPage)}
-      >
-        {nextPage}
-      </a>
+      buttons.push(
+        <a
+          key={nextPage}
+          href="#"
+          onClick={() => handleClick(nextPage)}
+        >
+          {nextPage}
+        </a>
+      );
     }
 
     return buttons;
