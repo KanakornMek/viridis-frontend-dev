@@ -63,17 +63,15 @@ function NavBarwhitebackground(){
                     <li><Link to={`/`} className='home'>Home</Link></li>
                     <li><Link to={`/portfolio`} className='portfolio'>Portfolio</Link></li>
                     <li><Link to={`/services`} className='services'>Services</Link></li>
-                </ul>
-                {!auth && 
-                    <div className='buttonOnScreen'>
+                    {!auth && 
+                    <li className='buttonOnScreen'>
                         <button 
-                            style={{
-                                animationName: isAnimating ? "navOn-enter" : "none",
-                              }}
                             onClick={() => navigate("/login")}
                         >Login</button>
-                    </div>
-                }
+                    </li>
+                    }
+                </ul>
+                
                 
             </div>
         </div>
