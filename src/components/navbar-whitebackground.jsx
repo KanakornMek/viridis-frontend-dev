@@ -9,6 +9,7 @@ function NavBarwhitebackground(){
     const {auth, isAuthenticated } = useContext(AuthContext)
     const navigate = useNavigate();
     const [isNavOn, setisNavOn] = useState(false);
+    const [isAnimating, setIsAnimating] = useState(false);
 
 
     window.addEventListener("resize", function() {
@@ -65,7 +66,12 @@ function NavBarwhitebackground(){
                 </ul>
                 {!auth && 
                     <div className='buttonOnScreen'>
-                        <button onClick={() => navigate('/login')}>Login</button>
+                        <button 
+                            style={{
+                                animationName: isAnimating ? "navOn-enter" : "none",
+                              }}
+                            onClick={() => navigate("/login")}
+                        >Login</button>
                     </div>
                 }
                 
