@@ -63,9 +63,12 @@ function NavBarwhitebackground(){
                     <li><Link to={`/portfolio`} className='portfolio'>Portfolio</Link></li>
                     <li><Link to={`/services`} className='services'>Services</Link></li>
                 </ul>
-                <div className='buttonOnScreen'>
-                    <button onClick={() => navigate('/login')}>Login</button>
-                </div>
+                {!auth && 
+                    <div className='buttonOnScreen'>
+                        <button onClick={() => navigate('/login')}>Login</button>
+                    </div>
+                }
+                
             </div>
         </div>
     )
