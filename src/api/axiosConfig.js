@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const viridisAuth = axios.create({
-    baseURL: "http://localhost:5000",
+    baseURL: import.meta.env.VITE_AUTH_URL,
     timeout: 10000,
     withCredentials: true,
 });
@@ -16,7 +16,7 @@ const omise = axios.create({
 });
 
 const viridisApi = axios.create({
-    baseURL: "http://localhost:4000",
+    baseURL: import.meta.env.VITE_API_URL,
     timeout: 10000,
 })
 

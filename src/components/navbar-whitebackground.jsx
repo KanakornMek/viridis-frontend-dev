@@ -3,6 +3,7 @@ import { Link, useNavigate, redirect } from 'react-router-dom'
 import { useEffect, useState, useContext } from 'react';
 import  useScreenSize from './screenSizeHook'
 import { AuthContext } from '../contexts/AuthContext';
+import profilePic from '../assets/picture/profilePic.png'
 
 
 function NavBarwhitebackground(){
@@ -54,7 +55,7 @@ function NavBarwhitebackground(){
                     <li><Link to={`/`} className='home1'>Home</Link></li>
                     <li><Link to={`/portfolio`} className='portfolio1'>Portfolio</Link></li>
                     <li><Link to={`/services`} className='services1'>Services</Link></li>
-                    {auth && <li><Link to={`/profile`} className='profile'><img src="https://www.the-sun.com/wp-content/uploads/sites/6/2022/08/OP-OMF-TELETUBBY-SUN.jpg?strip=all&quality=100&w=1620&h=1080&crop=1"></img></Link></li>}
+                    {auth && <li><Link to={`/profile`} className='profile'><img src={profilePic}></img></Link></li>}
                 </ul>
                 {!auth && <div className='changableNavComponent'>
                     <button onClick={() => setisGoingToLogin(true)}>Login</button>
