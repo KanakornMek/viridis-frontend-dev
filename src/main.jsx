@@ -87,9 +87,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route
             path="/slip"
             element={
-              <PrivateRoute>
                 <PaymentSuccessfulPage />
-              </PrivateRoute>
             }
           />
         </Routes>
