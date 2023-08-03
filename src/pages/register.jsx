@@ -111,7 +111,7 @@ function Registerpage() {
       .post("/signup", requestBody)
       .then((res) => {
         console.log(res.data);
-        window.location = "http://localhost:5173/";
+        window.location = "/";
       })
       .catch((err) => {
         console.log(err);
