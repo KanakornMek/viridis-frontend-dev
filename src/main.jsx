@@ -1,4 +1,4 @@
-import React, { useContext, useState,useEffect } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import {
@@ -23,7 +23,6 @@ import PaymentSuccessfulPage from "./pages/paymentSuccessPage";
 const PrivateRoute = ({ children }) => {
   const { auth, isLoading } = useContext(AuthContext);
 
-
   if (isLoading) {
     return <div class="loader"></div>;
   }
@@ -44,7 +43,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/login" element={<Loginpage />} />
           <Route path="/register" element={<Registerpage />} />
           <Route path="/docs" element={<Docspage />} />
-          <Route path="/generate-qr" element={<GenQrPage />} />
+          <Route
+            path="/generate-qr"
+            element={
+              <PrivateRoute>
+                <GenQrPage />
+              </PrivateRoute>
+            }
+          />
           <Route path="/qr" element={<QRPage />} />
           <Route
             path="/portfolio"
@@ -59,18 +65,18 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             element={
               <PrivateRoute>
                 <Profile />
-               </PrivateRoute> 
-            }
-          />
-          <Route 
-            path="/buying"
-            element={
-              <PrivateRoute>
-                <Buyingpage/>
               </PrivateRoute>
             }
           />
-          <Route 
+          <Route
+            path="/buying"
+            element={
+              <PrivateRoute>
+                <Buyingpage />
+              </PrivateRoute>
+            }
+          />
+          <Route
             path="/qr-profile"
             element={
               <PrivateRoute>
@@ -78,7 +84,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
               </PrivateRoute>
             }
           />
-          <Route 
+          <Route
             path="/slip"
             element={
               <PrivateRoute>
