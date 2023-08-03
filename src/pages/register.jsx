@@ -76,7 +76,6 @@ function Registerpage() {
   };
 
   const handleEmailChange = (event) => {
-    console.log(import.meta.env.VIRIDIS_AUTH_URL)
     const rawValue = event.target.value;
     const formattedValue = formatEmail(rawValue);
     setFormattedEmail(formattedValue);
