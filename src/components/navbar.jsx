@@ -5,18 +5,10 @@ import { AuthContext } from '../contexts/AuthContext';
 import profilePic from '../assets/picture/profilePic.png'
 
 function NavBar({isHome}){
-    const [isGoingToLogin,setisGoingToLogin] = useState(false);
     const navigate = useNavigate();
     const [isNavOn, setisNavOn] = useState(false);
     const {auth, isAuthenticated } = useContext(AuthContext)
 
-    useEffect(() =>{
-        console.log(isGoingToLogin)
-        if(isGoingToLogin){
-            navigate('/login');
-        }
-
-    },)
 
     window.addEventListener("resize", function() {
         if (window.matchMedia("(min-width: 800px)").matches) {
@@ -56,7 +48,7 @@ function NavBar({isHome}){
                     {auth && <li><Link to={`/profile`} className='profile'><img src={profilePic}></img></Link></li>}
                 </ul>
                 {!auth && <div className='changableNavComponent'>
-                    <button onClick={() => setisGoingToLogin(true)}>Login</button>
+                    <button onClick={() => navigate('/login')}>Login</button>
                 </div>}
             </div>
             <div class="hammy" id='hammy' onClick={() => setisNavOn(!isNavOn)}>
@@ -71,7 +63,7 @@ function NavBar({isHome}){
                     <li><Link to={`/services`} className='services'>Services</Link></li>
                 </ul>
                 <div className='buttonOnScreen'>
-                    <button onClick={() => setisGoingToLogin(true)}>Login</button>
+                    <button onClick={() => navigate('/login')}>Login</button>
                 </div>
             </div>
         </div>
