@@ -97,6 +97,7 @@ function NavBar({ isHome }) {
               Services
             </Link>
           </li>
+          {auth && <li><Link to={`/profile`} className='portfolio'>Profile</Link></li>}
           {!auth && (
           <li className="buttonOnScreen">
             <button

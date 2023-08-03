@@ -63,6 +63,7 @@ function NavBarwhitebackground(){
                     <li><Link to={`/`} className='home'>Home</Link></li>
                     <li><Link to={`/portfolio`} className='portfolio'>Portfolio</Link></li>
                     <li><Link to={`/services`} className='services'>Services</Link></li>
+                    {auth && <li><Link to={`/profile`} className='portfolio'>Profile</Link></li>}
                     {!auth && 
                     <li className='buttonOnScreen'>
                         <button 
