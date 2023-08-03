@@ -5,7 +5,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrthographicCamera } from '@react-three/drei';
 import Model from '../components/3DModel';
 import { useState, useEffect } from "react";
-
+import treeIcon from '../assets/picture/cuteTreeIcon.png';
 function Portfolio() {
   const [size, setsize] = useState(window.innerWidth)
     
@@ -101,7 +101,7 @@ function Portfolio() {
           <div className="port-text1">
             <p1 className="port-text">kgCO2eqv ถูกชดเชย</p1>
             <p1 className="port-text">
-              = {Math.floor(wallet.totalTokens * 50/12)} ต้น <img src="/src/assets/picture/cuteTreeIcon.png"></img>
+              = {Math.floor(wallet.totalTokens * 50/12)} ต้น <img src={treeIcon}></img>
             </p1>
             <p1 className="port-text">Green points : {wallet.totalPoints} points </p1>
           </div>
