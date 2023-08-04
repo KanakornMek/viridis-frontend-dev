@@ -30,14 +30,14 @@ function HomePage(){
                         <div className="leftCard-img"></div>
                         <div className="Card-content">
                             <h3>Carbon Footprint</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p>คือ ปริมาณแก๊สทั้งหมด ที่เกิดจากคนซึ่งส่งผลให้เกิดภาวะโลกร้อน เราจำเป็นต้องลดปริมาณ carbon footprint ให้เหลือต่ำกว่า 2 ตัน จากปกติที่เราสร้างประมาณ 4 ตัน เพื่อหลีกเลี่ยงภาวะโลกร้อนที่รุนแรงขึ้น</p>
                         </div>
                     </div>
                     <div className="rightCard"onClick={() => alert('Going to Carbon credit')}>
                         <div className="rightCard-img"></div>
                         <div className="Card-content">
                             <h3>Carbon credit</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <p>คือ สิ่งที่องค์กรได้รับหลังจากสามารถลดปริมาณแก๊สที่ทำให้เกิดภาวะโลกร้อนจากโครงการต่างๆได้ ซึ่งเครดิตดังกล่าวสามารถวัดปริมาณและนำไปซื้อขายในตลาดคาร์บอนได้</p>
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@ function HomePage(){
                 <div className="whatWeDo-box">
                     <h3>What are we do?</h3>
                     <p>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    "ภาวะโลกร้อนเป็นปัญหาที่ต้องการการแก้ไขอย่างเร่งด่วนเนื่องจากตามสมมติฐานของนักวิทยาศาสตร์เรามีเวลาเพียงแค่ 6ปีครึ่งเพื่อแก้ไขปัญหาดังกล่าวก่อนที่จะถึงจุดที่โลกย้อนกลับไม่ได้ ในปัจจุบันปัญหาจากภาวะโลกร้อนมีมากมาย เช่น อุณหภูมิสูงขึ้น อากาศแปรปรวน นำ้ท่วมตามเมืองชายฝั่งและความแห้งแล้ง การชดเชยแก๊สที่ทำให้เกิดภาวะโลกร้อนด้วยการซื้อขาย carbon credit ผ่านช่องทางออนไลน์และร่วมสนุกกับการตกแต่งบ้านดิจิตัลของคุณไปด้วยกัน"
                     </p>
                 </div>
             </div>
