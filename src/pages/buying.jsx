@@ -75,7 +75,7 @@ function Buyingpage(){
         }else{
             setactivityCalcStage(0);
         }
-    })
+    }, [activityCalcStage])
 
     useEffect(() => {
         const interval = setInterval(() =>{
@@ -109,6 +109,10 @@ function Buyingpage(){
             setswiperCounter(0);
         }
     })
+
+    useEffect(() => {
+        setamountToBuy(price/2);
+    }, [price])
     return(
     <>
         <div className='buy-page'>

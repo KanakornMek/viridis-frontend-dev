@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./css/registerpage.css";
 import { viridisAuth } from "../api/axiosConfig";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Registerpage() {
   const [name, setName] = useState("");
@@ -114,7 +116,19 @@ function Registerpage() {
         window.location = "/";
       })
       .catch((err) => {
-        console.log(err);
+        if(err.response.data.message){
+          toast.error(err.response.data.message, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+          });
+        } 
+        console.error(err);
       });
   };
   useEffect(() => {
@@ -223,6 +237,7 @@ function Registerpage() {
           <button
             className="next-button-register"
             onClick={() => setpageStage(1)}
+            type="button"
             id="nextButtonRegister"
           >
             Next
@@ -236,6 +251,7 @@ function Registerpage() {
           </button>
         </form>
       </div>
+      <ToastContainer />
       <div className="left-side-green-banner"></div>
     </div>
   );
