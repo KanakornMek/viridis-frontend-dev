@@ -115,8 +115,7 @@
         height: 7rem;
         width: 16.75rem;
         font-weight: bold;
-        animation-name: navOn-enter;
-        animation-duration: 0.5S;
+        /* animation-duration: 0.5S; */
 
     }
     .buttonOnScreen button:hover{
@@ -126,12 +125,16 @@
     .buttonOnScreen button:active{
         color: white;
         background-color: #068139;
-        animation: none;
+        /* animation: none; */
     }
 }
 
 
 @media screen and (min-width: 800px){
+    .homeNav{
+        background-color: rgb(45, 45, 45);
+        width: calc(100vw - 42px) !important;
+    }
     .navBar{
         display: flex;
         justify-content: space-between;
@@ -218,6 +221,10 @@
 }
 
 @media screen and (min-width: 1920px){
+    .homeNav{
+        background-color: rgb(45, 45, 45);
+        width: calc(100vw - 42px) !important;
+    }
     .navBar{
         display: flex;
         justify-content: space-between;

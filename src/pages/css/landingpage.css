@@ -104,6 +104,12 @@
         font-family: 'Josefin Sans', sans-serif;
         margin-top: 0.5rem;
         color: #696969;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        line-clamp: 1;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
     }
     .whatWeDo-section{
         height: 100vh;
@@ -113,6 +119,7 @@
         background-position: right;
         background-color:rgb(69, 69, 69);
         background-blend-mode: multiply;
+        font-family: 'Noto Sans Thai', sans-serif;
     }
     .whatWeDo-box{
         display: flex;
@@ -130,7 +137,6 @@
     }
     .whatWeDo-box p { 
         font-size: clamp(1rem, 6vw ,2rem);
-        font-family: 'Josefin Sans', sans-serif;
         width: 80%;
         text-align: center;
         margin-top: 0px;
@@ -184,6 +190,7 @@
         flex-direction: column;
         justify-content: start;
         align-items: center;
+        font-family: 'Noto Sans Thai', sans-serif;
     }
     .knowMore-head{
         line-height: 1;
@@ -239,9 +246,14 @@
     }
     .Card-content p{
         font-size: clamp(0.75rem, 2vw ,1.5rem);
-        font-family: 'Josefin Sans', sans-serif;
         margin-top: 0.5rem;
         color: #696969;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        line-clamp: 1;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
     }
     .whatWeDo-section{
         height: 100vh;
@@ -251,6 +263,7 @@
         background-position: right;
         background-color:rgb(69, 69, 69);
         background-blend-mode: multiply;
+        font-family: 'Noto Sans Thai', sans-serif;
     }
     .whatWeDo-box{
         display: flex;
@@ -268,7 +281,6 @@
     }
     .whatWeDo-box p { 
         font-size: clamp(1rem, 6vw ,2rem);
-        font-family: 'Josefin Sans', sans-serif;
         width: 80%;
         text-align: center;
         margin-top: 0px;
@@ -324,7 +336,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-    
+        font-family: 'Noto Sans Thai', sans-serif;
     }
     .knowMore-head{
         margin-top: 2.5rem;
@@ -361,8 +373,9 @@
         margin-bottom: 0px;
     }
     .Card-content p{
+        text-overflow: ellipsis;
+        overflow: hidden;
         font-size: 1.5rem;
-        font-family: 'Josefin Sans', sans-serif;
         margin-top: 1rem;
         color: #696969;
     }
@@ -389,6 +402,7 @@
         background-position: center;
         background-color:rgb(69, 69, 69);
         background-blend-mode: multiply;
+        font-family: 'Noto Sans Thai', sans-serif;
     }
     .whatWeDo-box{
         display: flex;
@@ -407,7 +421,6 @@
     }
     .whatWeDo-box p { 
         font-size: 2.25rem;
-        font-family: 'Josefin Sans', sans-serif;
         width: 80%;
         text-align: center;
         margin-top: 0px;

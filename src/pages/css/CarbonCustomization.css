@@ -51,7 +51,7 @@
 }
 
 
-button[type="button"] {
+.qr-purchase button[type="button"] {
   padding: 16px 24px;
   border: none;
   border-radius: 8px;
@@ -63,7 +63,7 @@ button[type="button"] {
   transition: background-color 0.2s ease;
 }
 
-button[type="button"]:hover {
+.qr-purchase button[type="button"]:hover {
   background-color: #005200;
 }
 

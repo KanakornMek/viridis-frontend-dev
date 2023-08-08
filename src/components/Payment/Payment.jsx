@@ -46,17 +46,14 @@ function Payment({ quantity, price, isQr, qrPhone }) {
     const [selected, setSelected] = useState(null);
 
     const payment_methods = [
-        { type: "บัตรเคดิต/เดบิต", typeclass: "bi-credit-card" },
         { type: "โมบายแบงก์กิ้ง", typeclass: "bi-bank2" },
         { type: "พร้อมเพย์", typeclass: "bi-qr-code" },
     ];
     const payment_method_options = () => {
         switch (selected) {
             case 0:
-                return <CreditCardForm price={price} />;
-            case 1:
                 return <BankingOptions qrPhone={qrPhone} isQr={isQr} price={price} quantity={quantity} />;
-            case 2:
+            case 1:
                 return <PromptPay qrPhone={qrPhone} isQr={isQr} price={price} quantity={quantity} />;
             default:
                 return null;

@@ -6,7 +6,7 @@ import "./css/profile.css";
 import { Canvas } from '@react-three/fiber';
 import { OrthographicCamera } from '@react-three/drei';
 import Model from '../components/3DModel';
-
+import profilePic from '../assets/picture/profilePic.png';
 function Profile() {
   const { logout } = useContext(AuthContext);
   const [edit, setEdit] = useState(false);
@@ -50,7 +50,7 @@ function Profile() {
         <div className="profile-pic-container">
           <img
             className="profile-pic"
-            src="/src/assets/picture/profilePic.png"
+            src={profilePic}
           ></img>
         </div>
         <div className="profile-home-container">

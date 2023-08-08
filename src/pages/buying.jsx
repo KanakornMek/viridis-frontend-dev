@@ -4,7 +4,11 @@ import './css/buying.css'
 import { clear } from 'localforage';
 import { viridisApi } from '../api/axiosConfig';
 import Payment from '../components/Payment/Payment';
-
+import carImage from '../assets/picture/car.png'
+import hamburgerImage from '../assets/picture/hamburger.png';
+import shoppingBag from '../assets/picture/shoppingBag.png';
+import treeImage from '../assets/picture/Trees.png';
+import solarPanel from '../assets/picture/solarPanel.png'
 function Buyingpage(){
     const [swiperCounter, setswiperCounter] = useState(0);
     const [page, setPage] = useState('1');
@@ -16,7 +20,7 @@ function Buyingpage(){
         exampleamount: 100,
         ratioprice: 0.4,
         ratiocarbon: 0.2,
-        image: '/src/assets/picture/car.png',
+        image: carImage,
     },{
         name: 'Meal',
         unit: 'servings',
@@ -24,7 +28,7 @@ function Buyingpage(){
         exampleamount: 2,
         ratioprice: 20,
         ratiocarbon: 10,
-        image: '/src/assets/picture/hamburger.png',
+        image: hamburgerImage,
     },{
         name: 'Plastic Bag',
         unit: 'bags',
@@ -32,7 +36,7 @@ function Buyingpage(){
         exampleamount: 8,
         ratioprice: 4,
         ratiocarbon: 2,
-        image: '/src/assets/picture/shoppingBag.png',
+        image: shoppingBag,
     }]
     const [activityCounter, setactivityCounter] =useState(0);
     const [activityCalcStage, setactivityCalcStage] = useState(0);
@@ -71,7 +75,7 @@ function Buyingpage(){
         }else{
             setactivityCalcStage(0);
         }
-    })
+    }, [activityCalcStage])
 
     useEffect(() => {
         const interval = setInterval(() =>{
@@ -105,6 +109,10 @@ function Buyingpage(){
             setswiperCounter(0);
         }
     })
+
+    useEffect(() => {
+        setamountToBuy(price/2);
+    }, [price])
     return(
     <>
         <div className='buy-page'>
@@ -117,13 +125,13 @@ function Buyingpage(){
                 </div>
                 <div className="left-side-container"id='swiper2'>
                     <h1>Equivalent to</h1>
-                    <img src='/src/assets/picture/Trees.png'></img>
+                    <img src={treeImage}></img>
                     <h1>planting</h1>
                     <h1><span>{Math.round(((price/activity[activityCounter].ratioprice) * activity[activityCounter].ratiocarbon) * 0.04) * 10 / 10}</span> Trees</h1>
                 </div>
                 <div className="left-side-container"id='swiper3'>
                     <h1>Equivalent to</h1>
-                    <img src='/src/assets/picture/solarPanel.png'></img>
+                    <img src={solarPanel}></img>
                     <h1>Install</h1>
                     <h1><span>{Math.round(((price/activity[activityCounter].ratioprice) * activity[activityCounter].ratiocarbon/650) * 10) / 10}</span> Solar Panel</h1>
                 </div>

@@ -114,8 +114,7 @@
         height: 7rem;
         width: 16.75rem;
         font-weight: bold;
-        animation-name: navOn-enter;
-        animation-duration: 0.5S;
+        /* animation-duration: 0.5S; */
 
     }
     .buttonOnScreen button:hover{
@@ -125,7 +124,7 @@
     .buttonOnScreen button:active{
         color: white;
         background-color: #068139;
-        animation: none;
+        /* animation: none; */
     }
 }
 

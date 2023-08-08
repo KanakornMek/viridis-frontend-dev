@@ -5,7 +5,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrthographicCamera } from '@react-three/drei';
 import Model from '../components/3DModel';
 import { useState, useEffect } from "react";
-
+import treeIcon from '../assets/picture/cuteTreeIcon.png';
 function Portfolio() {
   const [size, setsize] = useState(window.innerWidth)
     
@@ -35,8 +35,15 @@ function Portfolio() {
 
     getPortData();
   }, []);
-  const handleClick = (pageNum) => {
-    console.log("Clicked Page:", pageNum);
+  const handleClick = async (pageNum) => {
+    const transRes = await viridisApi.get("/user/transaction", {params: {
+      page: pageNum
+    }});
+      setTrans(transRes.data.transactions);
+      setTransInfo({
+        currentPage: transRes.data.currentPage,
+        totalPages: transRes.data.totalPages,
+      });
   };
   const renderButtons = () => {
     const currentPage = transInfo.currentPage;
@@ -50,7 +57,6 @@ function Portfolio() {
         <a
         key={prevPage}
         href="#"
-        className="active"
         onClick={() => handleClick(prevPage)}
       >
         {prevPage}
@@ -70,14 +76,15 @@ function Portfolio() {
     );
 
     if(nextPage <= totalPages) {
-      <a
-        key={nextPage}
-        href="#"
-        className="active"
-        onClick={() => handleClick(nextPage)}
-      >
-        {nextPage}
-      </a>
+      buttons.push(
+        <a
+          key={nextPage}
+          href="#"
+          onClick={() => handleClick(nextPage)}
+        >
+          {nextPage}
+        </a>
+      );
     }
 
     return buttons;
@@ -101,7 +108,7 @@ function Portfolio() {
           <div className="port-text1">
             <p1 className="port-text">kgCO2eqv ถูกชดเชย</p1>
             <p1 className="port-text">
-              = {Math.floor(wallet.totalTokens * 50/12)} ต้น <img src="/src/assets/picture/cuteTreeIcon.png"></img>
+              = {Math.floor(wallet.totalTokens * 50/12)} ต้น <img src={treeIcon}></img>
             </p1>
             <p1 className="port-text">Green points : {wallet.totalPoints} points </p1>
           </div>

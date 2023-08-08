@@ -2,7 +2,7 @@ import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom'
 import './css/loginpage.css';
 import { AuthContext } from '../contexts/AuthContext';
-
+import loginImage from '../assets/picture/image.png';
 function Loginpage(){
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -28,7 +28,7 @@ function Loginpage(){
                 </form>
             </div>
             <div className="right-side-login">
-                <img src="/src/assets/picture/image.png"></img>
+                <img src={loginImage}></img>
             </div>
         </div>
     )

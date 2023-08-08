@@ -51,7 +51,7 @@ function BankingOptions({price, quantity, isQr, qrPhone}) {
                             } else {
                                 viridisApi.post('/token/purchase', {
                                     amtToken: quantity,
-                                    tokenPrice: 20,
+                                    tokenPrice: 2,
                                     totalPrice: price,
                                     sourceId: res.data.id,
                                     type: "mobile_banking",

@@ -33,9 +33,9 @@ const CarbonCustomization = ({ setInfo, setPage }) => {
 
   const calculateCarbonCreditTotal = () => {
     if (selectedOption === "custom") {
-      setCarbonCreditTotal(customAmount * 20);
+      setCarbonCreditTotal(customAmount * 30);
     } else {
-      setCarbonCreditTotal(selectedOption * 20);
+      setCarbonCreditTotal(selectedOption * 30);
     }
   };
   return (
