@@ -8,6 +8,7 @@ function QrProfile(){
     const [name, setName] = useState('');
     const [type, setType] = useState('');
     const [qr, setQR] = useState(null);
+    const [transList, setTransList] = useState([]); 
     const [isqrorlist, setisqrorlist] = useState('qr');
 
     function isqrorlisthandle(){
@@ -31,7 +32,13 @@ function QrProfile(){
             .then((res) => {
                 setQR(res.data.qrData);
             }).catch((err) => {
-                console.log(err);
+                console.error(err);
+            })
+        viridisApi.get('/service/list')
+            .then((res) => {
+                setTransList(res.data.serviceLists)
+            }).catch((err) => {
+                console.error(err)
             })
     },[])
 
@@ -57,13 +64,11 @@ function QrProfile(){
                 <div className="left-side-qr-profile-information">
                     <div className="business-name-section">
                         <p>Name</p>
-                        {/* <h1>{name}</h1> */}
-                        <h1>Abraham licoln</h1>
+                        <h1>{name}</h1>
                     </div>
                     <div className="business-type-section">
                         <p>Type</p>
-                        {/* <h1>{type}</h1> */}
-                        <h1>Governing</h1>
+                        <h1>{type}</h1>
                     </div>
                     <div className="business-activity-carbonemission">
                         <p>Average CO2 emission</p>
@@ -90,26 +95,17 @@ function QrProfile(){
                         <div className="customer-offset-list-container" >
                             <h1>Offset by customer</h1>
                             <div className="customer-offset-list-box">
+                                
                                 <div className="customer-offset-list-head">
                                     <h2>Transaction Id.</h2>
                                     <h2>Amount CC</h2>
                                 </div>
-                                <div className="customer-offset-box">
-                                    <h2>029384092384093284</h2>
-                                    <h2>80 tCO2eqv</h2>
-                                </div>
-                                <div className="customer-offset-box">
-                                    <h2>029384092384093284</h2>
-                                    <h2>80 tCO2eqv</h2>
-                                </div>
-                                <div className="customer-offset-box">
-                                    <h2>029384092384093284</h2>
-                                    <h2>80 tCO2eqv</h2>
-                                </div>
-                                <div className="customer-offset-box">
-                                    <h2>029384092384093284</h2>
-                                    <h2>80 tCO2eqv</h2>
-                                </div>
+                                {transList.map((val, index) => 
+                                    <div key={index} className="customer-offset-box">
+                                        <h2>{val._id}</h2>
+                                        <h2>{val.amtToken}</h2>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>
