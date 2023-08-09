@@ -7,6 +7,7 @@ import { viridisApi } from "../api/axiosConfig";
 function QrProfile(){
     const [name, setName] = useState('');
     const [type, setType] = useState('');
+    const [tokenBalance, setTokenBalance] = useState(0)
     const [qr, setQR] = useState(null);
     const [transList, setTransList] = useState([]); 
     const [isqrorlist, setisqrorlist] = useState('qr');
@@ -24,7 +25,11 @@ function QrProfile(){
         viridisApi.get("/service/account")
             .then((res) => {
                 setName(res.data.name);
-                setType(res.data.type)
+                setType(res.data.type);
+                if(res.data.amtToken){
+
+                    setTokenBalance(res.data.amtToken)
+                }
             }).catch((err) => {
                 console.log(err);
             })
@@ -89,7 +94,7 @@ function QrProfile(){
                     
                     <div className="customer-offset-list-section" id="customerOffsetListSection">
                         <div className="total-customer-offset-container">
-                            <h1>50</h1>
+                            <h1>{tokenBalance}</h1>
                             <p>tCO2eqv have been offset by customer</p>
                         </div>
                         <div className="customer-offset-list-container" >
