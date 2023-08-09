@@ -361,4 +361,27 @@
       background-color: rgb(147, 202, 91);
     }
   }
-  
+
+
+.cert-history-container {
+  max-height: 70vh;
+  overflow: auto;
+}
+.cert-history-list {
+  margin: 10px 5px;
+  padding: 1rem;
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cert-info-container {
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.cert-info {
+  display: flex;
+  justify-content: space-between
+}

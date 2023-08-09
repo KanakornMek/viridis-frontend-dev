@@ -109,9 +109,9 @@ function Buyingpage(){
             setswiperCounter(0);
         }
     })
-
+    const [cctoBuy, setCCtoBuy] = useState(0)
     useEffect(() => {
-        setamountToBuy(price/2);
+        setCCtoBuy(price/2);
     }, [price])
     return(
     <>
@@ -171,7 +171,7 @@ function Buyingpage(){
                         </>
                     )}
                     {page === '2' && (
-                        <Payment price={price} quantity={amountToBuy} isQr={false} />
+                        <Payment price={price} quantity={cctoBuy} isQr={false} />
                     )}
                 </div>
             </div>
