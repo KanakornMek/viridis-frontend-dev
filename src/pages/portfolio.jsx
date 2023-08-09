@@ -132,7 +132,10 @@ function Portfolio() {
         >
           {modalPage === "0" && (
             <>
-              <h2 id="child-modal-title">ขอ certificate</h2>
+              <div className="modal-header">
+                <h2 id="child-modal-title">ขอ certificate</h2>
+                <i className="bi bi-x" onClick={handleClose}></i>
+              </div>
               <div className="cert-history-container">
                 {trans.map((trans, index) => {
                   const date = new Date(trans.purchaseDate);
@@ -152,13 +155,12 @@ function Portfolio() {
                   );
                 })}
               </div>
-              <button onClick={handleClose}>Close Child Modal</button>
             </>
           )}
           {modalPage === "1" && (
             <>
             <i className="bi bi-chevron-left" onClick={() => setModalPage("0")}></i>
-            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '0 1rem'}}>
+            <div className="cert-wrapper">
               <div className="cert-info-container">
                 <p style={{color: 'gray'}}>{certInfo.localeDate}</p>
                 <div className="cert-info">
