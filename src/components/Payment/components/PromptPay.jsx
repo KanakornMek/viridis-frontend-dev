@@ -3,7 +3,7 @@ import qs from "qs";
 import { omise, viridisApi } from "../../../api/axiosConfig";
 import './PromptPay.css'
 
-function PromptPay({ price, quantity, isQr, qrPhone }) {
+function PromptPay({ price, quantity, isQr, qrPhone, serviceId }) {
   const [qr, setQR] = useState(null);
   return (
     <div className="promptpay-container">
@@ -31,6 +31,7 @@ function PromptPay({ price, quantity, isQr, qrPhone }) {
                         phoneNumber: qrPhone,
                         sourceId: res.data.id,
                         type: "promptpay",
+                        serviceId
                       },
                     )
                     .then((res) => {

@@ -18,7 +18,7 @@ function BankSelection({logo, bank, onClick}) {
     );
 }
 
-function BankingOptions({price, quantity, isQr, qrPhone}) {
+function BankingOptions({price, quantity, isQr, qrPhone, serviceId}) {
     const banks = [
         { name: 'K plus', logo: kplusLogo, type: 'mobile_banking_kbank'},
         { name: 'SCB Easy', logo: scbLogo, type: 'mobile_banking_scb'},
@@ -38,6 +38,7 @@ function BankingOptions({price, quantity, isQr, qrPhone}) {
                             type: bank.type
                         })).then((res) => {
                             if(isQr){
+                                console.log(serviceId)
                                 viridisApi.post('/service/purchase', {
                                     amtToken: quantity,
                                     tokenPrice: 2,
@@ -45,6 +46,7 @@ function BankingOptions({price, quantity, isQr, qrPhone}) {
                                     phoneNumber: qrPhone,
                                     sourceId: res.data.id,
                                     type: "mobile_banking",
+                                    serviceId
                                 }).then((res) => {
                                     window.location = res.data.authorize_uri
                                 })

@@ -7,13 +7,29 @@ import { viridisApi } from "../api/axiosConfig";
 function QrProfile(){
     const [name, setName] = useState('');
     const [type, setType] = useState('');
+    const [tokenBalance, setTokenBalance] = useState(0)
     const [qr, setQR] = useState(null);
+    const [transList, setTransList] = useState([]); 
+    const [isqrorlist, setisqrorlist] = useState('qr');
 
+    function isqrorlisthandle(){
+        if(isqrorlist === 'qr'){
+            setisqrorlist('list')
+        }else if(isqrorlist === 'list'){
+            setisqrorlist('qr');
+        }else{
+            setisqrorlist('qr');
+        }
+    }
     useEffect(() => {
         viridisApi.get("/service/account")
             .then((res) => {
                 setName(res.data.name);
-                setType(res.data.type)
+                setType(res.data.type);
+                if(res.data.amtToken){
+
+                    setTokenBalance(res.data.amtToken)
+                }
             }).catch((err) => {
                 console.log(err);
             })
@@ -21,9 +37,31 @@ function QrProfile(){
             .then((res) => {
                 setQR(res.data.qrData);
             }).catch((err) => {
-                console.log(err);
+                console.error(err);
+            })
+        viridisApi.get('/service/list')
+            .then((res) => {
+                setTransList(res.data.serviceLists)
+            }).catch((err) => {
+                console.error(err)
             })
     },[])
+
+    useEffect(()=>{
+        if(isqrorlist === 'qr'){
+            document.getElementById('qrButt').className = "qr-butt-on";
+            document.getElementById('listButt').className = "list-butt";
+
+            document.getElementById('qrSectionHideHandle').className = "qr-section-hide-handle-on";
+            document.getElementById('customerOffsetListSection').className = "customer-offset-list-section";
+        }else if(isqrorlist === 'list'){
+            document.getElementById('qrButt').className = "qr-butt";
+            document.getElementById('listButt').className = "list-butt-on";
+
+            document.getElementById('qrSectionHideHandle').className = "qr-section-hide-handle";
+            document.getElementById('customerOffsetListSection').className = "customer-offset-list-section-on";
+        }
+    })
     return(
         <div className="qrPage">
             <NavBar></NavBar>
@@ -43,10 +81,39 @@ function QrProfile(){
                     </div>
                 </div>
                 <div className="right-side-qr-profile-qrcode">
-                    <div className="qr-section">
-                        <img src={qr} className="qr"></img>
+                    <button className="toggle-qr-offset" onClick={isqrorlisthandle}>
+                        <div className="qr-butt" id="qrButt">QR</div>
+                        <div className="list-butt" id="listButt">offset</div>
+                    </button>
+                    <div className="qr-section-hide-handle-" id="qrSectionHideHandle">
+                        <div className="qr-section">
+                            <img src={qr} className="qr"></img>
+                        </div>
+                        <button className="download-qr-button">Download QR</button>
                     </div>
-                    <button className="download-qr-button">Download QR</button>
+                    
+                    <div className="customer-offset-list-section" id="customerOffsetListSection">
+                        <div className="total-customer-offset-container">
+                            <h1>{tokenBalance}</h1>
+                            <p>tCO2eqv have been offset by customer</p>
+                        </div>
+                        <div className="customer-offset-list-container" >
+                            <h1>Offset by customer</h1>
+                            <div className="customer-offset-list-box">
+                                
+                                <div className="customer-offset-list-head">
+                                    <h2>Transaction Id.</h2>
+                                    <h2>Amount CC</h2>
+                                </div>
+                                {transList.map((val, index) => 
+                                    <div key={index} className="customer-offset-box">
+                                        <h2>{val._id}</h2>
+                                        <h2>{val.amtToken}</h2>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -190,6 +190,7 @@ function QRPage() {
                     quantity={purchaseInfo.quantity}
                     price={purchaseInfo.quantity * 2}
                     isQr={true}
+                    serviceId={serviceId}
                     qrPhone={phoneNumber}
                   />
                 </div>     

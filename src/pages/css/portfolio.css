@@ -1,364 +1,399 @@
 @media screen and (min-width: 850px) {
-    .portfolio {
-      overflow: hidden;
-      display: flex;
-      flex-direction: row;
-    }
-    .Leftzone-portfolio {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 50vw;
-      height: 100vh;
-      flex-flow: column;
-      overflow: hidden;
-    }
-  
-    .Rightzone-portfolio {
-      display: flex;
-      align-items: center;
-      width: 55vw;
-      height: 100vh;
-  
-      flex-flow: column;
-      overflow-y: auto;
-    }
-  
-    .port-text {
-        width: 30rem;
-        color: white;
-        font-size: 2rem;
-        padding-bottom: 1rem;
-        font-family: "Josefin Sans", sans-serif;
-        text-align: center;
-    }
+  .portfolio {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+  }
+  .Leftzone-portfolio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    height: 100vh;
+    flex-flow: column;
+    overflow: hidden;
+  }
 
-    .port-text img{
-        width: 2.5rem;
-        height: 2.5rem;
-        background-size: cover;
-    }
-  
-    .port-text1 {
-      color: white;
-      font-size: 30px;
-      display: flex;
-      align-items: center;
-      flex-flow: column;
-      margin-top: 0;
-      margin-bottom: 4rem;
-    }
-  
-    #CO2-num {
-      font-size: 8rem;
-      padding-bottom: 0px;
-      margin-bottom: 0;
-      font-family: "Josefin Sans", sans-serif;
-      font-weight: 500;
-      margin-top: 10rem;
-    }
-  
-    .history-bar {
-      background-color: white;
-      width: clamp(200px, 50vw,600px);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border-radius: 20px;
-    }
-  
-    .historyhead {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
-      margin-top: 1rem;
-      width: 90%;
-    }
-  
-    #History {
-      font-family: "Josefin Sans", sans-serif;
-      font-size: 2.5rem;
-      font-weight: 500;
-      color: black;
-    }
-  
-    #Cert-button {
-      width: 40%;
-      height: 4rem;
-      font-family: "Josefin Sans", sans-serif;
-      font-size: 2rem;
-      font-weight: 400;
-    }
-  .history-box{
+  .Rightzone-portfolio {
+    display: flex;
+    align-items: center;
+    width: 55vw;
+    height: 100vh;
+
+    flex-flow: column;
+    overflow-y: auto;
+  }
+
+  .port-text {
+    width: 30rem;
+    color: white;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+  }
+
+  .port-text img {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: cover;
+  }
+
+  .port-text1 {
+    color: white;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    margin-top: 0;
+    margin-bottom: 4rem;
+  }
+
+  #CO2-num {
+    font-size: 8rem;
+    padding-bottom: 0px;
+    margin-bottom: 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 500;
+    margin-top: 10rem;
+  }
+
+  .history-bar {
+    background-color: white;
+    width: clamp(200px, 50vw, 600px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+  }
+
+  .historyhead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    width: 90%;
+  }
+
+  #History {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: black;
+  }
+
+  #Cert-button {
+    width: 40%;
+    height: 4rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .history-box {
     display: flex;
     flex-direction: column;
     width: 90%;
   }
-    .historybox-inner p {
-      font-size: 24px;
-      font-family: 'Josefin Sans', sans-serif;
-    }
-  
-    .historybox-inner {
-      width: 90%;
-      height: 3rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;   
-      border: 3px solid rgb(255, 255, 255);
-      background-color: #eeeeee;
-      border-radius: 1rem;
-      margin-bottom: 0.5em;
-      color: #222222;
-      padding: 0 1rem 0 1rem;
-    }
-  
-    .history-bar h1 {
-      font-size: 30px;
-    }
-  
-    .history-bar button {
-      font-size: 1.5rem;
-      border: none;
-      border-radius: 0.625rem;
-      color: white;
-      background-color: #06c755;
-      height: 2.8rem;
-      width: 8.375rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
-  
-    .history-bar button:hover {
-      color: rgb(77, 45, 45);
-    }
-  
-    .pagination {
-      display: flex;
-      justify-content:space-between;
-      width: 100%;
-      padding: 0rem 1rem 2rem 1rem;
-      margin-top: 0;
-      width: 90%;
-    }
-  
-    .pagination a {
-      font-size: 2rem;
-      width: 2rem;
-      height: 1.9rem;
-      border-radius: 3rem;
-      padding:0.3rem;
-      color: black;
-      float: left;
-      text-decoration: none;
-      transition: background-color 0.3s;
-      font-family: 'Josefin Sans', sans-serif;
-      text-align: center;
-    }
-  
-    .pagination a.active {
-      background-color: #06c755;
-      color: white;
-    }
-  
-    .pagination a:hover:not(.active) {
-      background-color: #ddd;
-    }
-  
-    .pagination a:hover {
-      background-color: rgb(147, 202, 91);
-    }
+  .historybox-inner p {
+    font-size: 24px;
+    font-family: "Josefin Sans", sans-serif;
   }
 
+  .historybox-inner {
+    width: 90%;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid rgb(255, 255, 255);
+    background-color: #eeeeee;
+    border-radius: 1rem;
+    margin-bottom: 0.5em;
+    color: #222222;
+    padding: 0 1rem 0 1rem;
+  }
 
+  .history-bar h1 {
+    font-size: 30px;
+  }
 
+  .history-bar button {
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 0.625rem;
+    color: white;
+    background-color: #06c755;
+    height: 2.8rem;
+    width: 8.375rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
 
+  .history-bar button:hover {
+    color: rgb(77, 45, 45);
+  }
 
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0rem 1rem 2rem 1rem;
+    margin-top: 0;
+    width: 90%;
+  }
 
+  .pagination a {
+    font-size: 2rem;
+    width: 2rem;
+    height: 1.9rem;
+    border-radius: 3rem;
+    padding: 0.3rem;
+    color: black;
+    float: left;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+  }
 
+  .pagination a.active {
+    background-color: #06c755;
+    color: white;
+  }
 
+  .pagination a:hover:not(.active) {
+    background-color: #ddd;
+  }
 
+  .pagination a:hover {
+    background-color: rgb(147, 202, 91);
+  }
+}
 
+@media screen and (max-width: 850px) {
+  .portfolio {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .Leftzone-portfolio {
+    padding-top: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 40vh;
+    flex-flow: column;
+    overflow: hidden;
+  }
 
+  .Rightzone-portfolio {
+    display: flex;
+    align-items: center;
+    width: 100vw;
 
+    flex-flow: column;
+    overflow-y: auto;
+  }
 
+  .port-text {
+    width: 30rem;
+    color: white;
+    font-size: clamp(1.7rem, 5vw, 2rem);
+    padding-bottom: 1rem;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+  }
 
+  .port-text img {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: cover;
+  }
 
+  .port-text1 {
+    color: white;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    margin-top: 0;
+    margin-bottom: 4rem;
+  }
 
-  @media screen and (max-width: 850px) {
-    .portfolio {
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-    .Leftzone-portfolio {
-      padding-top: 8rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100vw;
-      height: 40vh;
-      flex-flow: column;
-      overflow: hidden;
-    }
+  #CO2-num {
+    font-size: 6rem;
+    padding-bottom: 0px;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 500;
+  }
 
-  
-    .Rightzone-portfolio {
-      display: flex;
-      align-items: center;
-      width: 100vw;
-  
-      flex-flow: column;
-      overflow-y: auto;
-    }
-  
-    .port-text {
-        width: 30rem;
-        color: white;
-        font-size: clamp(1.7rem,5vw,2rem);
-        padding-bottom: 1rem;
-        font-family: "Josefin Sans", sans-serif;
-        text-align: center;
-    }
+  .history-bar {
+    background-color: white;
+    width: clamp(200px, 85vw, 500px);
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    margin-bottom: 5rem;
+    align-items: center;
+  }
 
-    .port-text img{
-        width: 2.5rem;
-        height: 2.5rem;
-        background-size: cover;
-    }
-  
-    .port-text1 {
-      color: white;
-      font-size: 30px;
-      display: flex;
-      align-items: center;
-      flex-flow: column;
-      margin-top: 0;
-      margin-bottom: 4rem;
-    }
-  
-    #CO2-num {
-      font-size: 6rem;
-      padding-bottom: 0px;
-      margin-bottom: 0;
-      margin-top: 0;
-      font-family: "Josefin Sans", sans-serif;
-      font-weight: 500;
-    }
-  
-    .history-bar {
-      background-color: white;
-      width: clamp(200px, 85vw, 500px);
-      display: flex;
-      flex-direction: column;
-      border-radius: 20px;
-      margin-bottom: 5rem;
-      align-items: center;
-    }
-  
-    .historyhead {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 0rem;
-      width:90%;
-      margin-top: 1rem;
-    }
-  
-    #History {
-      font-family: "Josefin Sans", sans-serif;
-      font-size: 2.5rem;
-      font-weight: 500;
-      color: black;
-    }
-  
-    #Cert-button {
-      width: 40%;
-      height: 4rem;
-      font-family: "Josefin Sans", sans-serif;
-      font-size: clamp(0.5rem,5vw,2rem);
-      font-weight: 400;
-    }
-  .history-box{
+  .historyhead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0rem;
+    width: 90%;
+    margin-top: 1rem;
+  }
+
+  #History {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: black;
+  }
+
+  #Cert-button {
+    width: 40%;
+    height: 4rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: clamp(0.5rem, 5vw, 2rem);
+    font-weight: 400;
+  }
+  .history-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 90%;
   }
-    .historybox-inner p {
-      font-size: clamp(1.2rem,5vw,2rem);
-      font-family: 'Josefin Sans', sans-serif;
-    }
-  
-    .historybox-inner {
-      width: 90%;
-      height: 3rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;   
-      border: 3px solid rgb(255, 255, 255);
-      background-color: #eeeeee;
-      border-radius: 1rem;
-      margin-bottom: 0.5em;
-      color: #222222;
-      padding: 0 1rem 0 1rem;
-    }
-  
-    .history-bar h1 {
-      font-size: 30px;
-    }
-  
-    .history-bar button {
-      font-size: 1.5rem;
-      border: none;
-      border-radius: 0.625rem;
-      color: white;
-      background-color: #06c755;
-      height: 2.8rem;
-      width: 8.375rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
-  
-    .history-bar button:hover {
-      color: rgb(77, 45, 45);
-    }
-  
-    .pagination {
-      display: flex;
-      justify-content:space-between;
-      width: 100%;
-      padding: 0rem 1rem 2rem 1rem;
-      margin-top: 0;
-      width: 90%;
-    }
-  
-    .pagination a {
-      font-size: 2rem;
-      width: 2.5rem;
-      height: 2rem;
-      color: black;
-      float: left;
-      border-radius: 2rem;
-      text-decoration: none;
-      padding-top: 0.5rem;
-      transition: background-color 0.3s;
-      font-family: 'Josefin Sans', sans-serif;
-      text-align: center;
-    }
-  
-    .pagination a.active {
-      background-color: #06c755;
-      color: white;
-    }
-  
-    .pagination a:hover:not(.active) {
-      background-color: #ddd;
-    }
-  
-    .pagination a:hover {
-      background-color: rgb(147, 202, 91);
-    }
+  .historybox-inner p {
+    font-size: clamp(1.2rem, 5vw, 2rem);
+    font-family: "Josefin Sans", sans-serif;
   }
-  
+
+  .historybox-inner {
+    width: 90%;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid rgb(255, 255, 255);
+    background-color: #eeeeee;
+    border-radius: 1rem;
+    margin-bottom: 0.5em;
+    color: #222222;
+    padding: 0 1rem 0 1rem;
+  }
+
+  .history-bar h1 {
+    font-size: 30px;
+  }
+
+  .history-bar button {
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 0.625rem;
+    color: white;
+    background-color: #06c755;
+    height: 2.8rem;
+    width: 8.375rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .history-bar button:hover {
+    color: rgb(77, 45, 45);
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0rem 1rem 2rem 1rem;
+    margin-top: 0;
+    width: 90%;
+  }
+
+  .pagination a {
+    font-size: 2rem;
+    width: 2.5rem;
+    height: 2rem;
+    color: black;
+    float: left;
+    border-radius: 2rem;
+    text-decoration: none;
+    padding-top: 0.5rem;
+    transition: background-color 0.3s;
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+  }
+
+  .pagination a.active {
+    background-color: #06c755;
+    color: white;
+  }
+
+  .pagination a:hover:not(.active) {
+    background-color: #ddd;
+  }
+
+  .pagination a:hover {
+    background-color: rgb(147, 202, 91);
+  }
+}
+
+.cert-history-container {
+  max-height: 70vh;
+  overflow: auto;
+}
+.cert-history-list {
+  margin: 10px 5px;
+  padding: 1rem;
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cert-info-container {
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.cert-info {
+  display: flex;
+  justify-content: space-between;
+}
+.cert-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.cert-wrapper button {
+  padding: 1rem;
+  font-family: "Josefin Sans", sans-serif;
+  color: white;
+  font-size: 1rem;
+  background-color: #06c755;
+  border: none;
+  border-radius: 1rem;
+  margin: 1rem 0 0 0;
+}
+
+.modal-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-header h2{
+  margin: 0;
+}
+.modal-header i{
+  font-size: 3rem;
+}
