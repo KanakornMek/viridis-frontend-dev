@@ -182,7 +182,8 @@ function Portfolio() {
                 }, {
                   responseType: 'blob'
                 }).then((res) => {
-                  window.open(URL.createObjectURL(res.data))
+                  const blob = new Blob([res.data], { type: res.headers['content-type'] });
+                  window.open(URL.createObjectURL(blob))
                 })
               }}>Generate Certificate</button>
             </div>
