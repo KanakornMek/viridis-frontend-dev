@@ -25,7 +25,7 @@ function GenQrPage(){
     },[bizTypeSelector])
     const bizType = [
         {
-            type: 'Retaurant',
+            type: 'Restaurant',
             icon: '🍛',
         },
         {
