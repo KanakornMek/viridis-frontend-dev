@@ -62,6 +62,13 @@ function QrProfile(){
             document.getElementById('customerOffsetListSection').className = "customer-offset-list-section-on";
         }
     })
+
+    function download(datauri, filename){
+        const link = document.createElement("a")
+        link.href = datauri;
+        link.download = filename;
+        link.click()
+    }
     return(
         <div className="qrPage">
             <NavBar></NavBar>
@@ -89,7 +96,7 @@ function QrProfile(){
                         <div className="qr-section">
                             <img src={qr} className="qr"></img>
                         </div>
-                        <button className="download-qr-button">Download QR</button>
+                        <button onClick={() => download(qr, 'qrcode.png')} className="download-qr-button">Download QR</button>
                     </div>
                     
                     <div className="customer-offset-list-section" id="customerOffsetListSection">
