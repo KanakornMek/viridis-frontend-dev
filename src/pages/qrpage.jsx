@@ -26,10 +26,6 @@ function QrProfile(){
             .then((res) => {
                 setName(res.data.name);
                 setType(res.data.type);
-                if(res.data.amtToken){
-
-                    setTokenBalance(res.data.amtToken)
-                }
             }).catch((err) => {
                 console.log(err);
             })
@@ -46,6 +42,13 @@ function QrProfile(){
                 console.error(err)
             })
     },[])
+    useEffect(() => {
+        let bal = 0
+        for (tran in transList) {
+            bal += tran.amtToken;
+        }
+        setTokenBalance(bal)
+    }, [transList])
 
     useEffect(()=>{
         if(isqrorlist === 'qr'){
