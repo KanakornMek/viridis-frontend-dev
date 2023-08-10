@@ -44,8 +44,8 @@ function QrProfile(){
     },[])
     useEffect(() => {
         let bal = 0;
-        for (let tran; tran < transList.length; tran++) {
-            bal += tran.amtToken;
+        for (let i; i < transList.length; i++) {
+            bal += transList[i].amtToken;
         }
         setTokenBalance(bal)
     }, [transList])
